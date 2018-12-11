@@ -3,12 +3,30 @@
 }
 
 body {
-	background-color: grey
+	background-color: grey;
+	margin: 0;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
 }
 
 .container {
-	width: 1200px !important
-
+	width: 1200px !important;
+	padding-left: 0 !important;
+    padding-right: 0 !important;
 }
 
 .header {
