@@ -1,7 +1,15 @@
+*{
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+}
 
 body {
-	background-color: grey;
-	margin: 0;
+	font-family: 'Lato', sans-serif;
+	font-size: 14px;
+	line-height: 1.15;
+	color: #34404b;
+	background:#f4f6f8; 
 }
 
 article,
@@ -19,8 +27,8 @@ section,
 summary {
   display: block;
 }
-
 .container {
+	width: 1170px;
 	padding-left: 0 !important;
     padding-right: 0 !important;
 }
