@@ -40,6 +40,7 @@ summary {
 }
 
 .header .logo{
+	float: left;
 
 }
 .header .logo img{
@@ -50,7 +51,6 @@ summary {
 
 .header .search{
 	flex-grow: 1;
-	margin: 0 100px;
 }
 
 .header .search input{
@@ -59,4 +59,8 @@ summary {
 	height: 40px;
 	width: auto;
 	align-items: center !important;
+}
+
+.header .cart{
+	height: 80px;
 }
