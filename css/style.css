@@ -12,55 +12,62 @@ body {
 	background:#f4f6f8; 
 }
 
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-menu,
-nav,
-section,
-summary {
-  display: block;
-}
 .container {
 	width: 1170px;
 	padding-left: 0 !important;
-    padding-right: 0 !important;
+	padding-right: 0 !important;
 }
 
-.header {
-	height: 80px;
-	background-color: #fff;
-	margin: 30px 0
+a:hover{
+	text-decoration: none !important
 }
 
-.header .logo{
-	float: left;
-
-}
-.header .logo img{
-	height: 50px;
-	width: auto;
-	vertical-align: middle;
-}
-
-.header .search{
-	flex-grow: 1;
-}
-
-.header .search input{
-	border: 1px solid rgba(0,0,0,0.09);
-	background: rgba(0,0,0,0.03);
-	height: 40px;
-	width: auto;
+.align-items-center {
+	-ms-flex-align: center !important;
 	align-items: center !important;
 }
 
-.header .cart{
+@media (min-width: 992px) {
+.d-lg-flex {
+	display: -ms-flexbox !important;
+	display: flex !important;
+}
+}
+
+.header-content .header-content-search {
+	flex-grow: 1;
+	margin: 0px 50px;
+}
+
+.icon-cart-mobile.hidden-md.hidden-lg.f-left.absolute {
+	right:15px;
+	top:45px
+}
+.icon-cart-mobile.hidden-md.hidden-lg.f-left.absolute .icon.relative .fa {
+	font-size:24px
+}
+.icon-cart-mobile.hidden-md.hidden-lg.f-left.absolute .cartCount {
+	right:-20px;
+	background:#e22b00
+}
+.menu-bar.hidden-md.hidden-lg {
+	top:60px;
+	left: 0
+}
+.logo img{
+	width: auto;
 	height: 80px;
+}
+.topbar-mobile.hidden-lg.hidden-md {
+	color: #fff;
+	line-height: 40px;
+	font-size: 15px;
+}
+
+.text-md-left {
+	/*text-align: left !important;*/
+}
+
+.a-center {
+	text-align: center !important;
 }

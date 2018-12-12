@@ -3,4 +3,13 @@
 	.container {
 		width: 750px;
 	}
+
+	.topbar-mobile.hidden-lg.hidden-md {
+	    color: #fff;
+	    line-height: 40px;
+	    background: #005186;
+	    font-size: 15px;
+	}
+
+	
 }
