@@ -1,0 +1,37 @@
+@media only screen and (max-width: 991px) and (min-width: 768px){
+	
+	.container {
+		width: 750px;
+	}
+
+	.topbar-mobile.hidden-lg.hidden-md {
+	    color: #fff;
+	    line-height: 40px;
+	    background: #005186;
+	    font-size: 15px;
+	}
+	
+	
+	/* Hải viết footer*/
+	footer {
+		height: 850px;
+	}
+	footer .footer-top .information{
+		float: left;
+	}
+	footer .footer-bottom .about-us{
+		float: none;
+	}
+	.footer-bottom .bottom-left{
+		float: left;
+	}
+	.footer-bottom .bottom-center{
+		float: left;
+	}
+	.footer-bottom .bottom-right{
+		float: left;
+		margin-top: 20px;
+	}
+
+	
+}
