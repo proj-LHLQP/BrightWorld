@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Demo</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Lato:100,200,300,400,500,600,700,800,900" rel="stylesheet"/>		
+	<script type="text/javascript" src="../vendor\jquery\jquery.js"></script>
+	<script type="text/javascript" src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../js/jquery-1.11.3.min.js" ></script>
+    <script type="text/javascript" src="../js/jssor.slider-27.5.0.min.js"></script>
+    <script type="text/javascript" src="../js/script.js"></script>
+	<link rel="stylesheet" type="text/css" href="../vendor/bootstrap/css/bootstrap.css">
+	<script type="text/javascript" src="../js/data_product.json"></script>
+	<script type="text/javascript" src="../js/data_partner.json"></script>
+</head>
+<body>
+	<section class="section_1">
+	    <div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:1300px;height:400px;overflow:hidden;visibility:hidden;">
+	  
+	        <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1300px;height:400px;overflow:hidden;">
+	            <div>
+	                <img data-u="image" src="../img/slide.png" />
+	            </div> 	
+	            <div>
+	            	<img data-u="image" src="../img/0716_lighting_main_700.jpg" />
+	            </div>
+	            <div>
+	            	<img data-u="image" src="../img/den-trang-tri-phong-sinh-hoat-chung-348.jpg" />
+	            </div>
+	             <div>
+	                <img data-u="image" src="../img/slide2.png" />
+	            </div>
+	            <div>
+	            	<img data-u="image" src="../img/Đèn chùm phòng khách 1.jpg" />
+	            </div> 
+	            <div>
+	            	<img data-u="image" src="../img/customLogo.jfif" />
+	            </div>
+	           
+	        </div>
+	        <!-- Bullet Navigator -->
+	        <div data-u="navigator" class="jssorb032" style="position:absolute;bottom:12px;right:12px;" data-autocenter="1" data-scale="0.5" data-scale-bottom="0.75">
+	            <div data-u="prototype" class="i" style="width:16px;height:16px;">
+	                <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+	                    <circle class="b" cx="8000" cy="8000" r="5800"></circle>
+	                </svg>
+	            </div>
+	        </div>
+	        <!-- Arrow Navigator -->
+	        <div data-u="arrowleft" class="jssora051" style="width:65px;height:65px;top:0px;left:25px;" data-autocenter="2" data-scale="0.75" data-scale-left="0.75">
+	            <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+	                <polyline class="a" points="11040,1920 4960,8000 11040,14080 "></polyline>
+	            </svg>
+	        </div>
+	        <div data-u="arrowright" class="jssora051" style="width:65px;height:65px;top:0px;right:25px;" data-autocenter="2" data-scale="0.75" data-scale-right="0.75">
+	            <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+	                <polyline class="a" points="4960,1920 11040,8000 4960,14080 "></polyline>
+	            </svg>
+	        </div>
+	    </div>
+	</section>
+	
+	<div class="feature-products">
+		<div class="col-xs-12">
+			<div class="container">
+				<section class="section_2">
+					<div class="title text-center">
+                		<h2 class="main_products"><span>NHÓM <b style="color: #005186;">SẢN PHẨM</b> CHÍNH</span></h2>
+           		 	</div>
+				</section>
+
+				<section class="section_3">
+					<div id="product_list"></div>
+				</section>
+			</div>
+		</div>
+	</div>
+
+	<div class="partner">
+		<div class="col-xs-12">
+			<div class="container">
+				<div class="title text-center">
+                	<h2><span>DANH SÁCH <b style="color: #005186;">ĐỐI TÁC</b></span></h2>
+            	</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-xs-12">
+		<div class="container">
+		 	<marquee  id ="partner_list" scrollamount="8" direction="left" loop="50" scrolldelay="1" behavior="scroll" onmouseover="this.stop()" onmouseout="this.start()">
+		 		<!-- <a href="Link"><img src="https://tlclighting.com.vn/wp-content/themes/lamvt-light/images/partner4.png" title="" width="195" height="100"/> </a>
+		 		<a href="Link"><img src="https://tlclighting.com.vn/wp-content/themes/lamvt-light/images/partner5.png" title="" width="195" height="100"/> </a>
+		 		<a href="Link"><img src="https://tlclighting.com.vn/wp-content/themes/lamvt-light/images/partner1.png" title="" width="195" height="100"/> </a>
+		 		<a href="Link"><img src="https://tlclighting.com.vn/wp-content/themes/lamvt-light/images/partner3.png" title="" width="195" height="100"/> </a>
+		 		<a href="Link"><img src="https://tlclighting.com.vn/wp-content/themes/lamvt-light/images/partner6.png" title="" width="195" height="100"/> </a>
+		 		<a href="Link"><img src="https://tlclighting.com.vn/wp-content/themes/lamvt-light/images/partner2.png" title="" width="195" height="100"/> </a> -->
+		 	</marquee> 
+		 </div>
+	</div>
+	<script type="text/javascript" src="../js/index_product.js"></script>
+	<script type="text/javascript" src="../js/index_partner.js"></script>
+</body>
+</html>

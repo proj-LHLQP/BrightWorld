@@ -1,0 +1,20 @@
+var partner = [
+	{
+		URL: "https://tlclighting.com.vn/wp-content/themes/lamvt-light/images/partner1.png",
+	},
+	{
+		URL: "https://tlclighting.com.vn/wp-content/themes/lamvt-light/images/partner2.png"
+	},
+	{
+		URL: "https://tlclighting.com.vn/wp-content/themes/lamvt-light/images/partner3.png"
+	},
+	{
+		URL: "https://tlclighting.com.vn/wp-content/themes/lamvt-light/images/partner4.png"
+	},
+	{
+		URL: "https://tlclighting.com.vn/wp-content/themes/lamvt-light/images/partner5.png"
+	},
+	{
+		URL: "https://tlclighting.com.vn/wp-content/themes/lamvt-light/images/partner6.png"
+	},
+]
