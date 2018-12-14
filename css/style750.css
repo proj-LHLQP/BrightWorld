@@ -3,4 +3,24 @@
 	.container {
 		width: 750px;
 	}
+
+	footer {
+		height: 850px;
+	}
+	footer .footer-top .information{
+		float: left;
+	}
+	footer .footer-bottom .about-us{
+		float: none;
+	}
+	.footer-bottom .bottom-left{
+		float: left;
+	}
+	.footer-bottom .bottom-center{
+		float: left;
+	}
+	.footer-bottom .bottom-right{
+		float: left;
+		margin-top: 20px;
+	}
 }
