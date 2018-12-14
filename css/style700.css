@@ -2,5 +2,28 @@
 	.container {
 		width: 100%;
 	}
-	
+	footer {
+		height: 1500px;
+	}
+	footer .footer-top {
+		text-align: center;
+	}
+	footer .footer-bottom {
+		text-align: center;
+	}
+	footer .footer-bottom .about-us{
+		float: none;
+	}
+	footer .footer-bottom .enterMail{
+		float: none;
+	}
+	.bottom-center .form-group{
+		margin-top: 8px;
+	}
+	.bottom-center button {
+		margin-top: 10px;
+	}
+	.footer-bottom .bottom-right{
+		display: none;
+	}
 }
