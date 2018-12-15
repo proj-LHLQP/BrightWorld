@@ -72,6 +72,9 @@ a:hover{
 	text-align: center !important;
 }
 
+header ul li{
+	list-style: none;
+}
 
 
 /* Hải viết footer*/

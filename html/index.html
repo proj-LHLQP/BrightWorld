@@ -5,9 +5,6 @@
 	<meta charset="UTF-8">	
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="../vendor/bootstrap/css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="../vendor/bootstrap/css/bootstrap-theme.css">
-	<link rel="stylesheet" type="text/css" href="../css/base.scss.css">
-	<link rel="stylesheet" type="text/css" href="../css/plugin.scss.css">
 	<link rel="stylesheet" type="text/css" href="../css/style.scss.css">
 	<link rel="stylesheet" type="text/css" href="../css/style-theme.scss.css">
 	<link rel="stylesheet" type="text/css" href="../css/responsive.scss.css">
@@ -105,7 +102,7 @@
 							<div class="mini-cart text-xs-center">
 								<div class="heading-cart">
 									<a class="icons" href="/cart">
-										<div class="icon relative">
+										<div class="icon">
 											<i class="fa fa-shopping-bag"></i>
 											<span class="cartCount count_item_pr" id="cart-total">0</span>
 										</div>
@@ -134,7 +131,7 @@
 				<img src="../img/menu-bar.png" alt="menu bar">
 			</div>
 			<div class="icon-cart-mobile hidden-md hidden-lg f-left absolute" onclick="window.location.href='/cart'">
-				<div class="icon relative">
+				<div class="icon">
 					<i class="fa fa-shopping-bag"></i>
 					<span class="cartCount count_item_pr">0</span>
 				</div>
@@ -159,48 +156,15 @@
 							<ul class="nav nav-dt nav-left">
 								<li class="nav-item "><a class="nav-link" href="/" title="Trang chủ">Trang chủ</a></li>
 								<li class="nav-item active has-mega">
-									<a href="/collections/all" class="nav-link" title="Sản phẩm">Sản phẩm <i class="fa fa-angle-down" data-toggle="dropdown"></i></a>			
+									<a href="/collections/all" class="nav-link" title="Sản phẩm">Sản phẩm <i class="fa fa-angle-down" data-toggle="dropdown"></i></a>		
 									<div class="mega-content">
 									    <div class="level0-wrapper2">
 									       <div class="nav-block nav-block-center">
 											   <ul class="level0">
-												   <li class="level1 parent item"> <h2 class="h4"><a href="/san-pham-moi" title="Sản phẩm mới"><span>Sản phẩm mới</span></a></h2> 
-													   <ul class="level1">
-														   <li class="level2"> <a href="/collections/all" title="Vòng tay mới"><span>Vòng tay mới</span></a> </li>
-														   <li class="level2"> <a href="/collections/all" title="Dây chuyền mới"><span>Dây chuyền mới</span></a> </li>
-														   <li class="level2"> <a href="/collections/all" title="Nhẫn phong thủy mới"><span>Nhẫn phong thủy mới</span></a> </li>
-														   <li class="level2"> <a href="/collections/all" title="Khuyến mãi mới"><span>Khuyến mãi mới</span></a> </li>
-														   <li class="level2"> <a href="/collections/all" title="Sản phẩm mới"><span>Sản phẩm mới</span></a> </li>
-													   </ul>
-												   </li>
-												   <li class="level1 parent item"> <h2 class="h4"><a href="/san-pham-hot" title="Sản phẩm hot"><span>Sản phẩm hot</span></a></h2> 
-													   <ul class="level1">
-														   <li class="level2"> <a href="/collections/all" title="Vòng tay hot"><span>Vòng tay hot</span></a> </li>
-														   <li class="level2"> <a href="/collections/all" title="Nhẫn hot"><span>Nhẫn hot</span></a> </li>
-														   <li class="level2"> <a href="/collections/all" title="Dây chuyền hot"><span>Dây chuyền hot</span></a> </li>
-														   <li class="level2"> <a href="/collections/all" title="Sản phẩm hot"><span>Sản phẩm hot</span></a> </li>
-														   <li class="level2"> <a href="/collections/all" title="Khuyến mãi hot"><span>Khuyến mãi hot</span></a> </li>
-													   </ul>
-												   </li>
-												   <li class="level1 parent item"> <h2 class="h4"><a href="/san-pham-noi-bat" title="Sản phẩm nổi bật"><span>Sản phẩm nổi bật</span></a></h2> 
-													   <ul class="level1">
-														   <li class="level2"> <a href="/collections/all" title="Vòng tay nổi bật"><span>Vòng tay nổi bật</span></a> </li>
-														   <li class="level2"> <a href="/collections/all" title="Nhẫn nổi bật"><span>Nhẫn nổi bật</span></a> </li>
-														   <li class="level2"> <a href="/collections/all" title="Nhẫn khuyến mãi"><span>Nhẫn khuyến mãi</span></a> </li>
-														   <li class="level2"> <a href="/collections/all" title="Dây chuyền nổi bật"><span>Dây chuyền nổi bật</span></a> </li>
-														   <li class="level2"> <a href="/collections/all" title="Nổi bật nhất"><span>Nổi bật nhất</span></a> </li>
-													   </ul>
-												   </li>
-												   <li class="level1 parent item"> <h2 class="h4"><a href="/san-pham-khuyen-mai" title="Sản phẩm khuyến mại"><span>Sản phẩm khuyến mại</span></a></h2> 
-													   <ul class="level1">
-														   <li class="level2"> <a href="/collections/all" title="Vòng tay khuyến mãi"><span>Vòng tay khuyến mãi</span></a> </li>
-														   <li class="level2"> <a href="/collections/all" title="Nhẫn khuyến mãi"><span>Nhẫn khuyến mãi</span></a> </li>
-														   <li class="level2"> <a href="/collections/all" title="Dây chuyền khuyến mãi"><span>Dây chuyền khuyến mãi</span></a> </li>
-														   <li class="level2"> <a href="/collections/all" title="Khuyến mãi mới"><span>Khuyến mãi mới</span></a> </li>
-														   <li class="level2"> <a href="/collections/all" title="Khuyến mãi khủng"><span>Khuyến mãi khủng</span></a> </li>
-														   
-													   </ul>
-												   </li>
+												   <li class="level1 parent item"> <h2 class="h4"><a href="/san-pham-moi" title="Sản phẩm mới"><span>Sản phẩm mới</span></a></h2> </li>
+												   <li class="level1 parent item"> <h2 class="h4"><a href="/san-pham-hot" title="Sản phẩm hot"><span>Sản phẩm hot</span></a></h2> </li>
+												   <li class="level1 parent item"> <h2 class="h4"><a href="/san-pham-noi-bat" title="Sản phẩm nổi bật"><span>Sản phẩm nổi bật</span></a></h2>  </li>
+												   <li class="level1 parent item"> <h2 class="h4"><a href="/san-pham-khuyen-mai" title="Sản phẩm khuyến mại"><span>Sản phẩm khuyến mại</span></a></h2>  </li>
 											   </ul>
 										   </div>
 										 </div>
