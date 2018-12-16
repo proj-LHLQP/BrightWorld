@@ -154,7 +154,7 @@ summary {
 .title {
     margin-bottom: 50px;
 }
-span::after{
+.feature-products span::after{
 	display: block;
     content: "";
     position: absolute;
@@ -170,7 +170,7 @@ span::after{
     bottom: -7px;
 }
 
-span::before{
+.feature-products span::before{
     display: block;
     content: "";
     position: absolute;
@@ -181,6 +181,34 @@ span::before{
     height: 1px;
     transform: translateX(-50%);
 }
+.partner span::after{
+    display: block;
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    transform: rotate(-45deg);
+    background: white;
+    border: 1px solid #005186;
+    -webkit-box-shadow: 0 0 0 5px white;
+    box-shadow: 0 0 0 5px white;
+    left: 50%;
+    margin-left: -5px;
+    bottom: -7px;
+}
+
+.partner span::before{
+    display: block;
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    background: black;
+    width: 75%;
+    height: 1px;
+    transform: translateX(-50%);
+}
+
 .feature-products{
 	padding: 70px 0px;
 }
