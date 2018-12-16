@@ -69,6 +69,27 @@ summary {
 /*slide+product*/
 
 /*jssor slider bullet skin 032 css*/
+
+.section_1 .style_1{
+    position:relative;
+    margin:0 auto;
+    top:0px;
+    left:0px;
+    width:1300px;
+    height:400px;
+    overflow:hidden;
+    visibility:hidden;
+}
+
+.section_1 .style_1 .style_2{
+    cursor:default;
+    position:relative;
+    top:0px;
+    left:0px;
+    width:1300px;
+    height:400px;
+    overflow:hidden;
+}
 .jssorb032 {
 	position:absolute;
 }
@@ -170,7 +191,7 @@ span::before{
     transition: all 0.5s;
     cursor: pointer;
     margin-bottom: 30px;
-    height: 332px;
+    height: 320px;
 }
 
 
@@ -197,7 +218,26 @@ span::before{
 .feature-products .container .section_3 .product_item:hover .product_button{
 	opacity: 1;
 }
-
+.feature-products .container .section_3 .product_item:hover .image .image_product{
+    width : 220px; 
+    height : 220px;
+}
+.feature-products .container .section_3 .product_item .image .image_product{
+    width:250px; 
+    height:250px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.feature-products .container .section_3 .product_item .product_info a{
+    color:#337ab7;
+    min-height: 50px;
+    font-size: 16px;
+    display: inline-block;
+    margin: 10px;
+}
 .feature-products .container .section_3 .product_button a:hover {
     color: #fff;
 }
@@ -208,9 +248,3 @@ span::before{
 .feature-products .container .section_3 .product_button a {
     color: #fff;
 }
-.feature-products .container .section_3 a {
-    color: #337ab7;
-    text-decoration: none;
-    background-color: transparent;
-}
-

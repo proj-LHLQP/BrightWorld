@@ -3,7 +3,7 @@ var partner = [
 		URL: "https://tlclighting.com.vn/wp-content/themes/lamvt-light/images/partner1.png",
 	},
 	{
-		URL: "https://tlclighting.com.vn/wp-content/themes/lamvt-light/images/partner2.png"
+		URL: "https://sangtaodecor.com/profiles/sangtaodecorcom/uploads/attach/thumbnail/1474699249_hgp.jpg"
 	},
 	{
 		URL: "https://tlclighting.com.vn/wp-content/themes/lamvt-light/images/partner3.png"
@@ -17,4 +17,17 @@ var partner = [
 	{
 		URL: "https://tlclighting.com.vn/wp-content/themes/lamvt-light/images/partner6.png"
 	},
+	{
+		URL: "http://hssv.ulis.vnu.edu.vn/files/uploads/2017/05/Vingroup-logo-625x412.jpg"
+	},
+	{
+		URL: "http://denledmh.com/UserFile/editor/images/1CHUAN-BIG.png"
+	},
+	{
+		URL: "https://blog.saokim.com.vn/wp-content/uploads/2017/07/Logo1477573169-500x337.jpg"
+	},
+	{
+		URL: "http://ledtechvn.com/image/catalog/logo-lead%202.png"
+	},
+
 ]
