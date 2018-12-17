@@ -192,7 +192,7 @@ header.header .social-icons a:hover {
  text-overflow:ellipsis;
  position:relative
 }
-.header_search .search_text:before {
+/*.header_search .search_text:before {
  display:inline-block;
  content:"\f107" !important;
  font:normal normal normal 14px/1 FontAwesome;
@@ -207,7 +207,7 @@ header.header .social-icons a:hover {
  margin-top:-1px;
  background-repeat:no-repeat;
  background-position:center
-}
+}*/
 
 
 .header_search .list_search {

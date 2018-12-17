@@ -11,10 +11,65 @@
 	    font-size: 15px;
 	}
 	
-	
-	/* Hải viết footer*/
+
+/* body's QUANG*/
+	.section_1 .style_1{
+	    position:relative;
+	    margin:0 auto;
+	    top:0px;
+	    left:0px;
+	    width:1300px;
+	    height:700px;
+	    overflow:hidden;
+	    visibility:hidden;
+	}
+
+	.section_1 .style_1 .style_2{
+	    cursor:default;
+	    position:relative;
+	    top:0px;
+	    left:0px;
+	    width:1300px;
+	    height:700px;
+	    overflow:hidden;
+	}
+	.feature-products .container .section_3 .product_item .product_info a{
+	    color: #337ab7;
+	    min-height: 50px;
+	    font-size: 40px;
+	    display: inline-block;
+	    margin: 10px;
+	}
+	.feature-products .container .section_3 .product_item {
+	    border: 3px solid #ddd;
+	    position: relative;
+	    transition: all 0.5s;
+	    cursor: pointer;
+	    height: 620px;
+	    width: 520px;
+	    margin: 0 auto;
+	    margin-bottom: 45px;
+	}
+	.feature-products .container .section_3{
+		text-align: center;
+	}
+	.feature-products .container .section_3 .product_item .image .image_product{
+	    width:510px; 
+	    height:450px;
+	    -webkit-transition: all 0.3s;
+	    -moz-transition: all 0.3s;
+	    -ms-transition: all 0.3s;
+	    -o-transition: all 0.3s;
+	    transition: all 0.3s;
+	}
+	.feature-products .container .section_3 .product_button{
+		opacity:1;
+	}
+
+
+/* footer's HAI*/
 	footer {
-		height: 850px;
+		height: 880px;
 	}
 	footer .footer-top .information{
 		float: left;
@@ -22,16 +77,19 @@
 	footer .footer-bottom .about-us{
 		float: none;
 	}
-	.footer-bottom .bottom-left{
+	footer .footer-bottom .bottom-left{
 		float: left;
 	}
-	.footer-bottom .bottom-center{
+	footer .footer-bottom .bottom-center{
 		float: left;
 	}
-	.footer-bottom .bottom-right{
+	footer .footer-bottom .bottom-right{
 		float: left;
 		margin-top: 20px;
 	}
-
+	footer .footer-bottom iframe{
+		width: 100%;
+		height: 200px
+	}
 	
 }

@@ -8,27 +8,14 @@
 	<link rel="stylesheet" type="text/css" href="../css/style.scss.css">
 	<link rel="stylesheet" type="text/css" href="../css/style-theme.scss.css">
 	<link rel="stylesheet" type="text/css" href="../css/responsive.scss.css">
+	<!-- <link rel="stylesheet" type="text/css" href="../css/shortstyle.css"> -->
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 	<link rel="stylesheet" type="text/css" href="../css/style970.css">
 	<link rel="stylesheet" type="text/css" href="../css/style750.css">
 	<link rel="stylesheet" type="text/css" href="../css/style700.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
 	<link rel="stylesheet" href="../fontawesome/css/all.css"/>
-	<script type="text/javascript" src="../vendor/jquery/jquery-3.3.1.min.js"></script>
-	<script >
-		$(document).ready(function(){
-			$(".menu-bar").click(function(var2) {
-				var2.preventDefault();
-				$('#nav-mobile').toggleClass('open');
-				$('.menu-offcanvas').toggleClass('open');
-			});
-		    $(".menuclose").click(function(var1) {
-				var1.preventDefault();
-				// $('#nav').toggleClass('open');
-				$('#nav-mobile').removeClass('open');
-				$('.menu-offcanvas').removeClass('open');
-			});
-		});
-	</script>
+
 </head>
 <body>
 	<header class="header other-page">
@@ -78,14 +65,6 @@
 								<form class="input-group search-bar d-flex" action="/search" method="get" role="search">
 									<div class="collection-selector">
 										<div class="search_text">Tìm kiếm</div>
-										<!-- <div class="list_search" style="display: none;">
-											<div class="search_item" data-coll-id="1727647" title="Sản phẩm hot">Sản phẩm hot</div>
-											<div class="search_item" data-coll-id="1727646" title="Sản phẩm nổi bật">Sản phẩm nổi bật</div>
-											<div class="search_item" data-coll-id="1727645" title="Sản phẩm khuyến mãi">Sản phẩm khuyến mãi</div>
-											<div class="search_item" data-coll-id="1727644" title="Sản phẩm mới">Sản phẩm mới</div>
-											<div class="liner_search"></div>
-											<div class="search_item active" data-coll-id="0">Tất cả</div>
-										</div> -->
 									</div>
 									<input type="search" name="query" value="" placeholder="Tìm kiếm sản phẩm... " class="input-group-field st-default-search-input search-text" autocomplete="off">
 									<span class="input-group-btn">
@@ -262,66 +241,6 @@
 										</li>						
 									</ul>                      
 								</li>
-								<li class="dropdown-submenu nav-item-lv2">
-									<a class="nav-link" href="/san-pham-hot">Sản phẩm hot <i class="fa faa fa-angle-right"></i></a>
-									<ul class="dropdown-menu">
-										<li class="nav-item-lv3">
-											<a class="nav-link" href="/collections/all">Vòng tay hot</a>
-										</li>						
-										<li class="nav-item-lv3">
-											<a class="nav-link" href="/collections/all">Nhẫn hot</a>
-										</li>						
-										<li class="nav-item-lv3">
-											<a class="nav-link" href="/collections/all">Dây chuyền hot</a>
-										</li>						
-										<li class="nav-item-lv3">
-											<a class="nav-link" href="/collections/all">Sản phẩm hot</a>
-										</li>						
-										<li class="nav-item-lv3">
-											<a class="nav-link" href="/collections/all">Khuyến mãi hot</a>
-										</li>						
-									</ul>                      
-								</li>
-								<li class="dropdown-submenu nav-item-lv2">
-									<a class="nav-link" href="/san-pham-noi-bat">Sản phẩm nổi bật <i class="fa faa fa-angle-right"></i></a>
-									<ul class="dropdown-menu">
-										<li class="nav-item-lv3">
-											<a class="nav-link" href="/collections/all">Vòng tay nổi bật</a>
-										</li>						
-										<li class="nav-item-lv3">
-											<a class="nav-link" href="/collections/all">Nhẫn nổi bật</a>
-										</li>						
-										<li class="nav-item-lv3">
-											<a class="nav-link" href="/collections/all">Nhẫn khuyến mãi</a>
-										</li>						
-										<li class="nav-item-lv3">
-											<a class="nav-link" href="/collections/all">Dây chuyền nổi bật</a>
-										</li>						
-										<li class="nav-item-lv3">
-											<a class="nav-link" href="/collections/all">Nổi bật nhất</a>
-										</li>						
-									</ul>                      
-								</li>
-								<li class="dropdown-submenu nav-item-lv2">
-									<a class="nav-link" href="/san-pham-khuyen-mai">Sản phẩm khuyến mại <i class="fa faa fa-angle-right"></i></a>
-									<ul class="dropdown-menu">
-										<li class="nav-item-lv3">
-											<a class="nav-link" href="/collections/all">Vòng tay khuyến mãi</a>
-										</li>						
-										<li class="nav-item-lv3">
-											<a class="nav-link" href="/collections/all">Nhẫn khuyến mãi</a>
-										</li>						
-										<li class="nav-item-lv3">
-											<a class="nav-link" href="/collections/all">Dây chuyền khuyến mãi</a>
-										</li>						
-										<li class="nav-item-lv3">
-											<a class="nav-link" href="/collections/all">Khuyến mãi mới</a>
-										</li>						
-										<li class="nav-item-lv3">
-											<a class="nav-link" href="/collections/all">Khuyến mãi khủng</a>
-										</li>						
-									</ul>                      
-								</li>
 							</ul>
 						</li>
 						<li class="nav-item "><a class="nav-link" href="/gioi-thieu">Giới thiệu</a></li>		
@@ -351,6 +270,90 @@
 			</div>
 		</nav>
 	</header>
+	<!-- ĐÃ KẾT THÚC HEADER -->
+
+	<!-- BẮT ĐẦU THÂN TRANG -->
+	<section class="section_1">
+	    <div id="jssor_1" class="style_1">
+	  
+	        <div data-u="slides" class="style_2">
+	            <div>
+	                <img data-u="image" src="../img/slide.png" />
+	            </div> 	
+	            <div>
+	            	<img data-u="image" src="../img/0716_lighting_main_700.jpg" />
+	            </div>
+	            <div>
+	            	<img data-u="image" src="../img/den-trang-tri-phong-sinh-hoat-chung-348.jpg" />
+	            </div>
+	             <div>
+	                <img data-u="image" src="../img/slide2.png" />
+	            </div>
+	            <div>
+	            	<img data-u="image" src="../img/Đèn chùm phòng khách 1.jpg" />
+	            </div> 
+	            <div>
+	            	<img data-u="image" src="../img/customLogo.jfif" />
+	            </div>
+	           
+	        </div>
+	        <!-- Bullet Navigator -->
+	        <div data-u="navigator" class="jssorb032" style="position:absolute;bottom:12px;right:12px;" data-autocenter="1" data-scale="0.5" data-scale-bottom="0.75">
+	            <div data-u="prototype" class="i" style="width:16px;height:16px;">
+	                <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+	                    <circle class="b" cx="8000" cy="8000" r="5800"></circle>
+	                </svg>
+	            </div>
+	        </div>
+	        <!-- Arrow Navigator -->
+	        <div data-u="arrowleft" class="jssora051" style="width:65px;height:65px;top:0px;left:25px;" data-autocenter="2" data-scale="0.75" data-scale-left="0.75">
+	            <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+	                <polyline class="a" points="11040,1920 4960,8000 11040,14080 "></polyline>
+	            </svg>
+	        </div>
+	        <div data-u="arrowright" class="jssora051" style="width:65px;height:65px;top:0px;right:25px;" data-autocenter="2" data-scale="0.75" data-scale-right="0.75">
+	            <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+	                <polyline class="a" points="4960,1920 11040,8000 4960,14080 "></polyline>
+	            </svg>
+	        </div>
+	    </div>
+	</section>
+	
+	<div class="feature-products">
+		<div class="col-xs-12">
+			<div class="container">
+				<section class="section_2">
+					<div class="title text-center">
+                		<h2 class="main_products"><span>NHÓM <b style="color: #005186;">SẢN PHẨM</b> CHÍNH</span></h2>
+           		 	</div>
+				</section>
+
+				<section class="section_3">
+					<div id="product_list"></div>
+				</section>
+			</div>
+		</div>
+	</div>
+
+	<div class="partner">
+		<div class="col-xs-12">
+			<div class="container">
+				<div class="title text-center">
+                	<h2><span>DANH SÁCH <b style="color: #005186;">ĐỐI TÁC</b></span></h2>
+            	</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-xs-12">
+		<div class="container">
+		 	<marquee  id ="partner_list" scrollamount="8" direction="left" loop="50" scrolldelay="1" behavior="alternate" onmouseover="this.stop()" onmouseout="this.start()">
+		 	</marquee> 
+		 </div>
+	</div>
+	<!-- ĐÃ KẾT THÚC THÂN TRANG -->
+	
+	<!-- BẮT ĐẦU FOOTER -->
 	<footer class="col-xs-12">
 			<div class="container">
 				<div class="row">
@@ -375,14 +378,14 @@
 								<div class="top-center">
 									<span class="title">SẢN PHẨM</span>
 									<ul>
-										<li>Đèn LED</li>
-										<li>Đèn LED Smartlighting</li>
-										<li>Đèn bàn học bảo vệ thị lực</li>
-										<li>Bóng đèn Compact</li>
-										<li>Bóng đèn huỳnh quang</li>
-										<li>Đèn nông nghiệp công nghệ cao</li>
-										<li>Bóng đèn sợi đốt</li>
-										<li>Thiết bị chiếu sáng</li>
+										<li>Đèn LED Âm trần</li>
+										<li>Đèn LED Bulp</li>
+										<li>Đèn LED Panel</li>
+										<li>Đèn LED Rời</li>
+										<li>Đèn LED Tuýp</li>
+										<li>Đèn LED Nhà xưởng</li>
+										<li>Đèn LED Xưởng</li>
+										<li>Đèn LED Pha</li>
 									</ul>
 								</div>
 							</div>
@@ -411,18 +414,18 @@
 								<span class="about-us">CÔNG TY CP BÓNG ĐÈN PHÍCH NƯỚC RẠNG ĐÔNG</span>
 								<div class="about-us">
 									<i class="fas fa-home" style="color: #FCAF17"></i>
-									<span>Địa chỉ: Số 90, Phố Hạ Đình, Phường Thanh Xuân Trung, Quận Thanh Xuân, Hà Nội</span>
+									<span>Địa chỉ: 21C Trần Duy Hưng, P. Trung Hoà, Q. Cầu Giấy, Hà Nội, Việt Nam</span>
 								</div>
 								<div class="about-us">
 									<i class="fas fa-phone-square" style="color: #FCAF17"></i>
-									<span>Điện thoại: (84-24) 666 888 / 555 999</span>
+									<span>Điện thoại: (84-24) 8888 6666 / 9999 5555</span>
 								</div>
 								<div class="about-us">
 									<i class="fas fa-envelope" style="color: #FCAF17"></i>
 									<span>Email: thietbichieusang@gmail.com</span>
 								</div>
 							</div>
-							<div class="col-md-4 bottom-center">
+							<div class="col-md-4 col-sm-6 bottom-center">
 								<span class="enterMail"><h4>ĐĂNG KÝ NHẬN EMAIL</h4></span><br>
 								<span class="enterMail">Nhập email để theo dõi tin tức từ Rạng Đông</span><br>
 								<form class="form-inline" role="form">
@@ -446,13 +449,18 @@
 									</a>
 								</div>
 							</div>
-							<div class="col-md-4 bottom-right">
-								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2214.5770853029826!2d105.80347741982574!3d21.01427798557149!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x953e8c1a369cf62a!2zVGjhur8gR2nhu5tpIMSQw6huIExFRCBIw6AgTuG7mWk!5e0!3m2!1svi!2s!4v1544722522666" width="360" height="240" frameborder="0" style="border:0" allowfullscreen></iframe>
+							<div class="col-md-4 col-sm-6 bottom-right">
+								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2214.5770853029826!2d105.80347741982574!3d21.01427798557149!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x953e8c1a369cf62a!2zVGjhur8gR2nhu5tpIMSQw6huIExFRCBIw6AgTuG7mWk!5e0!3m2!1svi!2s!4v1544722522666" frameborder="0" style="border:0" allowfullscreen></iframe>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 	</footer>
+	<script type="text/javascript" src="../vendor/jquery/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="../js/jssor.slider-27.5.0.min.js"></script>
+	<script type="text/javascript" src="../js/data_product.json"></script>
+	<script type="text/javascript" src="../js/data_partner.json"></script>
+	<script type="text/javascript" src="../js/scripts.js"></script>
 </body>
 </html>
