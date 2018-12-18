@@ -1,7 +1,7 @@
 [	// Mảng các sản phẩm : Products
 	{
 		"prod_id"		: 	1,
-		"prod_name"		: 	"Đèn âm trần Philips chiếu điểm chip COB",
+		"prod_name"		: 	"Đèn âm trần Philips chip COB",
 		"prod_brand"	: 	"Philips",
 		"prod_category"	: 	"Đèn âm trần",
 	 	"prod_power"	:  	"12w",
@@ -26,7 +26,8 @@
 [	// Mảng các Danh mục : Categories
 	{
 		"category_id":1,
-		"category_name":"Đèn âm trần"
+		"category_name":"Đèn âm trần",
+		"category_short":"denamtran"	
 	}
 ]
 
