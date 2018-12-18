@@ -105,7 +105,7 @@ jQuery(document).ready(function ($) {
 
 	var html = '';
 	for (var i = 0; i < images.length; i++) {
-	html+='<div class="col-md-6 col-lg-3 col-xs-12">'
+	html+='<div class="col-md-4 col-lg-3 col-xs-6">'
 	html+=    '<div class="product_item text-center">'
 	html+=          '<div class="image">'
 	html+=              '<a href="#">'
