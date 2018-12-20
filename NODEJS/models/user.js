@@ -20,7 +20,7 @@ var userStudent = new Student({
         required: true,
         default: 'user'},
 	dateAdded : { type: Date, default: Date.now },
-})
+});
 
 const User = mongoose.model('User', userStudent);
 autoIncrement.initialize(mongoose.connection);
