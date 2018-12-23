@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Demo</title>
+	<script type="text/javascript" src="../vendor/jquery/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+	<div style="text-align: center;font-size: 40px">List Product</div>
+	<div id="product_list"></div>
+
+
+	<script type="text/javascript">
+		function renderHtml(product){
+			var html = '';
+				for (var i = 0; i < product.length; i++) {
+					html+="<div> product_thumb: "+product[i].prod_galerry[0]+"</div>";
+					html+= '<img width="250" height="250" src="'+product[i].prod_thumb+'"/>'
+				}
+				jQuery("#product_list").append(html);
+		}
+	
+		jQuery(document).ready(function(){
+			jQuery.ajax({
+				url: "/list_Product",
+				method: "GET", 
+				success: function(result){
+					renderHtml(result.data)
+					console.log(result);
+				},
+				error: function(){
+					alert("error")
+				},
+			});
+		});
+	</script>
+</body>
+</html>
+

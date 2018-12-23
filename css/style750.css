@@ -3,6 +3,16 @@
 	.container {
 		width: 750px;
 	}
+
+	.topbar-mobile.hidden-lg.hidden-md {
+	    color: #fff;
+	    line-height: 40px;
+	    background: #005186;
+	    font-size: 15px;
+	}
+	
+
+/* body's QUANG*/
 	.section_1 .style_1{
 	    position:relative;
 	    margin:0 auto;
@@ -23,40 +33,70 @@
 	    height:700px;
 	    overflow:hidden;
 	}
-	.feature-products .container .section_3 .product_item .product_info a{
-	    color: #337ab7;
+	.partner .title {
+	    margin-bottom: 40px;
+	    font-size: 25px;
+	}
+	.feature-products .title {
+	    margin-bottom: 40px;
+	    font-size: 25px;
+	}
+	.feature-products .container .product_item .product_info a{
+	   color: #337ab7;
 	    min-height: 50px;
-	    font-size: 40px;
+	    font-size: 30px;
 	    display: inline-block;
 	    margin: 10px;
 	}
-	.feature-products .container .section_3 .product_item {
+	.feature-products .container .product_item {
 	    border: 3px solid #ddd;
 	    position: relative;
 	    transition: all 0.5s;
 	    cursor: pointer;
-	    height: 620px;
-	    width: 520px;
+	    height: 500px;
+	    width: 355px;
 	    margin: 0 auto;
 	    margin-bottom: 45px;
 	}
-	.feature-products .container .section_3{
-		text-align: center;
-	}
-	.feature-products .container .section_3 .product_item .image .image_product{
-	    width:510px; 
-	    height:450px;
+	
+	.feature-products .container .product_item .image .image_product{
+	    width:348px; 
+	    height:auto;
 	    -webkit-transition: all 0.3s;
 	    -moz-transition: all 0.3s;
 	    -ms-transition: all 0.3s;
 	    -o-transition: all 0.3s;
 	    transition: all 0.3s;
 	}
-	.feature-products .container .section_3 .product_button{
+
+	.feature-products .container .product_button{
 		opacity:1;
 	}
-	.feature-products .container .section_3 .product_item:hover .image .image_product{
-	    width : 500px; 
-	    height : 440px;
+
+
+/* footer's HAI*/
+	footer {
+		height: 880px;
 	}
+	footer .footer-top .information{
+		float: left;
+	}
+	footer .footer-bottom .about-us{
+		float: none;
+	}
+	footer .footer-bottom .bottom-left{
+		float: left;
+	}
+	footer .footer-bottom .bottom-center{
+		float: left;
+	}
+	footer .footer-bottom .bottom-right{
+		float: left;
+		margin-top: 20px;
+	}
+	footer .footer-bottom iframe{
+		width: 100%;
+		height: 200px
+	}
+	
 }

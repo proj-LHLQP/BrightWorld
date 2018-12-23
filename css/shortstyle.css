@@ -1,0 +1,14 @@
+.a-left {
+    text-align: left !important;
+}
+
+.f-left {
+    float: left !important;
+}
+
+.list-inline {
+    padding-left: 0;
+    margin-left: -5px;
+    list-style: none;
+}
+
