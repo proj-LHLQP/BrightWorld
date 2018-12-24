@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thêm sản phẩm</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        .add input:required:focus:invalid{
+            border: 1px solid #ff0000 !important;
+            box-shadow:none !important;
+            background-size: 25px;
+            background-color: #fff;
+
+        }
+        input:focus, .input:active input:active{
+            border-color: #dbdbdb !important;
+            color: #333;
+            box-shadow: none !important;
+            background-url:none;
+            background-color: #fff !important;
+        }
+
+    </style>
+    <script>
+        $('.add').keypress(function() {
+
+            const d = $('input').val().required;
+        });
+    </script>
+</head>
+<body>
+<section class="main">
+    <div class="container">
+        <div class="row">
+            <h2 class="text-center">THÊM MỚI SẢN PHẨM</h2>
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <form class="add"  method="POST" onsubmit="return false;">
+                    <div class="form-group">
+
+                        <label class="col-xs-3" >TÊN SẢN PHẨM</label>
+                        <div class="col-xs-9"><input  class="form-control" type="text" name="id" placeholder="Nhập tên sản phẩm" required/></div><br><br><br>
+
+                        <label class="col-xs-3">The Firm</label>
+                        <div class="col-xs-9">
+                            <select name="Type" class="form-control">
+                                <option value="0">Panasonic</option>
+                                <option value="1">TLC</option>
+                                <option value="2">Elink</option>
+                                <option value="3"> Rạng Đông</option>
+                                <option value="4"> Philips</option>
+                            </select>
+                        </div><br><br><br>
+
+                        <label class="col-xs-3">Price</label>
+                        <div class="col-xs-9"><input  class="form-control" type="text" name="class_id" placeholder="Nhập giá" /></div><br><br><br>
+
+                        <label class="col-xs-3" >Power</label>
+                        <div class="col-xs-9"><input  class="form-control" type="text" name="id"  required/></div><br><br><br>
+
+                        <label class="col-xs-3" >Volt</label>
+                        <div class="col-xs-9"><input  class="form-control" type="text" name="id"  required/></div><br><br><br>
+
+                        <label class="col-xs-3" >Color Temp</label>
+                        <div class="col-xs-9"><input  class="form-control" type="text" name="id" required/></div><br><br><br>
+
+                        <label class="col-xs-3" >Lum Flux</label>
+                        <div class="col-xs-9"><input  class="form-control" type="text" name="id" required/></div><br><br><br>
+
+                        
+
+                        <label class="col-xs-3"> Dimens</label>
+                        <div class="col-xs-9"> <input class="form-control" type="text" name="id" required></div><br><br><br>
+
+                        <label class="col-xs-3"> Advantages</label>
+                        <div class="col-xs-9"> <input class="form-control" type="text" name="id" required></div><br><br><br>
+
+                        
+                    </div>
+                    <button class="btn btn-group-sm" type="submit" id="submit">Add</button>
+                    
+                    <a href="list.html"><input class="btn btn-danger pull-right col-xs-3" type="button" value="Return" ></a>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>
