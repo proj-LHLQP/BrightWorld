@@ -27,10 +27,24 @@
 	    overflow:hidden;
 	}
 	.title_main{
-		font-size: 28px;
+		font-size: 25px;
 	}
-
-
+	.features_item{
+		margin-top: 50px;
+	}
+	.product_menu .btn{
+	    font-size:15px;
+	    font-weight: 600;
+	    border:1px solid;
+	    padding: 1rem 2rem;
+	}
+	.business_item .about_me{
+		padding: 15px 0;
+	    font-size:20px;
+	    font-weight: 600;
+        color: #0066CC;
+        font-family:'Lato', sans-serif;
+	}
 /* footer's HAI*/
 	footer {
 		height: 620px;
@@ -92,6 +106,15 @@
 	    text-align: center;
 	    padding: 4px;
 	    margin: 5px ;
+	}
+	a.cd-top {
+		bottom: 80px;
+   		 right: 5px;
+	}
+
+	.copyright{
+	    padding: 10px 0px;
+	    text-align: center;
 	}
 
 }

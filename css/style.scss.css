@@ -60,9 +60,9 @@ header .nav>li>a:focus,header .nav>li>a:hover {
 	margin-top:6px
 }
 
-.header-content {
+/*.header-content {
 	padding-top:20px
-}
+}*/
 .mini-cart {
 	z-index:10;
 	text-align:center;

@@ -10,12 +10,12 @@
 header.header {
  box-shadow:0px 0px 5px 0px rgba(84,84,84,0.15);
 }
-.header-content {
+/*.header-content {
  padding:20px 0
-}
+}*/
 @media (min-width: 1200px) {
  .header-content {
-  padding:30px 0
+  /*padding:30px 0*/
  }
 }
 .header-content .header-content-search {
@@ -295,7 +295,7 @@ header.header .social-icons a:hover {
 
 header nav {
  padding:0;
- background:#0099ee;
+ background:#005186;
  box-shadow:none
 }
 header nav .nav-menu-main {
