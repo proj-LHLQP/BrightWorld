@@ -64,46 +64,4 @@ jQuery(document).ready(function(){
 	jQuery(window).bind("orientationchange", ScaleSlider);
 	/*#endregion responsive code end*/
 
-
-
-    function renderHtml(product){
-		var html = '';
-		for (var i = 0; i < product.length; i++) {
-			html+='<div class="col-md-6 col-lg-3">'
-			html+=		'<div class="product_item text-center">'
-			html+=    			'<div class="image">'
-			html+=       			 '<a href="#">'
-			html+=           		 '<img width="250" height="250" src="'+product[i].prod_thumb+'"/>'
-			html+=					 '</a>'
-			html+=              '</div>'
-			html+=       '<div class="product_button">'
-			html+=           '<a href="#"> Xem chi tiết</a>'
-			html+=    	 '</div>'
-			html+=       '<div class="product_info">'
-			html+=           '<a href="#">'+product[i].prod_name+'</a>'
-			html+=       '</div>'
-			html+=       '</div>'
-			html+= '</div>'
-		}
-		jQuery("#product_list").append(html);
-	}
-	 jQuery.ajax({
-		url: "/list_Product",
-		method: "GET", 
-		success: function(result){
-			renderHtml(result.data)
-			console.log(result);
-		},
-		error: function(){
-			alert("error")
-		},
-	});
-
-	var html = '';
-	for (var i = 0; i < partner.length; i++) {
-		html+='<a href="Link"><img src='+'"'+partner[i].URL+'"'+'title=""'+ 'width="195"'+ 'height="100"/> </a>'
-	}
-	document.getElementById("partner_list").innerHTML = html;
-
 });
-

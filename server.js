@@ -18,6 +18,8 @@ app.use('/img',express.static('img'));
 app.use('/vendor/bootstrap/css',express.static('vendor/bootstrap/css'));
 app.use('/vendor/jquery',express.static('vendor/jquery'));
 app.use('/fontawesome/css',express.static('fontawesome/css'));
+app.use('/assets',express.static('assets'));
+app.use('/upload',express.static('upload'));
 
 app.listen("3003", function(){
 	console.log("Server đang chạy...");
