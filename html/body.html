@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>demo</title>
+    <style type="text/css">
+        .features_item .f_item_icon{
+    float: left;
+    width:15%;
+    display: inline-block;
+    margin-right: 15px;
+}
+.features_item .f_item_icon i{
+    font-size:4rem;
+    color:#00a885;
+}
+.features_item .f_item_text{
+    display: inline-block;
+    width:75%;
+}
+.features_item .f_item_text p{
+    font-size:14px;
+}
+
+/*Business Section*/
+.main_business{}
+.business_item{}
+.business_item h2{
+    font-size:26px;
+    font-weight: 800;
+}
+.business_item li{
+    font-size:18px;
+    font-weight: 300;
+    line-height: 2rem;
+}
+.business_item li i{
+    font-size:12px;
+    margin-right: 5px;
+
+}
+.business_item p{
+    color:#333333;
+    line-height: 2rem;
+    font-size:14px;
+    font-weight: 500;
+}
+.business_item .business_btn{
+    margin-left:-10px;
+}
+.business_item .business_btn a{
+    margin-left:10px;
+}
+.business_item .business_btn .btn-default{
+    color:#444444;
+}
+
+
+.slid_shap{
+    height: 40px;
+    border-radius: 4px 4px 0px 0px;
+    width:100%;
+}
+.business_slid {
+    box-shadow: 0px 0px 8px -1px;
+    border-radius: 4px 4px 0px 0px;
+}
+
+.business_slid .business_items{
+    background-color: #fff;
+    margin: 0;
+}
+
+.business_slid .slick-arrow{
+    position: absolute;
+    top:29%;
+    z-index: 1;
+    cursor:pointer;
+    width:30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size:20px;
+    transition: all 0.6s;
+    color:#fff;
+}
+.business_slid .nextprevleft{
+    left:5.9%;
+}
+.business_slid .nextprevright{
+    right:6%;
+}
+.business_slid .nextprevleft:hover,
+.business_slid .nextprevright:hover{
+    /*    width:25px;
+        height: 25px;
+        line-height: 25px;*/
+    /*text-align: center;*/
+    background-color: #ddd;
+    border-radius: 50%;
+}
+
+.business_slid .slick-dots {
+    position: absolute;
+    top: -36px;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: left;
+}
+
+
+
+/*
+work Section style
+=====================*/
+
+/*.slides{
+    width:100%;
+    height: auto;
+}*/
+/*#owl-demo .item{
+    width:350px;
+    height:350px;
+}
+#owl-demo .item img{
+    display: block;
+    width: 100%;
+    height: 300px;
+}*/
+
+
+
+.main_product .carousel-control{
+    background-color: #fff;
+    color:#333;
+    border-radius: 50%;
+    width:50px;
+    height: 50px;
+    line-height: 50px;
+    font-size:1rem;
+    text-align: center;
+    top:30%;
+}
+.main_product .carousel-control:hover{
+    background-color: #00a885;
+    color:#fff;
+}
+.main_product .carousel-control.left{
+    left:-1.4%;
+    box-shadow: -1px 0px 0px 0px;
+}
+.main_product .carousel-control.right {
+    right:-1.4%;
+    box-shadow: 1px 0px 0px 0px;
+}
+
+.main_product .port_img{
+    position: relative;
+    overflow: hidden;
+}
+
+.main_product .port_img img{
+    width:100%;
+}
+.main_product .port_overlay{
+    width:100%;
+    height: 100%;
+    background-color: rgba(0,168,133,0.60);
+    position: absolute;
+    left:0;
+    top:0;
+    padding-top: 35%;
+    opacity: 0;
+    transition: all 0.2s;
+}
+.main_product .port_overlay a{
+    width:40px;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 auto;
+    color:#fff;
+    border:1px solid #fff;
+    border-radius: 50%;
+    display: inline-block;
+    font-size:2rem;
+    bottom: -150px;
+    position: relative;
+}
+.main_product .port_img:hover .port_overlay a{
+    bottom:0;
+}
+.main_product .port_img:hover .port_overlay{
+    opacity: 1;
+}
+
+
+
+
+/*Test Section
+======================*/
+.main_test{
+    width: 100%;
+    display: block;
+}
+.test_item{
+    padding: 40px;
+    transition: all 0.6s;
+    border:1px solid transparent;
+}
+.test_item:hover{
+    border:1px solid #ddd;
+    background-color: #fff;
+}
+.test_item:hover .item_img i{
+    color:#fff;
+    background-color: #00a885;
+}
+
+.main_test .item_img{
+    float: left;
+    display: inline-block;
+    width:20%;
+    margin-right: 10%;
+}
+.main_test .item_text{
+    display: inline-block;
+    width:70%;
+}
+.item_img{
+    position: relative;
+}
+.item_img i{
+    background-color: #fff;
+    position: absolute;
+    right: -25%;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: #ddd;
+    border-radius: 50%;
+    box-shadow: 1px 0px 0px 0px #ddd;
+}
+
+    </style>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+
+        <link rel="stylesheet" href="assets/css/slick/slick.css"> 
+        <link rel="stylesheet" href="assets/css/slick/slick-theme.css">
+        <link rel="stylesheet" href="assets/css/animate.css">
+        <link rel="stylesheet" href="assets/css/iconfont.css">
+        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/css/bootstrap.css">
+        <link rel="stylesheet" href="assets/css/magnific-popup.css">
+        <link rel="stylesheet" href="assets/css/bootsnav.css">
+</head>
+<body>
+    <!--Featured Section-->
+<section id="features" class="features">
+    <div class="container">
+        <div class="row">
+            <div class="main_features fix roomy-70">
+                <div class="col-md-4">
+                    <div class="features_item sm-m-top-30">
+                        <div class="f_item_icon">
+                            <i class="fa fa-thumbs-o-up"></i>
+                        </div>
+                        <div class="f_item_text">
+                            <h3>Best Quality Design</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque eleifend
+                                in sit amet mattis volutpat rhoncus.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="features_item sm-m-top-30">
+                        <div class="f_item_icon">
+                            <i class="fa fa-tablet"></i>
+                        </div>
+                        <div class="f_item_text">
+                            <h3>Responsive Design</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque eleifend
+                                in sit amet mattis volutpat rhoncus.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="features_item sm-m-top-30">
+                        <div class="f_item_icon">
+                            <i class="fa fa-sliders"></i>
+                        </div>
+                        <div class="f_item_text">
+                            <h3>Easy to Customize</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque eleifend
+                                in sit amet mattis volutpat rhoncus.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- End off row -->
+    </div><!-- End off container -->
+</section><!-- End off Featured Section-->
+
+
+<!--Business Section-->
+<section id="business" class="business bg-grey roomy-70">
+    <div class="container">
+        <div class="row">
+            <div class="main_business">
+                <div class="col-md-6">
+                    <div class="business_slid">
+                        <div class="slid_shap bg-grey"></div>
+                        <div class="business_items text-center">
+                            <div class="business_item">
+                                <div class="business_img">
+                                    <img src="assets/images/about-img1.jpg" alt="" />
+                                </div>
+                            </div>
+
+                            <div class="business_item">
+                                <div class="business_img">
+                                    <img src="assets/images/about-img1.jpg" alt="" />
+                                </div>
+                            </div>
+
+                            <div class="business_item">
+                                <div class="business_img">
+                                    <img src="assets/images/about-img1.jpg" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="business_item sm-m-top-50">
+                        <h2 class="text-uppercase"><strong>Made</strong> is Template For Business</h2>
+                        <ul>
+                            <li><i class="fa fa-arrow-circle-right"></i> Clean & Modern Design</li>
+                            <li><i class="fa  fa-arrow-circle-right"></i> Fully Responsive</li>
+                            <li><i class="fa  fa-arrow-circle-right"></i> Google Fonts</li>
+                        </ul>
+                        <p class="m-top-20">Lorem ipsum dolor sit amet, consectetur adipiscing elit pellentesque eleifend in mi 
+                            sit amet mattis suspendisse ac ligula volutpat nisl rhoncus sagittis cras suscipit 
+                            lacus quis erat malesuada lobortis eiam dui magna volutpat commodo eget pretium vitae
+                            elit etiam luctus risus urna in malesuada ante convallis.</p>
+
+                        <div class="business_btn">
+                            <a href="" class="btn btn-default m-top-20">Read More</a>
+                            <a href="" class="btn btn-primary m-top-20">Buy Now</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section><!-- End off Business section -->
+
+
+<!--product section-->
+<section id="product" class="product">
+    <div class="container">
+        <div class="main_product roomy-80">
+            <div class="head_title text-center fix">
+                <h2 class="text-uppercase">What Client Say</h2>
+                <h5>Clean and Modern design is our best specialist</h5>
+            </div>
+
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <div class="port_item xs-m-top-30">
+                                        <div class="port_img">
+                                            <img src="assets/images/work-img1.jpg" alt="" />
+                                            <div class="port_overlay text-center">
+                                                <a href="assets/images/work-img1.jpg" class="popup-img">+</a>
+                                            </div>
+                                        </div>
+                                        <div class="port_caption m-top-20">
+                                            <h5>Your Work Title</h5>
+                                            <h6>- Graphic Design</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="port_item xs-m-top-30">
+                                        <div class="port_img">
+                                            <img src="assets/images/work-img2.jpg" alt="" />
+                                            <div class="port_overlay text-center">
+                                                <a href="assets/images/work-img2.jpg" class="popup-img">+</a>
+                                            </div>
+                                        </div>
+                                        <div class="port_caption m-top-20">
+                                            <h5>Your Work Title</h5>
+                                            <h6>- Graphic Design</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="port_item xs-m-top-30">
+                                        <div class="port_img">
+                                            <img src="assets/images/work-img3.jpg" alt="" />
+                                            <div class="port_overlay text-center">
+                                                <a href="assets/images/work-img3.jpg" class="popup-img">+</a>
+                                            </div>
+                                        </div>
+                                        <div class="port_caption m-top-20">
+                                            <h5>Your Work Title</h5>
+                                            <h6>- Graphic Design</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="port_item xs-m-top-30">
+                                        <div class="port_img">
+                                            <img src="assets/images/work-img4.jpg" alt="" />
+                                            <div class="port_overlay text-center">
+                                                <a href="assets/images/work-img4.jpg" class="popup-img">+</a>
+                                            </div>
+                                        </div>
+                                        <div class="port_caption m-top-20">
+                                            <h5>Your Work Title</h5>
+                                            <h6>- Graphic Design</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <div class="port_item xs-m-top-30">
+                                        <div class="port_img">
+                                            <img src="assets/images/work-img1.jpg" alt="" />
+                                            <div class="port_overlay text-center">
+                                                <a href="assets/images/work-img1.jpg" class="popup-img">+</a>
+                                            </div>
+                                        </div>
+                                        <div class="port_caption m-top-20">
+                                            <h5>Your Work Title</h5>
+                                            <h6>- Graphic Design</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="port_item xs-m-top-30">
+                                        <div class="port_img">
+                                            <img src="assets/images/work-img2.jpg" alt="" />
+                                            <div class="port_overlay text-center">
+                                                <a href="assets/images/work-img2.jpg" class="popup-img">+</a>
+                                            </div>
+                                        </div>
+                                        <div class="port_caption m-top-20">
+                                            <h5>Your Work Title</h5>
+                                            <h6>- Graphic Design</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="port_item xs-m-top-30">
+                                        <div class="port_img">
+                                            <img src="assets/images/work-img3.jpg" alt="" />
+                                            <div class="port_overlay text-center">
+                                                <a href="assets/images/work-img3.jpg" class="popup-img">+</a>
+                                            </div>
+                                        </div>
+                                        <div class="port_caption m-top-20">
+                                            <h5>Your Work Title</h5>
+                                            <h6>- Graphic Design</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="port_item xs-m-top-30">
+                                        <div class="port_img">
+                                            <img src="assets/images/work-img4.jpg" alt="" />
+                                            <div class="port_overlay text-center">
+                                                <a href="assets/images/work-img4.jpg" class="popup-img">+</a>
+                                            </div>
+                                        </div>
+                                        <div class="port_caption m-top-20">
+                                            <h5>Your Work Title</h5>
+                                            <h6>- Graphic Design</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <div class="port_item xs-m-top-30">
+                                        <div class="port_img">
+                                            <img src="assets/images/work-img1.jpg" alt="" />
+                                            <div class="port_overlay text-center">
+                                                <a href="assets/images/work-img1.jpg" class="popup-img">+</a>
+                                            </div>
+                                        </div>
+                                        <div class="port_caption m-top-20">
+                                            <h5>Your Work Title</h5>
+                                            <h6>- Graphic Design</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="port_item xs-m-top-30">
+                                        <div class="port_img">
+                                            <img src="assets/images/work-img2.jpg" alt="" />
+                                            <div class="port_overlay text-center">
+                                                <a href="assets/images/work-img2.jpg" class="popup-img">+</a>
+                                            </div>
+                                        </div>
+                                        <div class="port_caption m-top-20">
+                                            <h5>Your Work Title</h5>
+                                            <h6>- Graphic Design</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="port_item xs-m-top-30">
+                                        <div class="port_img">
+                                            <img src="assets/images/work-img3.jpg" alt="" />
+                                            <div class="port_overlay text-center">
+                                                <a href="assets/images/work-img3.jpg" class="popup-img">+</a>
+                                            </div>
+                                        </div>
+                                        <div class="port_caption m-top-20">
+                                            <h5>Your Work Title</h5>
+                                            <h6>- Graphic Design</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="port_item xs-m-top-30">
+                                        <div class="port_img">
+                                            <img src="assets/images/work-img4.jpg" alt="" />
+                                            <div class="port_overlay text-center">
+                                                <a href="assets/images/work-img4.jpg" class="popup-img">+</a>
+                                            </div>
+                                        </div>
+                                        <div class="port_caption m-top-20">
+                                            <h5>Your Work Title</h5>
+                                            <h6>- Graphic Design</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Controls -->
+                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                    <i class="fa fa-angle-left" aria-hidden="true"></i>
+                    <span class="sr-only">Previous</span>
+                </a>
+
+                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div><!-- End off row -->
+    </div><!-- End off container -->
+</section><!-- End off Product section -->
+
+<!--Test section-->
+<section id="test" class="test bg-grey roomy-60 fix">
+    <div class="container">
+        <div class="row">                        
+            <div class="main_test fix">
+
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="head_title text-center fix">
+                        <h2 class="text-uppercase">What Client Say</h2>
+                        <h5>Clean and Modern design is our best specialist</h5>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="test_item fix">
+                        <div class="item_img">
+                            <img class="img-circle" src="assets/images/test-img1.jpg" alt="" />
+                            <i class="fa fa-quote-left"></i>
+                        </div>
+
+                        <div class="item_text">
+                            <h5>Sarah Smith</h5>
+                            <h6>envato.com</h6>
+
+                            <p>Natus voluptatum enim quod necessitatibus quis
+                                expedita harum provident eos obcaecati id culpa
+                                corporis molestias.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="test_item fix sm-m-top-30">
+                        <div class="item_img">
+                            <img class="img-circle" src="assets/images/test-img2.jpg" alt="" />
+                            <i class="fa fa-quote-left"></i>
+                        </div>
+
+                        <div class="item_text">
+                            <h5>Sarah Smith</h5>
+                            <h6>envato.com</h6>
+
+                            <p>Natus voluptatum enim quod necessitatibus quis
+                                expedita harum provident eos obcaecati id culpa
+                                corporis molestias.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section><!-- End off test section -->
+
+
+<!--Featured Section-->
+<section id="features" class="features">
+    <div class="container">
+        <div class="row">
+            <div class="main_features fix roomy-70">
+                <div class="col-md-4">
+                    <div class="features_item sm-m-top-30">
+                        <div class="f_item_icon">
+                            <i class="fa fa-thumbs-o-up"></i>
+                        </div>
+                        <div class="f_item_text">
+                            <h3>Best Quality Design</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque eleifend
+                                in sit amet mattis volutpat rhoncus.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="features_item sm-m-top-30">
+                        <div class="f_item_icon">
+                            <i class="fa fa-tablet"></i>
+                        </div>
+                        <div class="f_item_text">
+                            <h3>Responsive Design</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque eleifend
+                                in sit amet mattis volutpat rhoncus.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="features_item sm-m-top-30">
+                        <div class="f_item_icon">
+                            <i class="fa fa-sliders"></i>
+                        </div>
+                        <div class="f_item_text">
+                            <h3>Easy to Customize</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque eleifend
+                                in sit amet mattis volutpat rhoncus.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- End off row -->
+    </div><!-- End off container -->
+</section><!-- End off Featured Section-->
+
+
+<!--Business Section-->
+<section id="business" class="business bg-grey roomy-70">
+    <div class="container">
+        <div class="row">
+            <div class="main_business">
+                <div class="col-md-6">
+                    <div class="business_slid">
+                        <div class="slid_shap bg-grey"></div>
+                        <div class="business_items text-center">
+                            <div class="business_item">
+                                <div class="business_img">
+                                    <img src="assets/images/about-img1.jpg" alt="" />
+                                </div>
+                            </div>
+
+                            <div class="business_item">
+                                <div class="business_img">
+                                    <img src="assets/images/about-img1.jpg" alt="" />
+                                </div>
+                            </div>
+
+                            <div class="business_item">
+                                <div class="business_img">
+                                    <img src="assets/images/about-img1.jpg" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="business_item sm-m-top-50">
+                        <h2 class="text-uppercase"><strong>Made</strong> is Template For Business</h2>
+                        <ul>
+                            <li><i class="fa fa-arrow-circle-right"></i> Clean & Modern Design</li>
+                            <li><i class="fa  fa-arrow-circle-right"></i> Fully Responsive</li>
+                            <li><i class="fa  fa-arrow-circle-right"></i> Google Fonts</li>
+                        </ul>
+                        <p class="m-top-20">Lorem ipsum dolor sit amet, consectetur adipiscing elit pellentesque eleifend in mi 
+                            sit amet mattis suspendisse ac ligula volutpat nisl rhoncus sagittis cras suscipit 
+                            lacus quis erat malesuada lobortis eiam dui magna volutpat commodo eget pretium vitae
+                            elit etiam luctus risus urna in malesuada ante convallis.</p>
+
+                        <div class="business_btn">
+                            <a href="" class="btn btn-default m-top-20">Read More</a>
+                            <a href="" class="btn btn-primary m-top-20">Buy Now</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section><!-- End off Business section -->
+
+
+<!--product section-->
+<section id="product" class="product">
+    <div class="container">
+        <div class="main_product roomy-80">
+            <div class="head_title text-center fix">
+                <h2 class="text-uppercase">What Client Say</h2>
+                <h5>Clean and Modern design is our best specialist</h5>
+            </div>
+
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <div class="port_item xs-m-top-30">
+                                        <div class="port_img">
+                                            <img src="assets/images/work-img1.jpg" alt="" />
+                                            <div class="port_overlay text-center">
+                                                <a href="assets/images/work-img1.jpg" class="popup-img">+</a>
+                                            </div>
+                                        </div>
+                                        <div class="port_caption m-top-20">
+                                            <h5>Your Work Title</h5>
+                                            <h6>- Graphic Design</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="port_item xs-m-top-30">
+                                        <div class="port_img">
+                                            <img src="assets/images/work-img2.jpg" alt="" />
+                                            <div class="port_overlay text-center">
+                                                <a href="assets/images/work-img2.jpg" class="popup-img">+</a>
+                                            </div>
+                                        </div>
+                                        <div class="port_caption m-top-20">
+                                            <h5>Your Work Title</h5>
+                                            <h6>- Graphic Design</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="port_item xs-m-top-30">
+                                        <div class="port_img">
+                                            <img src="assets/images/work-img3.jpg" alt="" />
+                                            <div class="port_overlay text-center">
+                                                <a href="assets/images/work-img3.jpg" class="popup-img">+</a>
+                                            </div>
+                                        </div>
+                                        <div class="port_caption m-top-20">
+                                            <h5>Your Work Title</h5>
+                                            <h6>- Graphic Design</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="port_item xs-m-top-30">
+                                        <div class="port_img">
+                                            <img src="assets/images/work-img4.jpg" alt="" />
+                                            <div class="port_overlay text-center">
+                                                <a href="assets/images/work-img4.jpg" class="popup-img">+</a>
+                                            </div>
+                                        </div>
+                                        <div class="port_caption m-top-20">
+                                            <h5>Your Work Title</h5>
+                                            <h6>- Graphic Design</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <div class="port_item xs-m-top-30">
+                                        <div class="port_img">
+                                            <img src="assets/images/work-img1.jpg" alt="" />
+                                            <div class="port_overlay text-center">
+                                                <a href="assets/images/work-img1.jpg" class="popup-img">+</a>
+                                            </div>
+                                        </div>
+                                        <div class="port_caption m-top-20">
+                                            <h5>Your Work Title</h5>
+                                            <h6>- Graphic Design</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="port_item xs-m-top-30">
+                                        <div class="port_img">
+                                            <img src="assets/images/work-img2.jpg" alt="" />
+                                            <div class="port_overlay text-center">
+                                                <a href="assets/images/work-img2.jpg" class="popup-img">+</a>
+                                            </div>
+                                        </div>
+                                        <div class="port_caption m-top-20">
+                                            <h5>Your Work Title</h5>
+                                            <h6>- Graphic Design</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="port_item xs-m-top-30">
+                                        <div class="port_img">
+                                            <img src="assets/images/work-img3.jpg" alt="" />
+                                            <div class="port_overlay text-center">
+                                                <a href="assets/images/work-img3.jpg" class="popup-img">+</a>
+                                            </div>
+                                        </div>
+                                        <div class="port_caption m-top-20">
+                                            <h5>Your Work Title</h5>
+                                            <h6>- Graphic Design</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="port_item xs-m-top-30">
+                                        <div class="port_img">
+                                            <img src="assets/images/work-img4.jpg" alt="" />
+                                            <div class="port_overlay text-center">
+                                                <a href="assets/images/work-img4.jpg" class="popup-img">+</a>
+                                            </div>
+                                        </div>
+                                        <div class="port_caption m-top-20">
+                                            <h5>Your Work Title</h5>
+                                            <h6>- Graphic Design</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <div class="port_item xs-m-top-30">
+                                        <div class="port_img">
+                                            <img src="assets/images/work-img1.jpg" alt="" />
+                                            <div class="port_overlay text-center">
+                                                <a href="assets/images/work-img1.jpg" class="popup-img">+</a>
+                                            </div>
+                                        </div>
+                                        <div class="port_caption m-top-20">
+                                            <h5>Your Work Title</h5>
+                                            <h6>- Graphic Design</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="port_item xs-m-top-30">
+                                        <div class="port_img">
+                                            <img src="assets/images/work-img2.jpg" alt="" />
+                                            <div class="port_overlay text-center">
+                                                <a href="assets/images/work-img2.jpg" class="popup-img">+</a>
+                                            </div>
+                                        </div>
+                                        <div class="port_caption m-top-20">
+                                            <h5>Your Work Title</h5>
+                                            <h6>- Graphic Design</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="port_item xs-m-top-30">
+                                        <div class="port_img">
+                                            <img src="assets/images/work-img3.jpg" alt="" />
+                                            <div class="port_overlay text-center">
+                                                <a href="assets/images/work-img3.jpg" class="popup-img">+</a>
+                                            </div>
+                                        </div>
+                                        <div class="port_caption m-top-20">
+                                            <h5>Your Work Title</h5>
+                                            <h6>- Graphic Design</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="port_item xs-m-top-30">
+                                        <div class="port_img">
+                                            <img src="assets/images/work-img4.jpg" alt="" />
+                                            <div class="port_overlay text-center">
+                                                <a href="assets/images/work-img4.jpg" class="popup-img">+</a>
+                                            </div>
+                                        </div>
+                                        <div class="port_caption m-top-20">
+                                            <h5>Your Work Title</h5>
+                                            <h6>- Graphic Design</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Controls -->
+                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                    <i class="fa fa-angle-left" aria-hidden="true"></i>
+                    <span class="sr-only">Previous</span>
+                </a>
+
+                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div><!-- End off row -->
+    </div><!-- End off container -->
+</section><!-- End off Product section -->
+
+<!--Test section-->
+<section id="test" class="test bg-grey roomy-60 fix">
+    <div class="container">
+        <div class="row">                        
+            <div class="main_test fix">
+
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="head_title text-center fix">
+                        <h2 class="text-uppercase">What Client Say</h2>
+                        <h5>Clean and Modern design is our best specialist</h5>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="test_item fix">
+                        <div class="item_img">
+                            <img class="img-circle" src="assets/images/test-img1.jpg" alt="" />
+                            <i class="fa fa-quote-left"></i>
+                        </div>
+
+                        <div class="item_text">
+                            <h5>Sarah Smith</h5>
+                            <h6>envato.com</h6>
+
+                            <p>Natus voluptatum enim quod necessitatibus quis
+                                expedita harum provident eos obcaecati id culpa
+                                corporis molestias.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="test_item fix sm-m-top-30">
+                        <div class="item_img">
+                            <img class="img-circle" src="assets/images/test-img2.jpg" alt="" />
+                            <i class="fa fa-quote-left"></i>
+                        </div>
+
+                        <div class="item_text">
+                            <h5>Sarah Smith</h5>
+                            <h6>envato.com</h6>
+
+                            <p>Natus voluptatum enim quod necessitatibus quis
+                                expedita harum provident eos obcaecati id culpa
+                                corporis molestias.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section><!-- End off test section -->
+
+     <script src="assets/js/vendor/jquery-1.11.2.min.js"></script>
+        <script src="assets/js/vendor/bootstrap.min.js"></script>
+
+        <script src="assets/js/owl.carousel.min.js"></script>
+        <script src="assets/js/jquery.magnific-popup.js"></script>
+        <script src="assets/js/jquery.easing.1.3.js"></script>
+        <script src="assets/css/slick/slick.js"></script>
+        <script src="assets/css/slick/slick.min.js"></script>
+        <script src="assets/js/jquery.collapse.js"></script>
+        <script src="assets/js/bootsnav.js"></script>
+
+
+
+        <script src="assets/js/plugins.js"></script>
+        <script src="assets/js/main.js"></script>
+</body>
+</html>
+
+
