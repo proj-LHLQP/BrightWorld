@@ -38,8 +38,13 @@ header .nav>li>a:focus,header .nav>li>a:hover {
 .header_search .input-group-btn {
 	position:absolute;
 	right:0;
-	top:0;
-	width:45px
+	top:2px;
+	width:45px;
+	margin-right: 5px;
+	color: #fff;
+	padding: 7px 0;
+	background-color:red;
+	border-radius: 3px;
 }
 @media (max-width: 991px) {
 .header_search .input-group-btn {
@@ -60,9 +65,9 @@ header .nav>li>a:focus,header .nav>li>a:hover {
 	margin-top:6px
 }
 
-.header-content {
+/*.header-content {
 	padding-top:20px
-}
+}*/
 .mini-cart {
 	z-index:10;
 	text-align:center;

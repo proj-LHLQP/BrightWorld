@@ -10,12 +10,12 @@
 header.header {
  box-shadow:0px 0px 5px 0px rgba(84,84,84,0.15);
 }
-.header-content {
+/*.header-content {
  padding:20px 0
-}
+}*/
 @media (min-width: 1200px) {
  .header-content {
-  padding:30px 0
+  /*padding:30px 0*/
  }
 }
 .header-content .header-content-search {
@@ -34,7 +34,8 @@ header.header {
 .header-content .header-content-search .header_search .input-group .input-group-field {
  flex-grow:1;
  width:auto;
- background:rgba(0,0,0,0.03)
+ background:rgba(0,0,0,0.03);
+ padding-left:20px;
 }
 .header-content .header-content-search .header_search .input-group .collection-selector {
  position:relative
@@ -172,25 +173,30 @@ header.header .social-icons a:hover {
 }
 
 .header_search .collection-selector {
- display:inline-block;
+ display:inline-block;  
  min-width:100px;
  z-index:99;
  left:0;
- text-align:right
+ text-align:right;
+ background-color:red;
+ color: #fff;
+ border-radius: 3px;
+
 }
 .header_search .search_text {
  height:40px;
- text-align:left;
+ text-align:center;
  line-height:42px;
  cursor:pointer;
  padding:0px 35px 0px 17px;
  width:100%;
- font-size:14px;
+ font-size:15px;
  border-right:1px solid #ebebeb;
  white-space:nowrap;
  overflow:hidden;
  text-overflow:ellipsis;
- position:relative
+ position:relative;
+ font-weight:600;
 }
 /*.header_search .search_text:before {
  display:inline-block;
@@ -295,7 +301,7 @@ header.header .social-icons a:hover {
 
 header nav {
  padding:0;
- background:#0099ee;
+ background:#005186;
  box-shadow:none
 }
 header nav .nav-menu-main {

@@ -13,37 +13,7 @@ jQuery(document).ready(function(){
 		jQuery('.menu-offcanvas').removeClass('open');
 	});
 
-    var html = '';
-	for (var i = 0; i < images.length; i++) {
-		html+='<div class="col-md-6 col-lg-3">'
-		html+=		'<div class="product_item text-center">'
-		html+=    			'<div class="image">'
-		html+=       			 '<a href="#">'
-		html+=           		 '<img width="250" height="250" src="'+images[i].URL+'"/>'
-		html+=					 '</a>'
-		html+=              '</div>'
-		html+=       '<div class="product_button">'
-		html+=           '<a href="#"> Xem chi tiết</a>'
-		html+=    	 '</div>'
-		html+=       '<div class="product_info">'
-		html+=           '<a href="#">'+images[i].Info+'</a>'
-		html+=       '</div>'
-		html+=       '</div>'
-		html+= '</div>'
-	}
-	document.getElementById("product_list").innerHTML = html;
-
-	var html = '';
-	for (var i = 0; i < partner.length; i++) {
-		html+='<a href="Link"><img src='+'"'+partner[i].URL+'"'+'title=""'+ 'width="195"'+ 'height="100"/> </a>'
-	}
-	document.getElementById("partner_list").innerHTML = html;
-
-});
-
-jQuery(document).ready(function ($) {
-
-	var jssor_1_SlideoTransitions = [
+   var jssor_1_SlideoTransitions = [
 		[{b:-1,d:1,o:-0.7}],
 		[{b:900,d:2000,x:-379,e:{x:7}}],
 		[{b:900,d:2000,x:-379,e:{x:7}}],
@@ -92,36 +62,17 @@ jQuery(document).ready(function ($) {
 	jQuery(window).bind("load", ScaleSlider);
 	jQuery(window).bind("resize", ScaleSlider);
 	jQuery(window).bind("orientationchange", ScaleSlider);
-	/*#endregion responsive code end*/
-
-	//partner
-
-	var html = '';
-	for (var i = 0; i < partner.length; i++) {
-		html+='<a href="Link"><img src='+'"'+partner[i].URL+'"'+'title=""'+ 'width="195"'+ 'height="100"/> </a>'
-	}
-	document.getElementById("partner_list").innerHTML = html;
-
-
-	var html = '';
-	for (var i = 0; i < images.length; i++) {
-	html+='<div class="col-md-4 col-lg-3 col-xs-6">'
-	html+=    '<div class="product_item text-center">'
-	html+=          '<div class="image">'
-	html+=              '<a href="#">'
-	html+=                   '<img class="image_product text-center" src="'+images[i].URL+'"/>'
-	html+=              '</a>'
-	html+=           '</div>'
-	html+=           '<div class="product_button">'
-	html+=              '<a href="#"> Xem chi tiết</a>'
-	html+=           '</div>'
-	html+=           '<div class="product_info">'
-	html+=               '<a href="#">'+images[i].Info+'</a>'
-	html+=          '</div>'
-	html+=      '</div>'
-	html+= '</div>'
-	}
-	document.getElementById("product_list").innerHTML = html;
-
+	
+   $(".business_items").slick({
+    dots: true,
+    infinite: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    prevArrow: "<i class='icon icon-chevron-left nextprevleft'></i>",
+    nextArrow: "<i class='icon icon-chevron-right nextprevright'></i>",
+    autoplay: true,
+    autoplaySpeed: 2000
+	});
 
 });
