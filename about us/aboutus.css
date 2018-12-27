@@ -1,0 +1,155 @@
+body{
+font-family: Arial, Helvetica, sans-serif;
+background-color: #f4f6f8;
+
+}
+ul{
+	padding: 0;
+}
+ul,li{
+	list-style: none;
+}
+@font-face {
+  font-family: myFirstFont;
+  src: url(sansation_light.woff);
+}
+.container{
+	width: 100%;
+}
+.background_image{
+
+  background-image: url("background.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #f4f6f8;
+  background-size: cover;
+  height: 468px;
+  position: relative;
+
+}
+.site-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  line-height: 2;
+}
+.our_store{
+	width: 100%;
+	padding: 140px 0;
+	height: 300px;
+}
+.our_store .text{
+	width: 1170px;
+	height: 300px;
+	margin: 0 auto;
+}
+.text .left {
+	width: 30%; 
+	float: left;
+	margin-right: 100px; 
+	line-height: 2
+}
+.text .right{
+	width: 590px;
+	float: right;
+	line-height: 2;
+
+}
+.site_text2{
+	position: absolute;
+	width: 200px;
+
+}
+.mySlider-fade{
+	height: 300px;
+}
+
+
+#contact {
+	background-image: url("picture8.jpg");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	display: inline;
+	float: left;
+	margin-bottom: 100px;
+	padding: 70px 0;
+	width: 100%;
+	height: 480px;
+}
+
+.contact-right{
+	background-color: rgba(104, 102, 96, 0.5);
+	display: inline;
+	float: left;
+	padding: 30px 40px;
+	width: 100%;
+}
+.contact-right h2 {
+	color: #fafafa;
+	font-size: 35px;
+	margin-bottom: 48px;
+	margin-left: 206px;
+}
+.contact-form{
+	float: right;
+	margin-right: 299px;
+	margin-top: -44px;
+}
+.contact-form .form-group input {
+	background: transparent;
+	color: #e1e1e1;
+	font-size: 20px;
+	border: 1px solid #fff;
+	border-radius: 0;
+	height: 60px;
+	width: 450px;
+	margin-bottom: 24px;
+}
+.contact-form .form-group textarea{
+	color: #e1e1e1;
+	background: transparent;
+	border: 1px solid #fff;
+	border-radius: 0;
+	height: 184px;
+	width: 450px;
+}
+.contact-form .form-control:focus {
+    outline: 0;
+    box-shadow: none;    
+} 
+.contact-form .form-control::-webkit-input-placeholder {
+	color: #e2e2e2;
+	font-size: 20px;
+}
+
+.contact-form .form-control:-moz-placeholder { /* Firefox 18- */
+	color: #e2e2e2;
+	font-size: 20px; 
+}
+
+.contact-form .form-control::-moz-placeholder {  /* Firefox 19+ */
+	color: #e2e2e2;
+	font-size: 20px;
+}
+
+.contact-form .form-control:-ms-input-placeholder {  
+	color: #e2e2e2;
+	font-size: 20px;
+}
+.contact-form button {
+	float: right;
+	margin-right: 0;
+	border-radius: 0px;
+	width: 145px;
+	height: 54px;
+	margin-top: 20px;
+
+}
+.contact-form.button-default::after,
+.contact-form .button-default > span {
+	padding: 12px 40px;  
+}
