@@ -1,7 +1,7 @@
 var express = require("express"); 		//cú pháp Node JS gọi module express
 var app = express();					// Tạo đối tượng server
 var bodyParser = require("body-parser"); //Thêm sinh viên
-var multer = require("multer");     //cú pháp Node JS gọi module upload file
+//var multer = require("multer");     //cú pháp Node JS gọi module upload file
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -11,16 +11,50 @@ app.use(bodyParser.json());
 
 
 // Dung de chay cac file tinh html
-app.use(express.static('html'));
-app.use('/css',express.static('css'));
-app.use('/js',express.static('js'));
-app.use('/img',express.static('img'));
-app.use('/vendor/bootstrap/css',express.static('vendor/bootstrap/css'));
-app.use('/vendor/jquery',express.static('vendor/jquery'));
-app.use('/fontawesome/css',express.static('fontawesome/css'));
+app.use(express.static('public'));
+
 
 app.listen("3003", function(){
 	console.log("Server đang chạy...");
+});
+var mongodb = require("mongodb");
+var MongoClient = mongodb.MongoClient;
+var url = 'mongodb://nmquang21:quang123456@ds040948.mlab.com:40948/brightworld';
+
+MongoClient.connect(url, function (err, db) {
+  if (err) {
+    console.log('Unable to connect to the mongoDB server. Error:', err);
+  } else {
+    //HURRAY!! We are connected. :)
+	    console.log('Connected to DB!!!!');
+	    var database = db.db();
+	    var collectionsss = database.collection("Products");
+	    app.get("/list_Products",function(req,res){
+			collectionsss.find().toArray(function (err, result) {
+		      	if (err) {
+		        	res.send({
+		        		status: 0,
+		        		message: "fail"
+		        	});
+		      	} else {
+		        	if(result.length){
+		        		res.send({
+		        			status: 1,
+		        			message:"Success!",
+		        			data: result
+		        		})
+		        	}
+		        	else{
+		        		res.send({
+		        			status: 1,
+		        			message:"Success!",
+		        			data: []
+		        		})
+		        	}
+		      	}
+		    });
+		});
+	}
 });
 // var mongodb = require("mongodb");		//cú pháp Node JS gọi module mongodb
 // var MongoClient = mongodb.MongoClient;
