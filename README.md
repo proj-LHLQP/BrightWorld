@@ -1,2 +1,0 @@
-# BrightWorld
-Store LED

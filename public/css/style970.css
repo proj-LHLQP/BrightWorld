@@ -36,8 +36,8 @@
 		float: left;
 		width: 100%;
 		height: 400px;
-		color: black;
-		background-color: #f2fafb;
+		color: #fff;
+		background-color: #4e4e4e;
 	}
 	
 	footer .footer-bottom{
@@ -81,7 +81,7 @@
 	}
 	footer .social-inline a {
 	    font-size: 20px;
-	    border: 1px solid #006699;
+	    border: 1px solid #fff;
 	    border-radius: 30px;
 	    width: 36px;
 	    height: 36px;

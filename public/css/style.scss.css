@@ -31,8 +31,11 @@ header .nav>li>a:focus,header .nav>li>a:hover {
 	width:auto
 }
 .header_search input {
-	float:right;
+	float:left;
 	background:#eee;
+	width: 100%;
+	line-height: 40px;
+	padding-left: 10px;
 	border:none !important
 }
 .header_search .input-group-btn {
@@ -48,13 +51,14 @@ header .nav>li>a:focus,header .nav>li>a:hover {
 }
 @media (max-width: 991px) {
 .header_search .input-group-btn {
-	background:#eee
+	background:	#FF6600
 }
 }
 .header_search .input-group {
 	width:100%;
 	margin-bottom:0;
-	border:1px solid #ededed
+	border:1px solid #FF6600;
+	border-radius: 3px;
 }
 .header_search button {
 	padding:0;
