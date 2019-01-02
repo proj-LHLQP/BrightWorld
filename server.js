@@ -413,6 +413,130 @@ MongoClient.connect(url, function (err, db) {
 
 
 
+    //Insert one Brand
+     app.post('/insert_brand',  function (req, res) {
+
+       
+        var name = req.body.brand_name;
+        console.log(name);
+        var brand = {
+            brand_name: name
+        };
+        Brands.insert([brand], function (err, result) {
+          if (err) {
+            res.send("error");
+         } else {
+            // res.send('Inserted');
+            res.redirect('admin/brand-list.html');
+          }
+        });
+    }); 
+     //Action delete one Brand
+    app.get('/delete_brand', function(req, res) {
+        var id = req.query.id;
+        MongoClient.connect(url, function(err, db) {
+            if(err) {  console.log(err); throw err;  }
+            data = '';
+            Brands.deleteOne({_id: new mongodb.ObjectID(id)});
+                res.redirect('admin/brand-list.html');
+                db.close();
+        });
+    });
+     //API return one Brand for edit
+    app.get('/edit_brand', function(req, res) {
+        var id = req.query.id;
+        MongoClient.connect(url, function(err, db) {
+            if(err) {  console.log(err); throw err;  }
+            data = '';
+            Brands.find({_id: new mongodb.ObjectID(id)}).toArray(function(err, docs){
+                if(err) throw err;
+                // res.render('edit-product.html', {data: docs});
+                res.send(docs);
+                db.close();
+            });
+        });
+    });
+    //Action Save one Brand
+    app.post('/update_brand', function (req, res) {
+
+        var id = req.body._id;
+        //Khai báo biến nhận về từ body (value input)
+        console.log(id);
+        var name = req.body.brand_name;
+        console.log(name);
+        Brands.updateOne({_id: new mongodb.ObjectID(id)}, {$set: {brand_name: name}},{w:1}, function (err,result) {
+            if (err) throw err;
+        });
+        res.redirect('admin/brand-list.html');
+    });
+    //API return one Category for edit
+    app.get('/edit_cate', function(req, res) {
+        var id = req.query.id;
+        MongoClient.connect(url, function(err, db) {
+            if(err) {  console.log(err); throw err;  }
+            data = '';
+            Categories.find({_id: new mongodb.ObjectID(id)}).toArray(function(err, docs){
+                if(err) throw err;
+                // res.render('edit-product.html', {data: docs});
+                res.send(docs);
+                db.close();
+            });
+        });
+    });
+
+    //Insert one Categories
+     app.post('/insert_cate',  function (req, res) {
+
+       
+        var name = req.body.cate_name;
+        var name_short = req.body.cate_nameshort;
+        console.log(name);
+        var category = {
+            cate_name: name,
+            cate_nameshort:name_short
+        };
+        Categories.insert([category], function (err, result) {
+          if (err) {
+            res.send("error");
+         } else {
+            // res.send('Inserted');
+            res.redirect('admin/categories-list.html');
+          }
+        });
+    }); 
+     //Action delete one Categories
+    app.get('/delete_cate', function(req, res) {
+        var id = req.query.id;
+        console.log(id);
+        MongoClient.connect(url, function(err, db) {
+            if(err) {  console.log(err); throw err;  }
+            data = '';
+            Categories.deleteOne({_id: new mongodb.ObjectID(id)});
+                res.redirect('admin/categories-list.html');
+                db.close();
+        });
+    });
+        //Action Save one Categories
+    app.post('/update_cate',function (req, res) {
+
+        var id = req.body._id;
+        //Khai báo biến nhận về từ body (value input)
+        var name = req.body.cate_name;
+        var name_short = req.body.cate_nameshort;
+        console.log(id);
+        console.log(name);
+        console.log(name_short);
+        
+        Categories.updateOne({_id: new mongodb.ObjectID(id)}, {$set: {cate_name: name,
+                                                                      cate_nameshort: name_short
+                                                                  }},{w:1}, function (err,result) {
+            if (err) throw err;
+        });
+        res.redirect('admin/categories-list.html');
+    });
+
+
+
 
 
   }
