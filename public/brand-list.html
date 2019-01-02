@@ -80,7 +80,7 @@
                     { "data": "_id",
                         "render": function(data, type, row, meta){
                         if(type === 'display'){
-                             data = '<a id="editlink" href="/admin/edit-brand.html?id='+data+'"><i class="far fa-edit"></i></a>&nbsp;&nbsp;<a href="/delete_brand?id='+data+'"><i class="far fa-trash-alt"></i></a>';
+                             data = '<a id="editlink" href="/edit-brand.html?id='+data+'"><i class="far fa-edit"></i></a>&nbsp;&nbsp;<a href="/delete_brand?id='+data+'"><i class="far fa-trash-alt"></i></a>';
                         }
                             return data;
                         },
@@ -388,8 +388,8 @@
                             <ul class="mobile-menu-nav">
                                 <li><a data-toggle="collapse" data-target="#Charts" href="#">Home</a>
                                     <ul class="collapse dropdown-header-top">
-                                        <li><a href="index.html">Dashboard</a></li>
-                                        <li><a href="analytics.html">End-User Page</a></li>
+                                        <li><a href="dashboard.html">Dashboard</a></li>
+                                        <li><a href="index.html">Home Page</a></li>
                                         <li><a href="widgets.html">Widgets</a></li>
                                     </ul>
                                 </li>
@@ -518,12 +518,9 @@
                     <div class="tab-content custom-menu-content">
                         <div id="Home" class="tab-pane active in notika-tab-menu-bg animated flipInX">
                             <ul class="notika-main-menu-dropdown">
-                                <li><a href="index.html">Dashboard</a>
-                                </li>
-                                <li><a href="/">End-User Page</a>
-                                </li>
-                                <li><a href="widgets.html">Widgets</a>
-                                </li>
+                                <li><a href="dashboard.html">Dashboard</a></li>
+                                <li><a href="index.html">Home Page</a></li>
+                                <li><a href="widgets.html">Widgets</a></li>
                             </ul>
                         </div>
                         <div id="mailbox" class="tab-pane notika-tab-menu-bg animated flipInX">

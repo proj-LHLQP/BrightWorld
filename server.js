@@ -427,7 +427,7 @@ MongoClient.connect(url, function (err, db) {
             res.send("error");
          } else {
             // res.send('Inserted');
-            res.redirect('admin/brand-list.html');
+            res.redirect('brand-list.html');
           }
         });
     }); 
@@ -438,7 +438,7 @@ MongoClient.connect(url, function (err, db) {
             if(err) {  console.log(err); throw err;  }
             data = '';
             Brands.deleteOne({_id: new mongodb.ObjectID(id)});
-                res.redirect('admin/brand-list.html');
+                res.redirect('brand-list.html');
                 db.close();
         });
     });
@@ -467,7 +467,7 @@ MongoClient.connect(url, function (err, db) {
         Brands.updateOne({_id: new mongodb.ObjectID(id)}, {$set: {brand_name: name}},{w:1}, function (err,result) {
             if (err) throw err;
         });
-        res.redirect('admin/brand-list.html');
+        res.redirect('brand-list.html');
     });
     //API return one Category for edit
     app.get('/edit_cate', function(req, res) {
@@ -500,7 +500,7 @@ MongoClient.connect(url, function (err, db) {
             res.send("error");
          } else {
             // res.send('Inserted');
-            res.redirect('admin/categories-list.html');
+            res.redirect('categories-list.html');
           }
         });
     }); 
@@ -532,7 +532,7 @@ MongoClient.connect(url, function (err, db) {
                                                                   }},{w:1}, function (err,result) {
             if (err) throw err;
         });
-        res.redirect('admin/categories-list.html');
+        res.redirect('categories-list.html');
     });
 
 
