@@ -141,7 +141,7 @@
                     url: "/edit_prod",
                     data: { id:  id },
                     }).done(function( data ) {
-                    jQuery('#select-brand option[value='+data[0]['prod_brand']+']').attr('selected','selected');
+                    jQuery('#select-brand option[value="'+data[0]['prod_brand']+'"]').attr('selected','selected');
                     jQuery('#select-category option[value="'+data[0]['prod_category']+'"]').attr('selected','selected');
                     jQuery('._id').val(data[0]['_id']);
                     jQuery('.prod_name').val(data[0]['prod_name']);
