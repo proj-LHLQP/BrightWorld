@@ -13,7 +13,27 @@ jQuery(document).ready(function(){
 		jQuery('.menu-offcanvas').removeClass('open');
 	});
 
-   var jssor_1_SlideoTransitions = [
+	var html = '';
+	for (var i = 0; i < images.length; i++) {
+		html+='<div class="col-md-6 col-lg-4">'
+		html+=		'<div class="product_item text-center">'
+		html+=    			'<div class="image">'
+		html+=       			 '<a href="#">'
+		html+=           		 '<img width="250" height="250" src="'+images[i].URL+'"/>'
+		html+=					 '</a>'
+		html+=              '</div>'
+		html+=       '<div class="product_button">'
+		html+=           '<a href="#"> Xem chi tiết</a>'
+		html+=    	 '</div>'
+		html+=       '<div class="product_info">'
+		html+=           '<a href="#">'+images[i].Info+'</a>'
+		html+=       '</div>'
+		html+=       '</div>'
+		html+= '</div>'
+	}
+	document.getElementById("product_list").innerHTML = html;
+
+    var jssor_1_SlideoTransitions = [
 		[{b:-1,d:1,o:-0.7}],
 		[{b:900,d:2000,x:-379,e:{x:7}}],
 		[{b:900,d:2000,x:-379,e:{x:7}}],

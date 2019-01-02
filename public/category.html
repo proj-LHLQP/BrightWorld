@@ -294,26 +294,31 @@
 									</span>
 								</div>
 
-								<div class="woocommerce columns-3">
-									<p class="woocommerce-result-count">Hiển thị 1–15 trong 32 kết quả</p>
-									<form class="woocommerce-ordering" method="get">
-										<select name="orderby" class="orderby">
-											<option value="popularity">Phổ biến nhất</option>
-											<option value="date" selected="selected">Mới nhất</option>
-											<option value="price">Giá thấp đến cao</option>
-											<option value="price-desc">Giá cao xuống thấp</option>
-										</select>
-									</form>
+								<div class="row">
+									<div class="feature-products">
+										<!-- <div class="title text-center">
+						            		<span >NHÓM <b style="color: #005186;">SẢN PHẨM</b> CHÍNH</span>
+						       		 	</div> -->
+										<div id="product_list"></div>
+									</div>
+								</div>
+
+								<!-- <div class="woocommerce columns-3">
 									<ul class="products">
 										<div class="col-md-4">
 											<div class="product_item">
 												<div class="image">
-													
+													<a href="" class="woocommerce_LoopProduct_link"></a>
+												</div>
+												<div class="product_info">
+													<a href="">
+														
+													</a>
 												</div>
 											</div>
 										</div>
 									</ul>
-								</div>
+								</div> -->
 							</div>
 						</div>
 					</div>
@@ -321,74 +326,60 @@
 					<div class="col-md-3">
 						<div class="sidebar">
 							<div class="category">
-								<h3 class="sidebar_title">DANH MỤC SẢN PHẨM</h3>
+								<h3 class="sidebar_title">Categories</h3>
 								<ul class="product_categories">
 									<li class="cat_item">
-										<a href="">Đèn Đường</a>
+										<input class="hidden" type="checkbox" name="size" id="checkbox1">
+										<label for="checkbox1">Led Âm Trần</label>
 									</li>
 									<li class="cat_item">
-										<a href="">Đèn LED Âm Trần</a>
-										<ul class="chidren">
-											<li class="cat_item">
-												<a href="">Đèn LED Âm Trần Cổ Điển</a>
-											</li>
-											<li class="cat_item">
-												<a href="">Đèn LED Âm Trần Chống Chói</a>
-											</li>
-											<li class="cat_item">
-												<a href="">Đèn LED Âm Trần COB</a>
-											</li>
-											<li class="cat_item">
-												<a href="">Đèn LED Âm Trần USA</a>
-											</li>
-										</ul>
+										<input class="hidden" type="checkbox" name="size" id="checkbox2">
+										<label for="checkbox2">Led Bulb</label>
 									</li>
 									<li class="cat_item">
-										<a href="">Đèn LED Âm Trần Khối Đúc</a>
+										<input class="hidden" type="checkbox" name="size" id="checkbox3">
+										<label for="checkbox3">Led Panel</label>
 									</li>
 									<li class="cat_item">
-										<a href="">Đèn LED Âm Trần Mặt Cong</a>
+										<input class="hidden" type="checkbox" name="size" id="checkbox4">
+										<label for="checkbox4">Led Rọi</label>
 									</li>
 									<li class="cat_item">
-										<a href="">Đèn LED Âm Trần Mỏng</a>
+										<input class="hidden" type="checkbox" name="size" id="checkbox5">
+										<label for="checkbox5">Led Tuýp</label>
 									</li>
 									<li class="cat_item">
-										<a href="">Đèn LED Âm Trần Ốp Nổi</a>
+										<input class="hidden" type="checkbox" name="size" id="checkbox6">
+										<label for="checkbox6">Led Nhà Xưởng</label>
 									</li>
 									<li class="cat_item">
-										<a href="">Đèn LED Búp</a>
+										<input class="hidden" type="checkbox" name="size" id="checkbox7">
+										<label for="checkbox7">Led Đường</label>
 									</li>
 									<li class="cat_item">
-										<a href="">Đèn LED Dây</a>
-									</li>
-									<li class="cat_item">
-										<a href="">Đèn LED Ốp Trần Galaxy</a>
-									</li>
-									<li class="cat_item">
-										<a href="">Đèn LED Pha</a>
-									</li>
-									<li class="cat_item">
-										<a href="">Đèn LED Rọi</a>
+										<input class="hidden" type="checkbox" name="size" id="checkbox8">
+										<label for="checkbox8">Led Pha</label>
 									</li>
 								</ul>
-								<h3 class="sidebar_title">SẢN PHẨM NỔI BẬT</h3>
+								<h3 class="sidebar_title">Brands</h3>
 								<ul class="product_list_widget">
 									<li class="widget_product">
-										<a href="">Đèn LED Tấm Plus</a>
+										<a href="">Elink</a>
 									</li>
 									<li class="widget_product">
-										<a href="">Đèn LED Búp Plus</a>
+										<a href="">Panasonic</a>
 									</li>
 									<li class="widget_product">
-										<a href="">Đèn LED Công Nghệ Không Vít</a>
+										<a href="">Philips</a>
 									</li>
 									<li class="widget_product">
-										<a href="">Đèn LED Đường Phố Hình Cá Mập</a>
+										<a href="">Rạng Đông</a>
 									</li>
 									<li class="widget_product">
-										<a href="">Đèn LED Nhà Xưởng Siêu Sáng</a>
+										<a href="">TLC</a>
 									</li>
 								</ul>
+								<h3 class="sidebar_title">Price</h3>
 							</div>
 						</div>
 					</div>
@@ -464,6 +455,7 @@
 	<script type="text/javascript" src="vendor/jquery/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="js/jssor.slider-27.5.0.min.js"></script>
     <script type="text/javascript" src="js/backtotop.js"></script>
+    <script type="text/javascript" src="js/data_product.json"></script>
 	<script type="text/javascript" src="js/scripts.js"></script>
 	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
     <script src="css/slick/slick.js"></script>
