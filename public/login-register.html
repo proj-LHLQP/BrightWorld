@@ -61,58 +61,72 @@
     <div class="login-content">
         <!-- Login -->
         <div class="nk-block toggled" id="l-login">
-            <div class="nk-form">
-                <div class="input-group">
-                    <span class="input-group-addon nk-ic-st-pro"><i class="notika-icon notika-support"></i></span>
-                    <div class="nk-int-st">
-                        <input type="text" class="form-control" placeholder="Username">
+            <form action="/login" method="POST">
+                <div class="nk-form">
+                    <h2>Login</h2>
+                    <div class="input-group">
+                        <span class="input-group-addon nk-ic-st-pro"><i class="notika-icon notika-support"></i></span>
+                        <div class="nk-int-st">
+                            <input type="text" class="form-control" placeholder="Username" name="username">
+                        </div>
                     </div>
-                </div>
-                <div class="input-group mg-t-15">
-                    <span class="input-group-addon nk-ic-st-pro"><i class="notika-icon notika-edit"></i></span>
-                    <div class="nk-int-st">
-                        <input type="password" class="form-control" placeholder="Password">
+                    <div class="input-group mg-t-15">
+                        <span class="input-group-addon nk-ic-st-pro"><i class="notika-icon notika-edit"></i></span>
+                        <div class="nk-int-st">
+                            <input type="password" class="form-control" placeholder="Password" name="password">
+                        </div>
                     </div>
+                    <!-- <div class="fm-checkbox">
+                        <label><input type="checkbox" class="i-checks"> <i></i> Keep me signed in</label>
+                    </div> -->
+                    <button class="btn btn-login btn-success btn-float"><i class="notika-icon notika-right-arrow"></i></button>
+                    <!-- <a href="#l-register" data-ma-action="nk-login-switch" data-ma-block="#l-register" class="btn btn-login btn-success btn-float"><i class="notika-icon notika-right-arrow right-arrow-ant"></i></a> -->
                 </div>
-                <div class="fm-checkbox">
-                    <label><input type="checkbox" class="i-checks"> <i></i> Keep me signed in</label>
-                </div>
-                <button class="btn btn-login btn-success btn-float"><i class="notika-icon notika-right-arrow"></i></button>
-                <!-- <a href="#l-register" data-ma-action="nk-login-switch" data-ma-block="#l-register" class="btn btn-login btn-success btn-float"><i class="notika-icon notika-right-arrow right-arrow-ant"></i></a> -->
-            </div>
 
-            <div class="nk-navigation nk-lg-ic">
-                <a href="#" data-ma-action="nk-login-switch" data-ma-block="#l-register"><i class="notika-icon notika-plus-symbol"></i> <span>Register</span></a>
-                <a href="index.html" ><i><</i> <span>Back</span></a>
-            </div>
+                <div class="nk-navigation nk-lg-ic">
+                    <a href="#" data-ma-action="nk-login-switch" data-ma-block="#l-register"><i class="notika-icon notika-plus-symbol"></i> <span>Register</span></a>
+                    <a href="index.html" ><i><</i> <span>Back</span></a>
+                </div>
+            </form>
         </div>
 
         <!-- Register -->
         <div class="nk-block" id="l-register">
             <div class="nk-form">
-                <div class="input-group">
-                    <span class="input-group-addon nk-ic-st-pro"><i class="notika-icon notika-support"></i></span>
-                    <div class="nk-int-st">
-                        <input type="text" class="form-control" placeholder="Username">
+                <form action="/register" method="POST">
+                    
+                    <h2>Register</h2>
+                    <div class="input-group">
+                        <span class="input-group-addon nk-ic-st-pro"><i class="notika-icon notika-support"></i></span>
+                        <div class="nk-int-st">
+                            <input type="text" class="form-control" placeholder="Username" name="username">
+                        </div>
                     </div>
-                </div>
 
-                <div class="input-group mg-t-15">
-                    <span class="input-group-addon nk-ic-st-pro"><i class="notika-icon notika-mail"></i></span>
-                    <div class="nk-int-st">
-                        <input type="text" class="form-control" placeholder="Email Address">
+                    <div class="input-group mg-t-15">
+                        <span class="input-group-addon nk-ic-st-pro"><i class="notika-icon notika-mail"></i></span>
+                        <div class="nk-int-st">
+                            <input type="text" class="form-control" placeholder="Email Address" name="email">
+                        </div>
                     </div>
-                </div>
 
-                <div class="input-group mg-t-15">
-                    <span class="input-group-addon nk-ic-st-pro"><i class="notika-icon notika-edit"></i></span>
-                    <div class="nk-int-st">
-                        <input type="password" class="form-control" placeholder="Password">
+                    <div class="input-group mg-t-15">
+                        <span class="input-group-addon nk-ic-st-pro"><i class="notika-icon notika-edit"></i></span>
+                        <div class="nk-int-st">
+                            <input type="password" class="form-control" placeholder="Password" name="password">
+                        </div>
                     </div>
-                </div>
 
-                <button class="btn btn-login btn-success btn-float"><i class="notika-icon notika-right-arrow"></i></button>
-                <!-- <a href="#l-login" data-ma-action="nk-login-switch" data-ma-block="#l-login" class="btn btn-login btn-success btn-float"><i class="notika-icon notika-right-arrow"></i></a> -->
+                    <div class="input-group mg-t-15">
+                        <span class="input-group-addon nk-ic-st-pro"><i class="notika-icon notika-edit"></i></span>
+                        <div class="nk-int-st">
+                            <input type="password" class="form-control" placeholder="Retype Password">
+                        </div>
+                    </div>
+
+                    <button class="btn btn-login btn-success btn-float"><i class="notika-icon notika-right-arrow"></i></button>
+                    <!-- <a href="#l-login" data-ma-action="nk-login-switch" data-ma-block="#l-login" class="btn btn-login btn-success btn-float"><i class="notika-icon notika-right-arrow"></i></a> -->
+                </form>
             </div>
 
             <div class="nk-navigation rg-ic-stl">

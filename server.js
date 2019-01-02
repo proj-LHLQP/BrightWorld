@@ -79,7 +79,7 @@ MongoClient.connect(url, function (err, db) {
     var Products = database.collection("Products");
     var Categories = database.collection("Categories");
     var Brands = database.collection("Brands");
-    var Users = database.collection("Users");
+    var User = database.collection("User");
 
     //API lấy tất cả sp
     app.get("/list_products",function(req,res){
@@ -512,11 +512,12 @@ MongoClient.connect(url, function (err, db) {
             if(err) {  console.log(err); throw err;  }
             data = '';
             Categories.deleteOne({_id: new mongodb.ObjectID(id)});
-                res.redirect('admin/categories-list.html');
+                res.redirect('categories-list.html');
                 db.close();
         });
     });
-        //Action Save one Categories
+
+    //Action Save one Categories
     app.post('/update_cate',function (req, res) {
 
         var id = req.body._id;
@@ -536,7 +537,65 @@ MongoClient.connect(url, function (err, db) {
     });
 
 
+    //Action register user
+    app.post('/register',function (req, res) {
 
+        var username = req.body.username;
+        var password = req.body.password;
+        var email = req.body.email;
+        var user = {
+            username : username,
+            password : password,
+            email : email
+        };
+        User.insert([user], function (err, result) {
+          if (err) {
+            res.send("error");
+         } else {
+            // res.send('Inserted');
+            res.redirect('index.html');
+          }
+        });
+
+
+        // User.find({username: username}).toArray(function(err, docs){
+        //     if(err) throw err;
+        //     // res.send(docs);
+        //     console.log(docs);
+        //     var exists = '';
+        //     // console.log(docs[0]);
+        //     // console.log(docs[0].prod_thumb);
+        //     // db.close();
+        //     res.status(200);
+        //     res.redirect('/');
+            
+        // });
+
+    });
+
+    //Action login user
+    app.post('/login',function (req, res) {
+
+        var username = req.body.username;
+        var password = req.body.password;
+        
+        User.find({username : username,password : password}).toArray(function(err, docs){
+            if(err) throw err;
+            // res.render('edit-product.html', {data: docs});
+            console.log(docs.length);
+            // console.log(docs[0].type);
+            // res.send(docs);
+            if (docs.length === 1 && docs[0].type === 1 ) {
+                res.redirect('dashboard.html');
+            } else if (docs.length === 1 && docs[0].type === undefined) {
+                res.redirect('/');
+            } else {
+                res.redirect('login-register.html');
+            }
+        });
+
+
+    });
 
 
   }
