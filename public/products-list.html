@@ -68,7 +68,6 @@
     <script type="text/javascript">
         jQuery(document).ready( function () {
             jQuery('#data-table-basic').DataTable( {
-
                     "ajax": {
                         "dataType": 'json',
                         "contentType": "application/json; charset=utf-8",
@@ -94,7 +93,7 @@
                         { "data": "_id",
                           "render": function(data, type, row, meta){
                             if(type === 'display'){
-                                data = '<a id="editlink" href="/edit-product.html?id='+data+'"><i class="far fa-edit" style="color:#00C292"></i></a>&nbsp;&nbsp;<a href="/delete_prod?id='+data+'"><i class="far fa-trash-alt" style="color:#00C292"></i></a>';
+                                data = '<a id="editlink" href="/edit-product.html?id='+data+'"><i class="far fa-edit" style="color:#00C292"></i></a>&nbsp;&nbsp;<a href="/delete_prod?id='+data+'" onclick="return confirm()"><i class="far fa-trash-alt" style="color:#00C292"></i></a>';
                             }
                                 return data;
                             },
@@ -114,6 +113,7 @@
 
         
                 } );
+
 
         } );
     </script>
