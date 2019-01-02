@@ -1,0 +1,81 @@
+@media only screen and (max-width: 991px) and (min-width: 768px){
+	
+	.container {
+		width: 750px;
+	}
+
+	.topbar-mobile.hidden-lg.hidden-md {
+	    color: #fff;
+	    line-height: 40px;
+	    background: #005186;
+	    font-size: 15px;
+	}
+	.section_1 .style_1{
+	    position:relative;
+	    margin:0 auto;
+	    top:0px;
+	    left:0px;
+	    width:1300px;
+	    height:700px;
+	    overflow:hidden;
+	    visibility:hidden;
+	}
+
+	.section_1 .style_1 .style_2{
+	    cursor:default;
+	    position:relative;
+	    top:0px;
+	    left:0px;
+	    width:1300px;
+	    height:750px;
+	    overflow:hidden;
+	}
+	.features_item{
+		margin-top: 60px;
+	}
+	.product_menu .title_main {
+		margin-bottom: 0;
+	}
+	.business_item .about_me{
+	    font-size:20px;
+	    font-weight: 600;
+	}
+	.business_item .about_me{
+		padding: 15px 0;
+	    font-size:25px;
+	    font-weight: 600;
+        color: #0066CC;
+        font-family:'Lato', sans-serif;
+	}
+
+/* body's QUANG*/
+	
+
+/* footer's HAI*/
+	footer {
+		height: 650px;
+	}
+	footer .footer-bottom .about-us{
+		float: none;
+	}
+	footer .footer-bottom .bottom-left{
+		float: left;
+	}
+	footer .footer-bottom .bottom-center{
+		float: left;
+	}
+	footer .footer-bottom .bottom-right{
+		float: left;
+		margin-top: 20px;
+	}
+	footer .footer-bottom iframe{
+		width: 100%;
+		height: 200px
+	}
+	.new_product{
+		width:178px;
+		height: auto;
+		margin: 0 auto;
+	}
+	
+}
