@@ -32,7 +32,9 @@ jQuery(document).ready(function(){
 		html+= '</div>'
 	}
 	document.getElementById("product_list").innerHTML = html;
+});
 
+jQuery(document).ready(function ($) {
     var jssor_1_SlideoTransitions = [
 		[{b:-1,d:1,o:-0.7}],
 		[{b:900,d:2000,x:-379,e:{x:7}}],
