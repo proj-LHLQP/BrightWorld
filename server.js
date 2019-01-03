@@ -598,7 +598,7 @@ MongoClient.connect(url, function (err, db) {
     });
 
 
-    //API lọc giá, brand, loại sp
+    //API and Action lọc giá, brand, loại sp
     app.post("/action_filter_prod",function(req,res){
          var query = {};
          var ft_price = {};
@@ -626,6 +626,47 @@ MongoClient.connect(url, function (err, db) {
          }
 
         Products.find(query).toArray(function (err, result) {
+            if (err) {
+                res.send({
+                    status: 0,
+                    message:"fail",
+                });
+                console.log(err)
+            }else {
+                if(result.length){
+                    res.send({
+                        // status:1,
+                        // message: 'success',
+                        data: result    
+                    });
+                // console.log(result);
+                }else{
+                    res.send({
+                        // status:1,
+                        // message: 'success',
+                        data: []    
+                    });
+                }
+            }           
+        });
+
+    });
+
+
+
+    //API and Action check tồn tại user
+    app.post("/check_user_exists",function(req,res){
+         var query = {};
+         var username = req.body.username;
+         // var password = req.body.password;
+         // var fullname = req.body.fullname;
+         
+        query.username = username;
+        // query.prod_category=category;
+        // query.fullname=fullname;
+
+
+        User.find(query).toArray(function (err, result) {
             if (err) {
                 res.send({
                     status: 0,
