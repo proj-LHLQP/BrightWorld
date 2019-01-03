@@ -224,7 +224,7 @@ MongoClient.connect(url, function (err, db) {
         var colortemp = req.body.prod_colortemp;
         var lum_flux = req.body.prod_lum_flux;
         var dimens = req.body.prod_dimens;
-        var price = req.body.prod_price;
+        var price = parseInt(req.body.prod_price);
         var thumb = "/upload/"+originalFileName;
         var gallery = strArray;
         var desc = req.body.prod_desc;
@@ -354,7 +354,7 @@ MongoClient.connect(url, function (err, db) {
             var colortemp = req.body.prod_colortemp;
             var lum_flux = req.body.prod_lum_flux;
             var dimens = req.body.prod_dimens;
-            var price = req.body.prod_price;
+            var price = parseInt(req.body.prod_price);
             var thumb = "/upload/"+originalFileName;
             var gallery = strArray;
             var desc = req.body.prod_desc;
@@ -596,6 +596,76 @@ MongoClient.connect(url, function (err, db) {
 
 
     });
+
+
+    //API lọc giá, brand, loại sp
+
+    // {prod_brand:"Philips",prod_category:"LED Pha", prod_price: { $lt: 500000}}
+
+    app.get("/action_filter_prod",function(req,res){
+         // var query = '{';
+         var brand = req.query.brand;
+         var category = req.query.category;
+         var from_price = parseInt(req.query.from_price);
+         var to_price = parseInt(req.query.to_price);
+
+
+         console.log(from_price!=NaN);
+         console.log(to_price!=NaN);
+
+         // console.log(category == "");
+         // console.log(query);
+         
+         // if (brand != "") {
+         //    query += "prod_brand:" + brand + ",";
+         // }
+         
+         // console.log(query);
+         // if (category != "") {
+         //    query += "prod_category:" + category + ",";
+         // }
+         // console.log(query);
+         // if (from_price != "") {
+         //    query += "prod_price: { $gt:"+ from_price + "},";
+         // }
+         // console.log(query);
+         // if (to_price != "") {
+         //    query += "prod_price: { $lt:"+ to_price + "},";
+         // }
+         // query += "}";
+         // console.log(query);
+
+
+
+
+        // Products.find(query).toArray(function (err, result) {
+        //     if (err) {
+        //         res.send({
+        //             status: 0,
+        //             message:"fail",
+        //         });
+        //         console.log(err)
+        //     }else {
+        //         if(result.length){
+        //             res.send({
+        //                 // status:1,
+        //                 // message: 'success',
+        //                 data: result    
+        //             });
+        //         console.log(result);
+        //         }else{
+        //             res.send({
+        //                 // status:1,
+        //                 // message: 'success',
+        //                 data: []    
+        //             });
+        //         }
+        //     }           
+        // });
+
+    });
+
+
 
 
   }
