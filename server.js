@@ -599,69 +599,56 @@ MongoClient.connect(url, function (err, db) {
 
 
     //API lọc giá, brand, loại sp
-
-    // {prod_brand:"Philips",prod_category:"LED Pha", prod_price: { $lt: 500000}}
-
-    app.get("/action_filter_prod",function(req,res){
-         // var query = '{';
-         var brand = req.query.brand;
-         var category = req.query.category;
-         var from_price = parseInt(req.query.from_price);
-         var to_price = parseInt(req.query.to_price);
-
-
-         console.log(from_price!=NaN);
-         console.log(to_price!=NaN);
-
-         // console.log(category == "");
-         // console.log(query);
+    app.post("/action_filter_prod",function(req,res){
+         var query = {};
+         var ft_price = {};
+         var brand = req.body.brand;
+         var category = req.body.category;
+         var from_price = parseInt(req.body.from_price);
+         var to_price = parseInt(req.body.to_price);
          
-         // if (brand != "") {
-         //    query += "prod_brand:" + brand + ",";
-         // }
+         if (brand != "") {
+            query.prod_brand = brand;
+         }
          
-         // console.log(query);
-         // if (category != "") {
-         //    query += "prod_category:" + category + ",";
-         // }
-         // console.log(query);
-         // if (from_price != "") {
-         //    query += "prod_price: { $gt:"+ from_price + "},";
-         // }
-         // console.log(query);
-         // if (to_price != "") {
-         //    query += "prod_price: { $lt:"+ to_price + "},";
-         // }
-         // query += "}";
-         // console.log(query);
+         if (category != "") {
+            query.prod_category=category;
+         }
 
+         if (isNaN(from_price) == false) {
+            ft_price.$gt = from_price;
+            query.prod_price = ft_price;
+         }
 
+         if (isNaN(to_price) == false) {
+            ft_price.$lt = to_price;
+            query.prod_price = ft_price;
+         }
 
-
-        // Products.find(query).toArray(function (err, result) {
-        //     if (err) {
-        //         res.send({
-        //             status: 0,
-        //             message:"fail",
-        //         });
-        //         console.log(err)
-        //     }else {
-        //         if(result.length){
-        //             res.send({
-        //                 // status:1,
-        //                 // message: 'success',
-        //                 data: result    
-        //             });
-        //         console.log(result);
-        //         }else{
-        //             res.send({
-        //                 // status:1,
-        //                 // message: 'success',
-        //                 data: []    
-        //             });
-        //         }
-        //     }           
-        // });
+        Products.find(query).toArray(function (err, result) {
+            if (err) {
+                res.send({
+                    status: 0,
+                    message:"fail",
+                });
+                console.log(err)
+            }else {
+                if(result.length){
+                    res.send({
+                        // status:1,
+                        // message: 'success',
+                        data: result    
+                    });
+                // console.log(result);
+                }else{
+                    res.send({
+                        // status:1,
+                        // message: 'success',
+                        data: []    
+                    });
+                }
+            }           
+        });
 
     });
 
