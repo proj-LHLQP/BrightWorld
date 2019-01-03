@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>demo_new_product</title>
+</head>
+<body>
+	<div style="text-align: center;"><h2>List</h2></div>
+	<!-- <div id="list"></div> -->
+	<div id="list2"></div>
+
+	<script type="text/javascript" src="vendor/jquery/jquery-3.3.1.min.js"></script>
+	<!-- <script type="text/javascript">
+		jQuery(document).ready(function(){
+			jQuery.ajax({
+				url: '/new_products',
+				method: "GET",
+				success: function(result){
+					var xyz ='';
+					var product = result.data;
+					//console.log(students);
+					xyz+='<div class="carousel-inner" role="listbox">'
+		                   xyz+='<div class="item active">'
+		                        xyz+='<div class="container">'
+		                            xyz+='<div class="row">'
+		                                xyz+='<div class="col-sm-3">'
+		                                    xyz+='<div class="port_item xs-m-top-30">'
+		                                        xyz+='<div class="port_img">'
+		                                            xyz+='<div class="new_product">'
+		                                            	xyz+='<a href="">'+'<img class="new_product_img" src="'+product[0].prod_thumb+'" ></a>'
+		                                            xyz+='</div>'   
+		                                        xyz+='</div>'
+		                                        xyz+='<div class="port_caption m-top-20 text-center">'
+		                                            xyz+='<h5><a style="cursor: pointer;">'+product[0].prod_name+'</a></h5>'
+		                                            xyz+='<h6 style="color: red">'+'Giá:'+ product[0].prod_price+'đ'+'</h6>'
+		                                        xyz+='</div>'
+		                                    xyz+='</div>'
+		                                xyz+='</div>'
+
+		                                 xyz+='<div class="col-sm-3">'
+		                                    xyz+='<div class="port_item xs-m-top-30">'
+		                                        xyz+='<div class="port_img">'
+		                                            xyz+='<div class="new_product">'
+		                                            	xyz+='<a href="">'+'<img class="new_product_img" src="'+product[1].prod_thumb+'" ></a>'
+		                                            xyz+='</div>'   
+		                                        xyz+='</div>'
+		                                        xyz+='<div class="port_caption m-top-20 text-center">'
+		                                            xyz+='<h5><a style="cursor: pointer;">'+product[1].prod_name+'</a></h5>'
+		                                            xyz+='<h6 style="color: red">'+'Giá:'+ product[1].prod_price+'đ'+'</h6>'
+		                                        xyz+='</div>'
+		                                    xyz+='</div>'
+		                                xyz+='</div>'
+		                                 xyz+='<div class="col-sm-3">'
+		                                    xyz+='<div class="port_item xs-m-top-30">'
+		                                        xyz+='<div class="port_img">'
+		                                            xyz+='<div class="new_product">'
+		                                            	xyz+='<a href="">'+'<img class="new_product_img" src="'+product[2].prod_thumb+'" ></a>'
+		                                            xyz+='</div>'   
+		                                        xyz+='</div>'
+		                                        xyz+='<div class="port_caption m-top-20 text-center">'
+		                                            xyz+='<h5><a style="cursor: pointer;">'+product[2].prod_name+'</a></h5>'
+		                                            xyz+='<h6 style="color: red">'+'Giá:'+ product[2].prod_price+'đ'+'</h6>'
+		                                        xyz+='</div>'
+		                                    xyz+='</div>'
+		                                xyz+='</div>'
+		                                xyz+='<div class="col-sm-3">'
+		                                    xyz+='<div class="port_item xs-m-top-30">'
+		                                        xyz+='<div class="port_img">'
+		                                            xyz+='<div class="new_product">'
+		                                            	xyz+='<a href="">'+'<img class="new_product_img" src="'+product[3].prod_thumb+'" ></a>'
+		                                            xyz+='</div>'   
+		                                        xyz+='</div>'
+		                                        xyz+='<div class="port_caption m-top-20 text-center">'
+		                                            xyz+='<h5><a style="cursor: pointer;">'+product[3].prod_name+'</a></h5>'
+		                                            xyz+='<h6 style="color: red">'+'Giá:'+ product[3].prod_price+'đ'+'</h6>'
+		                                        xyz+='</div>'
+		                                    xyz+='</div>'
+		                                xyz+='</div>'
+		                            xyz+='</div>'
+		                        xyz+='</div>'
+		                    xyz+='</div>'
+
+		                    xyz+='<div class="item">'
+		                        xyz+='<div class="container">'
+		                            xyz+='<div class="row">'
+		                                xyz+='<div class="col-sm-3">'
+		                                    xyz+='<div class="port_item xs-m-top-30">'
+		                                        xyz+='<div class="port_img">'
+		                                            xyz+='<div class="new_product">'
+		                                            	xyz+='<a href="">'+'<img class="new_product_img" src="'+product[4].prod_thumb+'" ></a>'
+		                                            xyz+='</div>'   
+		                                        xyz+='</div>'
+		                                        xyz+='<div class="port_caption m-top-20 text-center">'
+		                                            xyz+='<h5><a style="cursor: pointer;">'+product[4].prod_name+'</a></h5>'
+		                                            xyz+='<h6 style="color: red">'+'Giá:'+ product[4].prod_price+'đ'+'</h6>'
+		                                        xyz+='</div>'
+		                                    xyz+='</div>'
+		                                xyz+='</div>'
+		                                xyz+='<div class="col-sm-3">'
+		                                    xyz+='<div class="port_item xs-m-top-30">'
+		                                        xyz+='<div class="port_img">'
+		                                            xyz+='<div class="new_product">'
+		                                            	xyz+='<a href="">'+'<img class="new_product_img" src="'+product[5].prod_thumb+'" ></a>'
+		                                            xyz+='</div>'   
+		                                        xyz+='</div>'
+		                                        xyz+='<div class="port_caption m-top-20 text-center">'
+		                                            xyz+='<h5><a style="cursor: pointer;">'+product[5].prod_name+'</a></h5>'
+		                                            xyz+='<h6 style="color: red">'+'Giá:'+ product[5].prod_price+'đ'+'</h6>'
+		                                        xyz+='</div>'
+		                                    xyz+='</div>'
+		                                xyz+='</div>'
+		                                xyz+='<div class="col-sm-3">'
+		                                    xyz+='<div class="port_item xs-m-top-30">'
+		                                        xyz+='<div class="port_img">'
+		                                            xyz+='<div class="new_product">'
+		                                            	xyz+='<a href="">'+'<img class="new_product_img" src="'+product[6].prod_thumb+'" ></a>'
+		                                            xyz+='</div>'   
+		                                        xyz+='</div>'
+		                                        xyz+='<div class="port_caption m-top-20 text-center">'
+		                                            xyz+='<h5><a style="cursor: pointer;">'+product[6].prod_name+'</a></h5>'
+		                                            xyz+='<h6 style="color: red">'+'Giá:'+ product[6].prod_price+'đ'+'</h6>'
+		                                        xyz+='</div>'
+		                                    xyz+='</div>'
+		                                xyz+='</div>'
+		                                xyz+='<div class="col-sm-3">'
+		                                    xyz+='<div class="port_item xs-m-top-30">'
+		                                        xyz+='<div class="port_img">'
+		                                            xyz+='<div class="new_product">'
+		                                            	xyz+='<a href="">'+'<img class="new_product_img" src="'+product[7].prod_thumb+'" ></a>'
+		                                            xyz+='</div>'   
+		                                        xyz+='</div>'
+		                                        xyz+='<div class="port_caption m-top-20 text-center">'
+		                                            xyz+='<h5><a style="cursor: pointer;">'+product[7].prod_name+'</a></h5>'
+		                                            xyz+='<h6 style="color: red">'+'Giá:'+ product[7].prod_price+'đ'+'</h6>'
+		                                        xyz+='</div>'
+		                                    xyz+='</div>'
+		                                xyz+='</div>'
+		                            xyz+='</div>'
+		                        xyz+='</div>'
+		                    xyz+='</div>'
+
+		                     xyz+='<div class="item">'
+		                        xyz+='<div class="container">'
+		                            xyz+='<div class="row">'
+		                                xyz+='<div class="col-sm-3">'
+		                                    xyz+='<div class="port_item xs-m-top-30">'
+		                                        xyz+='<div class="port_img">'
+		                                            xyz+='<div class="new_product">'
+		                                            	xyz+='<a href="">'+'<img class="new_product_img" src="'+product[8].prod_thumb+'" ></a>'
+		                                            xyz+='</div>'   
+		                                        xyz+='</div>'
+		                                        xyz+='<div class="port_caption m-top-20 text-center">'
+		                                            xyz+='<h5><a style="cursor: pointer;">'+product[8].prod_name+'</a></h5>'
+		                                            xyz+='<h6 style="color: red">'+'Giá:'+ product[8].prod_price+'đ'+'</h6>'
+		                                        xyz+='</div>'
+		                                    xyz+='</div>'
+		                                xyz+='</div>'
+		                                xyz+='<div class="col-sm-3">'
+		                                    xyz+='<div class="port_item xs-m-top-30">'
+		                                        xyz+='<div class="port_img">'
+		                                            xyz+='<div class="new_product">'
+		                                            	xyz+='<a href="">'+'<img class="new_product_img" src="'+product[9].prod_thumb+'" ></a>'
+		                                            xyz+='</div>'   
+		                                        xyz+='</div>'
+		                                        xyz+='<div class="port_caption m-top-20 text-center">'
+		                                            xyz+='<h5><a style="cursor: pointer;">'+product[9].prod_name+'</a></h5>'
+		                                            xyz+='<h6 style="color: red">'+'Giá:'+ product[9].prod_price+'đ'+'</h6>'
+		                                        xyz+='</div>'
+		                                    xyz+='</div>'
+		                                xyz+='</div>'
+		                                xyz+='<div class="col-sm-3">'
+		                                    xyz+='<div class="port_item xs-m-top-30">'
+		                                        xyz+='<div class="port_img">'
+		                                            xyz+='<div class="new_product">'
+		                                            	xyz+='<a href="">'+'<img class="new_product_img" src="'+product[10].prod_thumb+'" ></a>'
+		                                            xyz+='</div>'   
+		                                        xyz+='</div>'
+		                                        xyz+='<div class="port_caption m-top-20 text-center">'
+		                                            xyz+='<h5><a style="cursor: pointer;">'+product[10].prod_name+'</a></h5>'
+		                                            xyz+='<h6 style="color: red">'+'Giá:'+ product[10].prod_price+'đ'+'</h6>'
+		                                        xyz+='</div>'
+		                                    xyz+='</div>'
+		                                xyz+='</div>'
+		                                xyz+='<div class="col-sm-3">'
+		                                    xyz+='<div class="port_item xs-m-top-30">'
+		                                        xyz+='<div class="port_img">'
+		                                            xyz+='<div class="new_product">'
+		                                            	xyz+='<a href="">'+'<img class="new_product_img" src="'+product[11].prod_thumb+'" ></a>'
+		                                            xyz+='</div>'   
+		                                        xyz+='</div>'
+		                                        xyz+='<div class="port_caption m-top-20 text-center">'
+		                                            xyz+='<h5><a style="cursor: pointer;">'+product[11].prod_name+'</a></h5>'
+		                                            xyz+='<h6 style="color: red">'+'Giá:'+ product[11].prod_price+'đ'+'</h6>'
+		                                        xyz+='</div>'
+		                                    xyz+='</div>'
+		                                xyz+='</div>'
+		                            xyz+='</div>'
+		                        xyz+='</div>'
+		                    xyz+='</div>'
+
+		                xyz+='</div>'
+					jQuery("#list").append(xyz);	
+				}
+			});
+		});
+	</script> -->
+	<script type="text/javascript">
+		jQuery(document).ready(function(){
+			jQuery.ajax({
+				url: '/comments',
+				method: "GET",
+				success: function(result){
+					var xyz ='';
+					var comment = result.data;
+					console.log(comment);
+					for(var i=0; i<comment.length; i++){
+						xyz+='<div class="col-md-6">';
+		                xyz+='<div class="test_item fix">';
+                        xyz+='<div class="item_img">';
+                        xyz+='<img class="img-circle" src="'+comment[i].avatar+'" alt="" />';
+                        xyz+='<i class="fa fa-quote-left"></i>';
+                        xyz+='</div>';
+
+                        xyz+='<div class="item_text">';
+                        xyz+='<h5>'+comment[i].name+'</h5>';
+                        xyz+='<h6>'+comment[i].email+'</h6>';
+
+                        xyz+='<p style="text-align: justify;"><i>'+comment[i].comment_info+'</i></p>';
+                        xyz+='</div>';
+	                    xyz+='</div>';
+		                xyz+='</div>';
+		            }
+					jQuery("#list2").append(xyz);	
+				}
+			});
+		});
+	</script>
+</body>
+</html>

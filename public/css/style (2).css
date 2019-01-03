@@ -840,8 +840,8 @@ form.cart{
 }
 .homenews li img {
     float: left;
-    width: 100px;
-    height: 60px;
+    width: 40%;
+    height: auto;
     margin-right: 10px;
 }
 
