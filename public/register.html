@@ -69,19 +69,21 @@
                     url : post_url,
                     type: request_method,
                     data : form_data
-                }).done(function(response){ //
-                    console.log(response.data[0]);
-                    console.log(response.data.length);
-                    if (response.data.length != 0) {
-                        $(".username").val("User đã tồn tại!").css("color","red");
-                        $(".username").focus(function(){
-                            $(".username").val("");
-                        }); 
+                }).done(function(response){ 
+                    console.log(typeof response.data[0] != "undefined");
+                    if (typeof response.data[0] != "undefined") {
+                        jQuery("#message").html("* User is exists, please choose other user!");
                     } else {
-                        alert("Đăng ký thành công!");
+                       jQuery('#my_form').attr('action', '/register');
+                       jQuery('#btn-register').click();
+                       jQuery("#message").html("* Register Success! Please login!");
                     }
                         
                 });
+            });
+
+            jQuery("input").focus(function(){
+                jQuery("#message").html("");
             });
 
 
@@ -129,6 +131,7 @@
                             <input type="password" class="form-control" placeholder="Retype Password">
                         </div>
                     </div>
+                    <br><div id="message" style="color: red"></div>
 
                     <button class="btn btn-login btn-success btn-float"><i class="notika-icon notika-right-arrow"></i></button>
                     <!-- <a href="#l-login" data-ma-action="nk-login-switch" data-ma-block="#l-login" class="btn btn-login btn-success btn-float"><i class="notika-icon notika-right-arrow"></i></a> -->
