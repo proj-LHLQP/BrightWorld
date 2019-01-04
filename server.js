@@ -224,7 +224,7 @@ MongoClient.connect(url, function (err, db) {
         var colortemp = req.body.prod_colortemp;
         var lum_flux = req.body.prod_lum_flux;
         var dimens = req.body.prod_dimens;
-        var price = req.body.prod_price;
+        var price = parseInt(req.body.prod_price);
         var thumb = "/upload/"+originalFileName;
         var gallery = strArray;
         var desc = req.body.prod_desc;
@@ -354,7 +354,7 @@ MongoClient.connect(url, function (err, db) {
             var colortemp = req.body.prod_colortemp;
             var lum_flux = req.body.prod_lum_flux;
             var dimens = req.body.prod_dimens;
-            var price = req.body.prod_price;
+            var price = parseInt(req.body.prod_price);
             var thumb = "/upload/"+originalFileName;
             var gallery = strArray;
             var desc = req.body.prod_desc;
@@ -596,6 +596,104 @@ MongoClient.connect(url, function (err, db) {
 
 
     });
+
+
+    //API and Action lọc giá, brand, loại sp
+    app.post("/action_filter_prod",function(req,res){
+         var query = {};
+         var ft_price = {};
+         var brand = req.body.brand;
+         var category = req.body.category;
+         var from_price = parseInt(req.body.from_price);
+         var to_price = parseInt(req.body.to_price);
+         
+         if (brand != "") {
+            query.prod_brand = brand;
+         }
+         
+         if (category != "") {
+            query.prod_category=category;
+         }
+
+         if (isNaN(from_price) == false) {
+            ft_price.$gt = from_price;
+            query.prod_price = ft_price;
+         }
+
+         if (isNaN(to_price) == false) {
+            ft_price.$lt = to_price;
+            query.prod_price = ft_price;
+         }
+
+        Products.find(query).toArray(function (err, result) {
+            if (err) {
+                res.send({
+                    status: 0,
+                    message:"fail",
+                });
+                console.log(err)
+            }else {
+                if(result.length){
+                    res.send({
+                        // status:1,
+                        // message: 'success',
+                        data: result    
+                    });
+                // console.log(result);
+                }else{
+                    res.send({
+                        // status:1,
+                        // message: 'success',
+                        data: []    
+                    });
+                }
+            }           
+        });
+
+    });
+
+
+
+    //API and Action check tồn tại user
+    app.post("/check_user_exists",function(req,res){
+         var query = {};
+         var username = req.body.username;
+         // var password = req.body.password;
+         // var fullname = req.body.fullname;
+         
+        query.username = username;
+        // query.prod_category=category;
+        // query.fullname=fullname;
+
+
+        User.find(query).toArray(function (err, result) {
+            if (err) {
+                res.send({
+                    status: 0,
+                    message:"fail",
+                });
+                console.log(err)
+            }else {
+                if(result.length){
+                    res.send({
+                        // status:1,
+                        // message: 'success',
+                        data: result    
+                    });
+                // console.log(result);
+                }else{
+                    res.send({
+                        // status:1,
+                        // message: 'success',
+                        data: []    
+                    });
+                }
+            }           
+        });
+
+    });
+
+
 
 
   }
