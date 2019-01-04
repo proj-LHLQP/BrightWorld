@@ -70,16 +70,20 @@
                     type: request_method,
                     data : form_data
                 }).done(function(response){ //
-                    console.log(response.data[0]);
-                    console.log(response.data.length);
-                    if (response.data.length != 0) {
-                        $(".username").val("User đã tồn tại!").css("color","red");
-                        $(".username").focus(function(){
-                            $(".username").val("");
-                        }); 
-                    } else {
-                        alert("Đăng ký thành công!");
-                    }
+                    console.log(typeof response);
+                    console.log(typeof response.data);
+                    console.log(typeof response.data[0]);
+                    console.log(typeof response.data[0].length);
+                    // if (response.data !== undefined) {
+                    //     // jQuery(".username").val("User đã tồn tại!").css("color","red");
+                    //     // jQuery(".username").focus(function(){
+                    //     //     jQuery(".username").val("");
+                    //     // });
+                    //     jQuery("#message").append("* User is exists, please choose other user!");
+                    // } else {
+                    //    jQuery('#my_form').attr('action', '/register');
+                    //    jQuery('#btn-register').click();
+                    // }
                         
                 });
             });
@@ -129,8 +133,9 @@
                             <input type="password" class="form-control" placeholder="Retype Password">
                         </div>
                     </div>
+                    <div id="message" style="color: red"></div>
 
-                    <button class="btn btn-login btn-success btn-float"><i class="notika-icon notika-right-arrow"></i></button>
+                    <button id="btn-register" class="btn btn-login btn-success btn-float"><i class="notika-icon notika-right-arrow"></i></button>
                     <!-- <a href="#l-login" data-ma-action="nk-login-switch" data-ma-block="#l-login" class="btn btn-login btn-success btn-float"><i class="notika-icon notika-right-arrow"></i></a> -->
                 </form>
             </div>
