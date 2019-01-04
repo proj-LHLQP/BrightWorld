@@ -43,7 +43,7 @@ header .nav>li>a:focus,header .nav>li>a:hover {
 	margin-right: 5px;
 	color: #fff;
 	padding: 7px 0;
-	background-color:#FF5C00;
+	background-color:#e02c26;
 	border-radius: 3px;
 }
 @media (max-width: 991px) {

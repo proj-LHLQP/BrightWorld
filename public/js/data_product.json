@@ -59,8 +59,8 @@ var images = [
 		URL : "https://tlclighting.com.vn/wp-content/uploads/2017/10/bong-den-led-tube-t8-90x90.jpg",
 		Info: "ĐÈN LED TUÝP TUBE T8 RỜI MÁNG TRẮNG",
 	},
-	{
-		URL : "https://tlclighting.com.vn/wp-content/uploads/2017/10/den-led-am-tran-mong-1-300x300.jpg",
-		Info: "ĐÈN LED ÂM TRẦN CHỐNG CHÓI MỎNG",
-	},
+	// {
+	// 	URL : "https://tlclighting.com.vn/wp-content/uploads/2017/10/den-led-am-tran-mong-1-300x300.jpg",
+	// 	Info: "ĐÈN LED ÂM TRẦN CHỐNG CHÓI MỎNG",
+	// },
 ]

@@ -178,7 +178,7 @@ header.header .social-icons a:hover {
  z-index:99;
  left:0;
  text-align:right;
- background-color:#FF5C00;
+ background-color:#e02c26;
  color: #fff;
  border-radius: 3px;
 
@@ -295,7 +295,7 @@ header.header .social-icons a:hover {
 .top-cart-contain .mini-cart .heading-cart .cartCount {
  right:-15px;
  top:-10px;
- background:#ff5c00
+ background:#e02c26;
 }
 
 
