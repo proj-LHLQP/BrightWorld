@@ -539,7 +539,7 @@ MongoClient.connect(url, function (err, db) {
 
     //Action register user
     app.post('/register',function (req, res) {
-        // console.log("Vào register!");
+        console.log("Vào register!");
         var username = req.body.username;
         var password = req.body.password;
         var email = req.body.email;
@@ -680,7 +680,7 @@ MongoClient.connect(url, function (err, db) {
                         // message: 'success',
                         data: result    
                     });
-                // console.log(result);
+                console.log(result);
                 }else{
                     res.send({
                         // status:1,
