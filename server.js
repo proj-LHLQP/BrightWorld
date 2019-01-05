@@ -694,6 +694,40 @@ MongoClient.connect(url, function (err, db) {
     });
 
 
+    //API and Action check tồn tại email
+    app.post("/check_email_exists",function(req,res){
+         var query = {};
+         var email = req.body.email;
+         
+        query.email = email;
+
+        User.find(query).toArray(function (err, result) {
+            if (err) {
+                res.send({
+                    status: 0,
+                    message:"fail",
+                });
+                console.log(err)
+            }else {
+                if(result.length){
+                    res.send({
+                        // status:1,
+                        // message: 'success',
+                        data: result    
+                    });
+                // console.log(result);
+                }else{
+                    res.send({
+                        // status:1,
+                        // message: 'success',
+                        data: []    
+                    });
+                }
+            }           
+        });
+
+    });
+
 
 
   }
