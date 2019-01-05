@@ -298,7 +298,8 @@ header ul li{
 
 /*Filter Price*/
 .range-filter {
-    padding:20px 0;
+    padding-top: 20px;
+    padding-bottom: 10px;
     width:100%;
     margin:auto;
     margin-bottom:10px;
@@ -344,7 +345,7 @@ header ul li{
     left:75%;
 }
 .range-filter .price-controls input{
-    width:40%;
+    width:37%;
     padding:8px 10px;
     /*margin-left:1%;*/
     border:none;
@@ -354,6 +355,11 @@ header ul li{
     text-align:center;
     color:#005186;
     border-radius:5px;
+}
+.range-filter .price {
+  color: #fff;
+  padding-top: 15px;
+  font-size: 16px;
 }
 
 
