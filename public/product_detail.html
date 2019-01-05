@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Trang chủ</title>
+	<title>Chi tiết sản phẩm</title>
 	<meta charset="UTF-8">	
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.css">
+	
 	<link rel="stylesheet" type="text/css" href="css/style.scss.css">
 	<link rel="stylesheet" type="text/css" href="css/style-theme.scss.css">
 	<link rel="stylesheet" type="text/css" href="css/responsive.scss.css">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/style_product_detail.css">
 	<link rel="stylesheet" type="text/css" href="css/style970.css">
 	<link rel="stylesheet" type="text/css" href="css/style750.css">
 	<link rel="stylesheet" type="text/css" href="css/style700.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
 	<link rel="stylesheet" href="fontawesome/css/all.css"/>
 
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
-    <script type="text/javascript" src="js/scripts.js"></script>   
-	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>   
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.css">
 
 </head>
 <body>
@@ -30,30 +29,7 @@
 				</span>
 			</div>
 		</div>
-		<!-- <div class="topbar hidden-sm hidden-xs">
-			<div class="container">
-				<div>
-					<div class="row">
-						<div class="col-sm-6 col-md-9 a-left">
-							<ul class="list-inline f-left">
-								<li>
-									<p>Light with me!</p>
-								</li>
-							</ul>
-						</div>
-						<div class="col-sm-6 col-md-3">
-							<div class="social-icons">
-								<a title="Facebook" href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
-								<a title="Twitter" href="https://twitter.com"><i class="fab fa-twitter"></i></a>
-								<a title="Google" href="https://plus.google.com" ><i class="fab fa-google"></i></a>
-								<a title="Pinterest" href="https://www.pinterest.com"><i class="fab fa-pinterest"></i></a>
-								<a title="Instagram" href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div> -->
+
 		<div class="container">
 			<div class="header-content clearfix a-center">
 				<div class="d-lg-flex align-items-center">
@@ -101,8 +77,8 @@
 							</a>
 							<div class="drop-down text-xs-left">
 								<ul>
-									<li><a href="login-register.html">Đăng nhập</a></li>
-									<li><a href="login-register.html">Đăng ký</a></li>
+									<li><a href="login-register.html" style="color: #fff">Đăng nhập</a></li>
+									<li><a href="login-register.html" style="color: #fff">Đăng ký</a></li>
 								</ul>
 							</div>
 						</div>
@@ -191,14 +167,15 @@
 						</div>
 					</div>
 				</div>
+
 				<div class="hidden-lg hidden-md menu-offcanvas">
 					<div class="head-menu clearfix">
 						<ul class="list-inline">
 							<li>
-								<a href="account/login"><i class="fa fa-user"></i> Đăng nhập</a>
+								<a href="login.html" style="color: #31ABED"><i class="fa fa-user" style="padding-right:4px;"></i><span style="font-weight: 600">Đăng nhập</span></a>
 							</li>
 							<li><span>hoặc</span></li>
-							<li><a href="account/register">Đăng ký</a>						
+							<li><a href="register.html" style="color: #D3A00A"><i class="fa fa-user-plus" style="padding-right:4px;"></i><span style="font-weight: 600">Đăng ký</span></a>						
 							</li>
 							<li class="li-search">
 								<div class="hidden-lg hidden-md">
@@ -215,60 +192,59 @@
 								</div>					
 							</li>
 						</ul>
-						<div class="menuclose"><i class="fa fa-window-close"></i></div>
+						<div class="menuclose"><i class="fa fa-window-close" style="color: red"></i></div>
 					</div>
 					<ul id="nav-mobile" class="nav hidden-md hidden-lg">
-						<li class="h3">
-							MENU
-						</li>
+						<li class="h3" style="color: #CC6600">MENU</li>
+
 						<li class="nav-item "><a class="nav-link" href="index.html">Trang chủ</a></li>		
 						<li class="nav-item active">
-							<a href="collections/all" class="nav-link">Sản phẩm <i class="fa faa fa-angle-right"></i></a>
+							<a href="/collections/all" class="nav-link">Sản phẩm <i class="fa faa fa-angle-right"></i></a>
 							<ul class="dropdown-menu">
 								<li class="dropdown-submenu nav-item-lv2">
-									<a class="nav-link" href="san-pham-moi">Sản phẩm mới <i class="fa faa fa-angle-right"></i></a>
+									<a class="nav-link" href="/san-pham-moi">Sản phẩm mới <i class="fa faa fa-angle-right"></i></a>
 									<ul class="dropdown-menu">
 										<li class="nav-item-lv3">
-											<a class="nav-link" href="collections/all">Vòng tay mới</a>
+											<a class="nav-link" href="/collections/all">Vòng tay mới</a>
 										</li>						
 										<li class="nav-item-lv3">
-											<a class="nav-link" href="collections/all">Dây chuyền mới</a>
+											<a class="nav-link" href="/collections/all">Dây chuyền mới</a>
 										</li>						
 										<li class="nav-item-lv3">
-											<a class="nav-link" href="collections/all">Nhẫn phong thủy mới</a>
+											<a class="nav-link" href="/collections/all">Nhẫn phong thủy mới</a>
 										</li>						
 										<li class="nav-item-lv3">
-											<a class="nav-link" href="collections/all">Khuyến mãi mới</a>
+											<a class="nav-link" href="/collections/all">Khuyến mãi mới</a>
 										</li>						
 										<li class="nav-item-lv3">
-											<a class="nav-link" href="collections/all">Sản phẩm mới</a>
+											<a class="nav-link" href="/collections/all">Sản phẩm mới</a>
 										</li>						
 									</ul>                      
 								</li>
 							</ul>
 						</li>
-						<li class="nav-item "><a class="nav-link" href="about.html">Giới thiệu</a></li>		
+						<li class="nav-item "><a class="nav-link" href="/about.html">Giới thiệu</a></li>		
 						<li class="nav-item ">
-							<a href="tin-tuc" class="nav-link">Tin tức <i class="fa faa fa-angle-right"></i></a>
+							<a href="/tin-tuc" class="nav-link">Tin tức <i class="fa faa fa-angle-right"></i></a>
 							<ul class="dropdown-menu">
 								<li class="nav-item-lv2">
-									<a class="nav-link" href="">Tin phong thủy</a>
+									<a class="nav-link" href="/">Tin phong thủy</a>
 								</li>
 								<li class="dropdown-submenu nav-item-lv2">
-									<a class="nav-link" href="">Tin thế giới <i class="fa faa fa-angle-right"></i></a>
+									<a class="nav-link" href="/">Tin thế giới <i class="fa faa fa-angle-right"></i></a>
 									<ul class="dropdown-menu">
 										<li class="nav-item-lv3">
-											<a class="nav-link" href="">Tin nước ngoài</a>
+											<a class="nav-link" href="/">Tin nước ngoài</a>
 										</li>						
 										<li class="nav-item-lv3">
-											<a class="nav-link" href="">Tin nước trong</a>
+											<a class="nav-link" href="/">Tin nước trong</a>
 										</li>						
 									</ul>                      
 								</li>
 							</ul>
 						</li>
-						<li class="nav-item "><a class="nav-link" href="lien-he">Liên hệ</a></li>		
-						<li class="nav-item "><a class="nav-link" href="dai-ly">Đại lý</a></li>		
+						<li class="nav-item "><a class="nav-link" href="/lien-he">Liên hệ</a></li>		
+						<li class="nav-item "><a class="nav-link" href="/dai-ly">Đại lý</a></li>		
 					</ul>
 				</div>
 			</div>
@@ -277,26 +253,33 @@
 	<!-- ĐÃ KẾT THÚC HEADER -->
 
 	 <!--BẮT ĐẦU CONTEN -->
-		<div class="col-md-6 col-sm-6 col-xs-12 ">
+
+	<div class="container" style="margin-top: 80px; margin-bottom: 120px;">
+		<div class="product_name">ĐÈN LED ĐƯỜNG ELINK</div>
+		<div class="col-md-6 col-sm-6 col-xs-12 " style="">
 
 			<!-- 	 &nbsp; &nbsp; &nbsp; &nbsp;
 			     &nbsp; &nbsp; &nbsp; &nbsp; -->
-			<div class="w3-content" style="max-width:100%">
-	          	<img class="mySlides" src="upload/img/elink/elink_am_tran1.png" height="300" style="width:70%;display:none">
-	          	<img class="mySlides" src="upload/img/elink/elink_am_tran2.png" height="300"style="width:70%">
-	          	<img class="mySlides" src="upload/img/elink/elink_am_tran3.png" height="300" style="width:70%;display:none">
+			<div class="image_product">
+	          	<img class="mySlides" src="upload/tlc_panel1.png" height="300" style="width:auto;margin: 0 auto;display: block;">
+	          	<img class="mySlides" src="upload/tlc_panel2.png" height="300"style="width:auto;margin: 0 auto;display:none">
+	          	<img class="mySlides" src="upload/tlc_panel3.png" height="300" style="width:auto;display:none;margin: 0 auto">
+	          	<img class="mySlides" src="upload/tlc_panel4.png" height="300" style="width:auto;display:none;margin: 0 auto">
 
-
-	            <div class="w3-row-padding w3-section">
-		            <div class="w3-col s4">
-		              <img class="demo w3-opacity w3-hover-opacity-off" src="upload/img/elink/elink_am_tran1.png" height="30" style="width:100%;cursor:pointer" onclick="currentDiv(1)">
-		            </div>
-		            <div class="w3-col s4">
-		              <img class="demo w3-opacity w3-hover-opacity-off" src="upload/img/elink/elink_am_tran2.png" height="30" style="width:100%;cursor:pointer" onclick="currentDiv(2)">
-		            </div>
-		            <div class="w3-col s4">
-		              <img class="demo w3-opacity w3-hover-opacity-off" src="upload/img/elink/elink_am_tran3.png" height="30" style="width:100%;cursor:pointer" onclick="currentDiv(3)">
-		            </div>
+	         
+	            <div class="image_small_product text-center">
+		            <span class="img_small">
+		              <img class="img_style w3-opacity w3-hover-opacity-off demo" src="upload/tlc_panel1.png" height="100" onclick="currentDiv(1)">
+		            </span >
+		            <span "class="img_small">
+		              <img class="img_style w3-opacity w3-hover-opacity-off demo" src="upload/tlc_panel2.png"  height="100"onclick="currentDiv(2)">
+		            </span>
+		            <span class="img_small">
+		              <img class="img_style w3-opacity w3-hover-opacity-off demo" src="upload/tlc_panel3.png" height="100" onclick="currentDiv(3)">
+		            </span> 
+		            <span class="img_small">
+		              <img class="img_style w3-opacity w3-hover-opacity-off demo" src="upload/tlc_panel4.png" height="100" onclick="currentDiv(4)">
+		            </span>
 				</div>
 			</div>
 		</div>
@@ -319,12 +302,12 @@
 			                    
 
 
-		<h1>ĐÈN LED ĐƯỜNG ELINK</h1>
+		
 		<div class="table-responsive col-md-12 col-sm-12 col-xs-12">          		
 			  
 			 &nbsp; &nbsp; &nbsp; &nbsp;
 			 &nbsp; &nbsp; &nbsp; &nbsp;
-			 <table class="table">
+			 <table class="table" style="border:1px solid #ddd">
 			    <thead>
 			      <tr><th class="col-md-6">Thông số</th><th class="col-md-6">Giá trị</th>
 			      </tr>
@@ -360,13 +343,13 @@
 			    <div class="row row-price">
 			      <div class="col-md-6">
 			                      <div class="price-online">
-			             Giá bán: <span>4,680,000đ</span><br>
-			             Giá bán online: <span class="bigger">4,050,000đ</span>
+			            
+			             Giá bán: <span class="bigger">1,000,000đ</span>
 			            </div>
 			                </div>
 			      <div class="col-md-6">
 			          <div class="quantity">
-						  <span>Số lượng:</span><input type="number" size="4" class="input-text qty text" title="SL" value="1" name="quantity" min="1" step="1">
+						  <span style="font-weight: 600">Số lượng:</span><input style="border-radius: 3px;border:1.5px solid red;margin-left: 10px;width: 70px; text-align: center;" type="number" size="4" class="input-text qty text" title="SL" value="1" name="quantity" min="1" step="1">
 			          </div>
 			      </div>
 			    </div>
@@ -403,7 +386,7 @@
 			      </div>
 			    </div>
 			    <div class="clearfix"></div>
-			    <div class="callbuy col-md-12 col-sm-12 col-xs-12">
+			<!--     <div class="callbuy col-md-12 col-sm-12 col-xs-12">
 			      <div class="row">
 			        <div class="col-md-7" style="padding-left: 7px !important;">
 			            <h4><i class="fa fa-share" aria-hidden="true"></i> <strong>Tư vấn dự án</strong></h4>
@@ -414,120 +397,29 @@
 			          </ul>
 			        </div>
 			      </div>
-			    </div>
+			    </div> -->
 			</div>
 
-			<div class="note clearfix">
+		<!-- 	<div class="note clearfix">
 				<ul>
 					<li>Giảm <b><font size="3" style="color: blue;">5%</font></b> cho đơn hàng &gt; <b>10 triệu</b></li>
 				<li>Giảm <b><font size="4" style="color: red;">10%</font></b> cho đơn hàng &gt; <b>20 triệu</b></li>
 				<li><b>Miễn phí vận chuyển</b> nội thành với đơn hàng &gt; 1 triệu</li>
 				<li>Bảo hành <b>1 đổi 1</b> trong vòng 2 năm</li>
 			</ul>
-			</div>
+			</div> -->
 			<div class="note clearfix">
 				<ul>
 			 <b><font size="4" style="color: red;">♥</font></b> Địa chỉ Showroom: <b>21C Trần Duy Hưng, Cầu Giấy, Hà Nội.</b>    ĐT: <b><font size="4"><a href="tel:04 8888 6666" style="color: red;">04 8888 6666</a></font></b><br>
 				</ul>
 			</div>
-			  
-			  <div class="popup" data-popup="muahangnhanh" style="display: none;">
-			     <div class="popup-inner">
-			        <div id="contact_form_pop">
-			           <div class="form-content">
-			              
-			              <div class="cotphai">
-			                  
-			                  
-			              </div><!--end cot-phai-->
-			           </div>
-			        </div>
-			        <a class="popup-close" data-popup-close="muahangnhanh" href="#">x</a>
-			     </div>
-			  </div>
       </div>
-   </div>
-
-   <div>
+  
    		<div class=" col-md-9 col-sm-9 col-xs-12 tab-block" style="clear:both">
 			<div class="content_tab">
 				<h3 class="tab1">Mô tả sản phẩm</h3>
 
-				<div class="confluid"><p><strong><a href="#" target="_blank" rel="noopener">ĐÈN LED &nbsp;ĐƯỜNG ELINK&nbsp;</a></strong>&nbsp;
-					<b><h2>THÔNG SỐ KỸ THUẬT</h2>
-						<p><br>
-						Thương hiệu LED: GX Lighting<br>
-						•	Công suất tiêu thụ: 100w<br>
-						•	Hiệu suất chiếu sáng: 130 lm/w<br>
-						•	Điện áp sử dụng: 220VAC<br>
-						•	Tuổi thọ đèn: 65.000 giờ<br>
-						•	Kích thước đèn: 550*270*60, Ø64 (mm)<br>
-						•	Nhiệt độ môi trường làm việc: ﹣20℃~60℃<br>
-						•	Độ ẩm môi trường làm việc: 0%-95%<br>
-						•	Tiêu chuẩn: IP66, IK08 chiếu sáng đường phố<br>
-						•	Chống sét: 10KV<br>
-						•	Màu sắc ánh sáng: White/Warm white/RGB</p><br>
-						Tất cả các thông số của đèn được công bố minh bạch, theo đúng tiêu chuẩn chiếu sáng đường phố.<br>
-					<figure id="attachment_1692" class="wp-caption alignnone"><figcaption class="wp-caption-text"><img class="alignnone size-full wp-image-7687" src="upload/img/elink/elink-d1.png" alt="âm đất 24w chỉnh góc" width="500" height="500">ĐÈN LED ĐƯỜNG ELINK </figcaption></figure>
-				<p><strong>Đèn led&nbsp;âm&nbsp;đất&nbsp;DMD-XK250-24w </strong>mang lại không gian sang trọng và lịch sự, cung cấp&nbsp;ánh sáng cho các hoạt&nbsp;động di chuyển của chúng ta. Với nhiều màu&nbsp;ánh sáng khác nhau, như&nbsp;đỏ, trắng, xanh,&nbsp;đổi màu…với báo giá cụ thể.</p>
-				<p>Miễn phí thi công lắp&nbsp;đặt&nbsp;đèn led&nbsp;âm&nbsp;đất 6w tại nhà</p>
-				<p>Cung cấp&nbsp;<strong><a href="https://denled.com/" target="_blank" rel="noopener">đèn led</a>&nbsp;âm&nbsp;đất&nbsp;âm tường</strong>&nbsp;chính hãng tuổi thọ gần 50.000h. Bề mặt&nbsp;đèn với kính cường lực chống xước, chống va&nbsp;đập, tán xạ&nbsp;ánh sáng tốt.</p></b>
-
-					<b><h2>2. Đặc điểm cấu tạo đèn đường led HLS1-100w</h2><br>
-					Xuất xứ chip led<br>
-					Chíp led được Elink nhập khẩu chính hãng từ các hãng LED uy tín trên thế giới:<br>
-					•	Chip led  Nichia – Nhật Bản<br>
-					•	Chip led Philips – Hà Lan<br>
-					•	Chip led Bridgelux – USA<br>
-					•	Chip led Osram – Germany<br>
-					<h2>Hiệu suất phát quang</h2><br>
-					•	Hiệu suất phát quang được tính bằng tỉ số giữa quang thông và công suất tiêu thụ của đèn (đơn vị lm/w).<br>
-					•	Khi lựa chọn mua đèn led, đèn có chỉ số hiệu suất phát quang càng cao thì đèn càng sáng và càng tiết kiệm điện.<br>
-					•	Hiệu suất phát quang đạt từ 130 – 150 lm/w với các dòng chip led của HALEDCO. Đây là chỉ số phát quang cao nhất trên thế giới được sử dụng.<br>
-					Đặc điểm chiếu sáng<br>
-					•	Đèn đường led HLS1-100w sử 100 chíp led công suất 1w/led, góc mở sáng được điều chỉnh bởi chóa + lens kính hội tụ ánh sáng ở từng mắt chip.<br>
-					•	Góc chiếu sáng là cố định 900/1200/1400, tuy nhiên có thể đặt theo yêu cầu dự án với những đơn hàng số lượng lớn.
-					Màu sắc ánh sáng<br>
-					•	Ánh sáng với chỉ số hoàn màu tối ưu CRI 70 ~ 80.<br>
-					•	Ánh sáng trắng 4500K – 6500K, ánh sáng vàng 2700K – 3200K.<br>
-					•	Hai màu sắc ánh sáng không gây mệt mỏi, buồn ngủ cho người tham gia giao thông<br>
-
-					<figure id="attachment_1692" class="wp-caption alignnone"><figcaption class="wp-caption-text"><img class="alignnone size-full wp-image-7687" src="upload/img/elink/elink-d2.png" alt="âm đất 24w chỉnh góc" width="500" height="500">ĐÈN LED ĐƯỜNG ELINK </figcaption></figure>
-
-					<h2>2.2. Nguồn led</h2>
-
-					Xuất xứ nguồn led<br>
-					•	Chúng tôi sử dụng 2 hãng nguồn led chính là:  nguồn Done và nguồn Meanwell.<br>
-					•	Nguồn led của hai hãng nguồn lớn, uy tín trong thị trường nguồn led, được đánh giá cao bởi chuyên gia.<br>
-					Chế độ hoạt động<br>
-					•	Đèn đường led không sử dụng kích + tụ cho quá trình kích hoạt nguồn để bật sáng đèn như đèn đường truyền thống. Nguồn đèn led với chế độ khởi động mềm, quá trình bật/tắt đèn tức thời, không mất thời gian chờ sáng.<br>
-					•	Điện áp nguồn cung cấp cho chip led hoạt động là từ 18V – 48V. Nguồn led sử dụng điện áp hoạt động thấp an toàn cho thiết bị khi chiếu sáng ngoài trời.<br>
-					Khả năng chống xung sét<br>
-					•	Bộ nguồn led được cung cấp đầy đủ các linh kiện chống xung điện, chống sét 10KV.<br>
-					•	Có thể lắp thêm hệ thống chống xung sét bên ngoài bộ đèn để tăng khả năng an toàn cho hệ thống đèn khi lắp đặt chiếu sáng đường phố.<br>
-					<h2>2.3. Thân đèn</h2><br>
-					Chất liệu thân vỏ<br>
-					Thân đèn từ vật liệu nhôm đúc bên ngoài sơn tĩnh điện chống ăn mòn, đèn có kết cấu vững chắc.<br>
-					Khả năng chống va đập và chống oxi hóa vĩnh cửu của vỏ đèn tốt nên đèn rất bền bỉ.<br>
-					Tiêu chuẩn<br>
-					•	IP66: Toàn bộ thân đèn kín khít chống nước, chống bụi, đạt tiêu chuẩn IP66. Sử dụng ngoài trời mà không cần thiết bị bảo vệ đi kèm.<br>
-					•	IK08: Bề mặt đèn là tấm kính cường lực đạt tiêu chuẩn IK08, đáp ứng yêu cầu khắt khe khi sử dụng ngoài trời.<br>
-					Màu sắc và kiểu dáng thân đèn<br>
-					•	Thân đèn có thiết kế hình chữ nhật, bộ phận tản nhiệt được tích hợp phía sau thân đèn. Các cánh tản nhiệt dạng khe rãnh sâu, tản nhiệt nhanh và hiệu quả.<br>
-					•	Mặt trước đèn là kính cường lực + viền đèn đen bóng. Mặt sau sơn tĩnh điện màu xám. Đem lại tính thẩm mỹ cao cho tổng thể bộ đèn.<br>
-					<h2>3. Chứng nhận chất lượng</h2><br>
-					•	Sản phẩm đạt tiêu chuẩn chất lượng Châu Âu: tiêu chuẩn RoHS, chứng nhận CE.<br>
-					•	Chứng nhận phù hợp tiêu chuẩn ISO 9001:2015:  TCVN 7722-1:2009/IEC60598-1:2008 tại Việt Nam.<br>
-					<h2>4. Tư vấn lắp đặt</h2><br>
-					4.1. Vị trí lắp đặt<br>
-					•	Công suất đèn đường led 100w phù hợp lắp đặt đường làng ngõ xóm, lắp chiếu sáng đường nội khu trung cư, chiếu sáng đường đi trong nhà máy, xí nghiệp, chiếu sáng khuân viên ngoại thất.<br>
-					•	Không nên lắp trên đường cao tốc, đường quốc lộ, đường chính khu đô thị vì công suất 100w sẽ không đủ sáng.<br>
-					4.2. Chiều cao và khoảng cách lắp đặt<br>
-					•	Chiều cao cột đèn đường từ 8m – 10m.<br>
-					•	Khoảng cách lắp đặt các cột đèn chiếu sáng theo tiêu chuẩn là từ 33m – 36m. Phụ thuộc vào vị trí lắp có nhiều vật cản hay không gian hẹp mà khoảng cách lắp này có thể thay đổi.<br>
-					<figure id="attachment_1692" class="wp-caption alignnone"><figcaption class="wp-caption-text"><img class="alignnone size-full wp-image-7687" src="upload/img/elink/elink-d2.png" alt="âm đất 24w chỉnh góc" width="500" height="500">ĐÈN LED ĐƯỜNG ELINK </figcaption></figure>
-
-					</p>
+				
 				
 				
 				<h2><em><strong>Quý khách mua hàng xin liên hệ:</strong></em></h2>
@@ -536,11 +428,10 @@
 				<p><strong>Email: </strong></p>
 				&nbsp; &nbsp; &nbsp; &nbsp;
 			 &nbsp; &nbsp; &nbsp; &nbsp;
-			</b>
 			</div>
 		</div>
-	</div>
-		<!-------------------------------------------col2---------->
+		
+
 		<div class=" col-md-3 col-sm-3 col-xs-12">
 			<aside class="homenews homenews1">
 			    <h3 class="">
@@ -554,14 +445,14 @@
 	                <li>
 
 	                <a href="#">
-	                <img width="300" height="300" src="upload/img/panasonic/panasonic_bulb1.png" class="thumnail wp-post-image" alt="pin tích điện 22w" sizes="100vw"></a>
+	                <img width="300" height="300" src="upload/panasonic_bulb1.png" class="thumnail wp-post-image" alt="pin tích điện 22w" sizes="100vw"></a>
 	                <h3><a href="#">Bóng đèn bulb </a></h3>
 					<p>450,000đ</p>
 	                </li>
 	                <li>
 
 	                <a href="#">
-	                <img width="300" height="300" src="upload/img/philips/philips_amtran4.png" class="thumnail wp-post-image" alt="pin tích điện 22w" sizes="100vw"></a>
+	                <img width="300" height="300" src="upload/philips_amtran4.png" class="thumnail wp-post-image" alt="pin tích điện 22w" sizes="100vw"></a>
 
 	                <h3><a href="#">Đèn âm trần Philips </a></h3>
 					<p>450,000đ</p>
@@ -570,7 +461,7 @@
 
 
 	                <a href="#">
-	                <img width="300" height="300" src="upload/img/philips/philips_pha3.png" class="thumnail wp-post-image" alt="pin tích điện 22w" sizes="100vw"></a>
+	                <img width="300" height="300" src="upload/philips_pha3.png" class="thumnail wp-post-image" alt="pin tích điện 22w" sizes="100vw"></a>
 
 	                <h3><a href="#">Bóng đèn pha Philips </a></h3>
 					<p>450,000đ</p>
@@ -578,7 +469,7 @@
 	                <li>
 
 	                <a href="#">
-	                <img width="300" height="300" src="upload/img/rangdong/rangdong_bulb1.png" class="thumnail wp-post-image" alt="pin tích điện 22w" sizes="100vw"></a>
+	                <img width="300" height="300" src="upload/rangdong_bulb1.png" class="thumnail wp-post-image" alt="pin tích điện 22w" sizes="100vw"></a>
 
 	                <h3><a href="#">Bóng đèn bulb Rạng Đông </a></h3>
 					<p>450,000đ</p>
@@ -586,7 +477,7 @@
 	                <li>
 
 	                <a href="#">
-	                <img width="300" height="300" src="upload/img/rangdong/rangdong_xuong1.png" class="thumnail wp-post-image" alt="pin tích điện 22w" sizes="100vw"></a>
+	                <img width="300" height="300" src="upload/rangdong_xuong1.png" class="thumnail wp-post-image" alt="pin tích điện 22w" sizes="100vw"></a>
 
 	                <h3><a href="#">Đèn nhà xưởng Rạng Đông </a></h3>
 					<p>450,000đ</p>
@@ -594,7 +485,7 @@
 	                <li>
 
 	                <a href="#">
-	                <img width="300" height="300" src="upload/img/tlc/tlc_roi3.png" class="thumnail wp-post-image" alt="pin tích điện 22w" sizes="100vw"></a>
+	                <img width="300" height="300" src="upload/tlc_roi3.png" class="thumnail wp-post-image" alt="pin tích điện 22w" sizes="100vw"></a>
 
 	                <h3><a href="#">Bóng đèn rọi TLC </a></h3>
 					<p>450,000đ</p>
@@ -604,9 +495,7 @@
 	        </ul>
 			</aside>    
 		</div>
-
-   
-
+	</div>
 
 	<!-- BẮT ĐẦU FOOTER -->
 	<footer class="col-xs-12 footer-area bg-img bg-gradient-overlay" style="background-image: url(img/lighting_connected_systems_hero.jpg);">
@@ -672,9 +561,14 @@
 			</div>
 			<a href="#" class="cd-top fa fa-chevron-up">Back To Top</a>
 	</footer>
+
 	<script type="text/javascript" src="vendor/jquery/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="js/jssor.slider-27.5.0.min.js"></script>
+    <script type="text/javascript" src="js/backtotop.js"></script>
 	<script type="text/javascript" src="js/scripts.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+	
+
 		<script>
 	function currentDiv(n) {
 	  showDivs(slideIndex = n);

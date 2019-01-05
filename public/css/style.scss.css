@@ -31,8 +31,11 @@ header .nav>li>a:focus,header .nav>li>a:hover {
 	width:auto
 }
 .header_search input {
-	float:right;
+	float:left;
 	background:#eee;
+	width: 100%;
+	line-height: 40px;
+	padding-left: 10px;
 	border:none !important
 }
 .header_search .input-group-btn {
@@ -43,18 +46,19 @@ header .nav>li>a:focus,header .nav>li>a:hover {
 	margin-right: 5px;
 	color: #fff;
 	padding: 7px 0;
-	background-color:#e02c26;
+	background-color:red;
 	border-radius: 3px;
 }
 @media (max-width: 991px) {
 .header_search .input-group-btn {
-	background:#eee
+	background:	#FF6600
 }
 }
 .header_search .input-group {
 	width:100%;
 	margin-bottom:0;
-	border:1px solid #ededed
+	border:1px solid #FF6600;
+	border-radius: 3px;
 }
 .header_search button {
 	padding:0;
@@ -93,9 +97,8 @@ header .nav>li>a:focus,header .nav>li>a:hover {
 	position:absolute;
 	right:0;
 	left:auto;
-	color: #fff;
-	background:#E02C26;
-	padding:2px;
+	background:#fff;
+	padding:0;
 	text-align:left;
 	box-shadow:0 0 15px -5px rgba(0,0,0,0.4);
 	z-index:10000
