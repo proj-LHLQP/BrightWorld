@@ -23,18 +23,18 @@
 					data : form_data
 				}).done(function(response){ //
 					// console.log(response.data[0].prod_name);
-					console.log(response.data.length);
+					console.log(response.data);
 					if (response.data.length == 0) {
 						$("#server-results").html("Không có kết quả được tìm thấy!");
 					} else {
-						var x = response.data[0].prod_name;
+						var x='';
+						for(var i = 0; i<response.data.length; i++)
+							x+= '<p>'+response.data[i].prod_thumb+'</p>';
 						$("#server-results").html(x);
 					}
 						
 				});
 			});
-
-
     	})
     </script>
 </head>
@@ -49,6 +49,14 @@
 		<label>To</label>
 		<input type="text" name="to_price">
 		<input type="submit" value="Filter">
+		<li>
+			<input class="hidden" type="radio"  name="radio" id="checkbox1" value="led am tran">
+			<label for="checkbox1">Led Âm Trần</label>
+		</li>
+		<li class="cat_item">
+			<input class="hidden" type="radio" checked="checked" name="radio" id="checkbox2" value="led bulb">
+			<label for="checkbox2">Led Bulb</label>
+		</li>
 	</form>
 	<div id="server-results"><!-- For server results --></div>
 </body>

@@ -602,26 +602,29 @@ MongoClient.connect(url, function (err, db) {
     app.post("/action_filter_prod",function(req,res){
          var query = {};
          var ft_price = {};
-         var brand = req.body.brand;
-         var category = req.body.category;
-         var from_price = parseInt(req.body.from_price);
-         var to_price = parseInt(req.body.to_price);
-         
-         if (brand != "") {
-            query.prod_brand = brand;
+         // var brand = req.body.brand;
+         // var category = req.body.category;	
+         var min_price = parseInt(req.body.min_price);
+         var max_price = parseInt(req.body.max_price);
+         var radio = req.body.radio;
+         var radio1 = req.body.radio1;
+         console.log(radio);
+         console.log(radio1);
+         if (radio1 != undefined) {
+            query.prod_brand = radio1;
          }
          
-         if (category != "") {
-            query.prod_category=category;
+         if (radio != undefined) {
+            query.prod_category=radio;
          }
 
-         if (isNaN(from_price) == false) {
-            ft_price.$gt = from_price;
+         if (isNaN(min_price) == false) {
+            ft_price.$gt = min_price;
             query.prod_price = ft_price;
          }
 
-         if (isNaN(to_price) == false) {
-            ft_price.$lt = to_price;
+         if (isNaN(max_price) == false) {
+            ft_price.$lt = max_price;
             query.prod_price = ft_price;
          }
 

@@ -721,6 +721,13 @@ a.cd-top.cd-fade-out {
 /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
     opacity: 1;
 }
+@media (min-width: 1170px) {
+  .paginationjs .paginationjs-pages{
+          position: absolute;
+          bottom: -10px;
+          left: 370px;
+        }
+}
 
 
 
