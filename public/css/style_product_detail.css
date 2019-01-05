@@ -916,7 +916,10 @@ form.cart{
         border:1px solid #AAAAAA;
         border-radius: 3px
    }
-
+.describe{
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
 /*********/
 @media only screen and  (min-width:1170px){
     .product_name{
@@ -934,10 +937,17 @@ form.cart{
     }
    .image_small_product{
         margin-top: 100px;
-        text-align: center;
+        
     }
     .img_small{
         margin: 0 10px;
+    }
+    .button_download{
+        padding: 6px 18px;
+        border-radius: 15px;
+        border: 1px solid #00a885;
+        color: #fff;
+        background-color: #00a885;
     }
 }
 
