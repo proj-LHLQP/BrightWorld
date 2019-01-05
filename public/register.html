@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Login Register | Notika - Notika Admin Template</title>
+    <title>Register Account</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- favicon
@@ -55,10 +55,67 @@
     <!-- jquery
         ============================================ -->
     <script src="admin-lib/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="vendor/jquery/jquery.validate.min.js"></script>
     
     <script type="text/javascript">
         jQuery(document).ready( function () {
 
+            //Validate form and message
+            // var pasReg = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,32}$/;
+            var userReg = /^[A-Za-z0-9_\.]{4,32}$/;
+            var pasReg = /^(?=(.*[a-z]){1,})(?=(.*[\d]){1,})(?=(.*[\W]){1,})(?!.*\s).{6,32}$/;
+            $("#my_form").validate({
+                rules: {
+                    username: {
+                        required: true,
+                        minlength: 4,
+                        maxlength: 32,
+                        regex: userReg
+                    },
+                    fullname: {
+                        required: true
+                    },
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    password: {
+                        required: true,
+                        minlength: 6,
+                        maxlength: 32,
+                        regex: pasReg
+                    },
+                    repassword: {
+                        required: true,
+                        minlength: 6,
+                        maxlength: 32,
+                        equalTo : "#password"
+                    }
+                },
+                messages: {
+                    username: {
+                        required: "Please type username!",
+                        regex: "Password required 4-32 character A-Z,a-z,0-9, _ and no whitespace"
+                    },
+                    fullname: {
+                        required: "Please type fullname!"
+                    },
+                    password: {
+                        required: "Please type password!",
+                        regex: "Password required 6-32 character at least 1 lower case, 1 upper case, 1 numeric, 1 non-word and no whitespace"
+                    },
+                    repassword: {
+                        required: "Please re-type password!",
+                        regex: "Password required 6-32 character at least 1 lower case, 1 upper case, 1 numeric, 1 non-word and no whitespace"
+                    }
+                }
+            });
+            $.validator.addMethod("regex", function (value, element, regexpr) {
+                return regexpr.test(value);
+            });
+
+
+            //Check username exists and submit
             $("#my_form").submit(function(event){
                 event.preventDefault(); //prevent default action 
                 var post_url = $(this).attr("action"); //get form action url
@@ -70,18 +127,24 @@
                     type: request_method,
                     data : form_data
                 }).done(function(response){ 
-                    console.log(typeof response.data[0] != "undefined");
+                    // console.log(typeof response.data[0] != "undefined");
                     if (typeof response.data[0] != "undefined") {
                         jQuery("#message").html("* User is exists, please choose other user!");
                     } else {
-                       jQuery('#my_form').attr('action', '/register');
-                       jQuery('#btn-register').click();
-                       jQuery("#message").html("* Register Success! Please login!");
+                        if( $('#my_form').valid() ) {
+                           //action if form valid
+                           jQuery('#my_form').attr('action', '/register');
+                           jQuery('#btn-register').click();
+                           jQuery("#message").html("* Register Success! Please login!");
+                           jQuery("input").val("");
+                        }
+                       jQuery('#my_form').attr('action', '/check_user_exists');
                     }
                         
                 });
             });
 
+            //poiter to input hide message
             jQuery("input").focus(function(){
                 jQuery("#message").html("");
             });
@@ -114,6 +177,13 @@
                     <div class="input-group mg-t-15">
                         <span class="input-group-addon nk-ic-st-pro"><i class="notika-icon notika-mail"></i></span>
                         <div class="nk-int-st">
+                            <input type="text" class="form-control" placeholder="Fullname" name="fullname">
+                        </div>
+                    </div>
+
+                    <div class="input-group mg-t-15">
+                        <span class="input-group-addon nk-ic-st-pro"><i class="notika-icon notika-mail"></i></span>
+                        <div class="nk-int-st">
                             <input type="text" class="form-control" placeholder="Email Address" name="email">
                         </div>
                     </div>
@@ -121,14 +191,14 @@
                     <div class="input-group mg-t-15">
                         <span class="input-group-addon nk-ic-st-pro"><i class="notika-icon notika-edit"></i></span>
                         <div class="nk-int-st">
-                            <input type="password" class="form-control" placeholder="Password" name="password">
+                            <input type="password" class="form-control" placeholder="Password" name="password" id="password">
                         </div>
                     </div>
 
                     <div class="input-group mg-t-15">
                         <span class="input-group-addon nk-ic-st-pro"><i class="notika-icon notika-edit"></i></span>
                         <div class="nk-int-st">
-                            <input type="password" class="form-control" placeholder="Retype Password">
+                            <input type="password" class="form-control" placeholder="Retype Password" name="repassword">
                         </div>
                     </div>
                     <br><div id="message" style="color: red; height: 50px"></div>
