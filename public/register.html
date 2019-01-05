@@ -60,7 +60,7 @@
     
     
     <script >
-        jQuery(function() {
+        jQuery(document).ready(function () {
 
             //Validate form and message
             // var pasReg = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,32}$/;
@@ -72,14 +72,32 @@
                         required: true,
                         minlength: 4,
                         maxlength: 32,
-                        regex: userReg
+                        regex: userReg,
+                        // remote: {
+                        //     url: "/check_user_exists",
+                        //     type: "post",
+                        //     data: {
+                        //       username: function() {
+                        //         return jQuery( ".username" ).val();
+                        //       }
+                        //     }
+                        // }
                     },
                     fullname: {
                         required: true
                     },
                     email: {
                         required: true,
-                        email: true
+                        email: true,
+                        // remote: {
+                        //     url: "/check_email_exists",
+                        //     type: "post",
+                        //     data: {
+                        //       email: function() {
+                        //         return jQuery( ".email" ).val();
+                        //       }
+                        //     }
+                        // }
                     },
                     password: {
                         required: true,
@@ -97,10 +115,16 @@
                 messages: {
                     username: {
                         required: "Please type username!",
-                        regex: "Password required 4-32 character A-Z,a-z,0-9, _ and no whitespace"
+                        regex: "Password required 4-32 character A-Z,a-z,0-9, _ and no whitespace",
+                        remote: "username already in use!"
                     },
                     fullname: {
                         required: "Please type fullname!"
+                    },
+                    email: {
+                        required: "Please enter your email address.",
+                        email: "Please enter a valid email address.",
+                        remote: "Email already in use!"
                     },
                     password: {
                         required: "Please type password!",
@@ -113,33 +137,8 @@
                 },
 
                 submitHandler : function (form) {
-                    jQuery("#my_form").submit(function(event){
-                        event.preventDefault(); //prevent default action 
-                        var post_url = $(this).attr("action"); //get form action url
-                        var request_method = $(this).attr("method"); //get form GET/POST method
-                        var form_data = $(this).serialize(); //Encode form elements for submission
-                        
-                        jQuery.ajax({
-                            url : post_url,
-                            type: request_method,
-                            data : form_data
-                        }).done(function(response){ 
-                            console.log(typeof response.data[0] != "undefined");
-                            if (typeof response.data[0] != "undefined") {
-                                jQuery("#message").html("* User is exists, please choose other user!");
-                            } else {
-                                if(jQuery("input:empty").length != 0) {
-                                   //action if form valid
-                                   jQuery('#my_form').attr('action', '/register');
-                                   jQuery('#btn-register').click();
-                                   jQuery("#message").html("* Register Success! Please login!");
-                                   // jQuery("input").val("");
-                                   // jQuery('#my_form').attr('action', '/check_user_exists');
-                                }
-                            }
-                                
-                        });
-                    });
+                    form.submit();
+                    jQuery('#message').html("Register successful!");
                 }
                 
             });
@@ -268,7 +267,7 @@
         <!-- Register -->
         <div class="nk-block toggled" id="l-register">
             <div class="nk-form">
-                <form action="/check_user_exists" method="POST" id="my_form">
+                <form action="/register" method="POST" id="my_form">
                     
                     <h2>Register</h2>
                     <div class="input-group">
@@ -288,7 +287,7 @@
                     <div class="input-group mg-t-15">
                         <span class="input-group-addon nk-ic-st-pro"><i class="notika-icon notika-mail"></i></span>
                         <div class="nk-int-st">
-                            <input type="text" class="form-control" placeholder="Email Address" name="email">
+                            <input type="text" class="form-control email" placeholder="Email Address" name="email">
                         </div>
                     </div>
 

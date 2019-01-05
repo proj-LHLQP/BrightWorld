@@ -678,7 +678,7 @@ MongoClient.connect(url, function (err, db) {
                     res.send({
                         // status:1,
                         // message: 'success',
-                        data: result    
+                        data: result[0].username    
                     });
                 // console.log(result);
                 }else{
@@ -713,7 +713,7 @@ MongoClient.connect(url, function (err, db) {
                     res.send({
                         // status:1,
                         // message: 'success',
-                        data: result    
+                        data: result[0].email   
                     });
                 // console.log(result);
                 }else{
