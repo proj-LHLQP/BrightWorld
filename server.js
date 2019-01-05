@@ -553,7 +553,7 @@ MongoClient.connect(url, function (err, db) {
             res.send("error");
          } else {
             // res.send('Inserted');
-            res.redirect('index.html');
+            res.redirect('login.html');
           }
         });
 
@@ -590,7 +590,7 @@ MongoClient.connect(url, function (err, db) {
             } else if (docs.length === 1 && docs[0].type === undefined) {
                 res.redirect('/');
             } else {
-                res.redirect('login-register.html');
+                res.redirect('login.html');
             }
         });
 
@@ -675,18 +675,10 @@ MongoClient.connect(url, function (err, db) {
                 console.log(err)
             }else {
                 if(result.length){
-                    res.send({
-                        // status:1,
-                        // message: 'success',
-                        data: result[0].username    
-                    });
                 // console.log(result);
+                    res.send(false);
                 }else{
-                    res.send({
-                        // status:1,
-                        // message: 'success',
-                        data: []    
-                    });
+                    res.send(true);
                 }
             }           
         });
@@ -710,18 +702,10 @@ MongoClient.connect(url, function (err, db) {
                 console.log(err)
             }else {
                 if(result.length){
-                    res.send({
-                        // status:1,
-                        // message: 'success',
-                        data: result[0].email   
-                    });
+                    res.send(false);
                 // console.log(result);
                 }else{
-                    res.send({
-                        // status:1,
-                        // message: 'success',
-                        data: []    
-                    });
+                    res.send(true);
                 }
             }           
         });
