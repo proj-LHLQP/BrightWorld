@@ -298,10 +298,15 @@ header ul li{
 
 /*Filter Price*/
 .range-filter {
-    padding-top:20px;
-    width:90%;
+    padding:20px 0;
+    width:100%;
     margin:auto;
     margin-bottom:10px;
+    margin-top: 27px;
+    background: #005186;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 2px 2px 4px rgba(10, 14, 134, 0.58);
 }
 .range-filter .range-controls {
     position:relative;
@@ -339,21 +344,18 @@ header ul li{
     left:75%;
 }
 .range-filter .price-controls input{
-    width:30%;
+    width:40%;
     padding:8px 10px;
-    margin-left:1%;
+    /*margin-left:1%;*/
     border:none;
-    background:#005186;
+    background:#fff;
     font-size:16px;
     font-family:"Tahoma", sans-serif;
     text-align:center;
-    color:#283136;
+    color:#005186;
     border-radius:5px;
-    color:white;
 }
-.range-filter .min-price {
-    margin-right:5%;
-}
+
 
 /*Button*/
 .business_btn .buttons {
@@ -568,6 +570,7 @@ footer{
     background: #D6ECF7;
     padding: 10px;
     margin: 25px 0 15px 0;
+    box-shadow: 2px 2px 4px rgba(10, 117, 134, 0.52);
 }
 .sidebar .product_categories {
     padding: 0;
