@@ -13,6 +13,10 @@ body {
 	/*background-image: url(https://cdn.colorlib.com/pinbin/wp-content/themes/pinbin/images/wood.png);*/
 }
 
+.header-acount .drop-down a {
+    color: #fff;
+}
+
 .container {
 	width: 1170px;
 	padding-left: 0 !important;
@@ -339,7 +343,7 @@ header ul li{
     padding:8px 10px;
     margin-left:1%;
     border:none;
-    background:#34495e;
+    background:#005186;
     font-size:16px;
     font-family:"Tahoma", sans-serif;
     text-align:center;

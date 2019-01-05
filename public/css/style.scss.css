@@ -93,8 +93,9 @@ header .nav>li>a:focus,header .nav>li>a:hover {
 	position:absolute;
 	right:0;
 	left:auto;
-	background:#fff;
-	padding:0;
+	color: #fff;
+	background:#E02C26;
+	padding:2px;
 	text-align:left;
 	box-shadow:0 0 15px -5px rgba(0,0,0,0.4);
 	z-index:10000
