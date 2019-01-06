@@ -189,6 +189,10 @@ body {}
 .logo-area{
 	padding:14px 0px;
 }
+.logo-area img {
+    max-width: 45%;
+    height: auto;
+}
 .nav.navbar-nav.notika-top-nav{
 	float: right;
 }

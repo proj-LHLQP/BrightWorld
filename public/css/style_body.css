@@ -27,7 +27,7 @@ html,
 }
 
 .roomy-60 {
-    padding-top: 80px;
+    padding-top: 50px;
     padding-bottom: 60px;
 }
 
@@ -359,4 +359,16 @@ ul{
 
 .business_item .m-top-20 {
     margin: 20px 0px; 
+}
+
+/*BUTTON TRANG LOGIN*/
+.btn-float {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    line-height: 58px!important;
+}
+.feature-products a:hover, a:hover:hover, a:active:hover, a:focus:hover {
+    text-decoration: none;
+    color: #FFF;
 }
