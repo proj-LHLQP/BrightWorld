@@ -587,8 +587,9 @@
 	                    jQuery("#gallery2").append(html_bind3);  
 
 	                    var html_bind2 = '';
-	                    for (var i = 0; i < result[0].prod_gallery.length; i++) {
-	                    	html_bind2 += '<img class="mySlides" src="'+result[0].prod_gallery[i]+'" height="300" style="width:auto;margin: 0 auto;display: block;">';
+	                    html_bind2 += '<img class="mySlides" src="'+result[0].prod_gallery[0]+'" height="300" style="width:auto;margin: 0 auto;display: block;">';
+	                    for (var i = 1; i < result[0].prod_gallery.length; i++) {
+	                    	html_bind2 += '<img class="mySlides" src="'+result[0].prod_gallery[i]+'" height="300" style="width:auto;margin: 0 auto;display: none;">';
 	                    }
 	                    jQuery("#gallery1").append(html_bind2);
 
