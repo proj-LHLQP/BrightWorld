@@ -394,7 +394,7 @@ MongoClient.connect(url, function (err, db) {
                 if(err) throw err;
                 // res.render('edit-product.html', {data: docs});
                 res.send(docs);
-                db.close();
+                // db.close();
             });
         });
     });
