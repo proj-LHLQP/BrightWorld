@@ -72,6 +72,11 @@
 		width: 100%;
 		height: 200px
 	}
+	footer .footer-bottom .logo {
+		width: 39%;
+    	height: auto;
+	}
+
 	.new_product{
 		width:178px;
 		height: auto;
