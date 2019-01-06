@@ -613,13 +613,13 @@
 		            var list_brands = result.data;
 		            for(var i = 0; i< list_brands.length;i++){
 		            	html+='<li "cat_item">';
-							html+='<input class="hidden"'+' type="radio"'+'  name="radio1"'+' id="checkbox'+(i+list_categories+1)+'"'+' value="'+list_brands[i].brand_name+'">'
-							html+='<label for="checkbox'+(i+list_categories+1)+'">'+list_brands[i].brand_name+'</label>';
+							html+='<input class="hidden"'+' type="radio"'+'  name="radio1"'+' id="checkbox'+(i+list_categories+2)+'"'+' value="'+list_brands[i].brand_name+'">'
+							html+='<label for="checkbox'+(i+list_categories+2)+'">'+list_brands[i].brand_name+'</label>';
 						html+='</li>';
 		            };
 		            html+='<li class="cat_item">';
-						html+='<input class="hidden"'+' type="radio"'+' name="radio1"' +' id="checkbox'+(i+list_categories+2)+'">';
-						html+='<label for="checkbox'+(i+list_categories+2)+'">Tất Cả</label>';
+						html+='<input class="hidden"'+' type="radio"'+' name="radio1"' +' id="checkbox'+(i+list_categories+3)+'">';
+						html+='<label for="checkbox'+(i+list_categories+3)+'">Tất Cả</label>';
 					html+='</li>'
 		            jQuery("#list_brands").append(html);
 		            console.log(list_categories.length)
