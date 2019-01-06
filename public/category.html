@@ -599,8 +599,8 @@
 				html+='</li>';
             };
             html+='<li class="cat_item">';
-				html+='<input class="hidden"'+' type="radio"'+' name="radio"'+'">';
-				html+='<label for="checkbox'+(list_categories+1)+'">Tất Cả</label>';
+				html+='<input class="hidden"'+' type="radio"'+' name="radio"'+' id="checkbox'+(list_categories.length+1)+'"'+'">';
+				html+='<label for="checkbox'+(list_categories.length+1)+'">Tất Cả</label>';
 			html+='</li>'
             jQuery("#list_categories").append(html);
            }
@@ -620,8 +620,8 @@
 				html+='</li>';
             };
             html+='<li class="cat_item">';
-				html+='<input class="hidden"'+' type="radio"'+' name="radio1"' +' id="checkbox'+(list_brands.length+1)+'">';
-				html+='<label for="checkbox'+(list_brands.length+1)+'">Tất Cả</label>';
+				html+='<input class="hidden"'+' type="radio"'+' name="radio1"' +' id="checkbox'+(i+16)+'">';
+				html+='<label for="checkbox'+(i+16)+'">Tất Cả</label>';
 			html+='</li>'
             jQuery("#list_brands").append(html);
            }
