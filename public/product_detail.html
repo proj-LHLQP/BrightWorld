@@ -534,7 +534,25 @@
 
 
 	<script>
+		function currentDiv(n) {
+		  showDivs(slideIndex = n);
+		}
 
+		function showDivs(n) {
+		  var i;
+		  var x = document.getElementsByClassName("mySlides");
+		  var dots = document.getElementsByClassName("demo");
+		  if (n > x.length) {slideIndex = 1}
+		  if (n < 1) {slideIndex = x.length}
+		  for (i = 0; i < x.length; i++) {
+		    x[i].style.display = "none";
+		  }
+		  for (i = 0; i < dots.length; i++) {
+		    dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+		  }
+		  x[slideIndex-1].style.display = "block";
+		  dots[slideIndex-1].className += " w3-opacity-off";
+		} 
 		// window.onload = function () { 
 		jQuery(document).ready( function () {
             
@@ -568,30 +586,12 @@
 	                    var html_bind3 = '';
 	                    for (var i = 0; i < result[0].prod_gallery.length; i++) {
 	                    	
-	                    	html_bind3 += '<span class="img_small"><img class="img_style w3-opacity w3-hover-opacity-off demo" src="'+result[0].prod_gallery[i]+'" height="100" onclick="currentDiv('+(i+1)+')"></span >';
+	                    	html_bind3 += '<span class="img_small"><img class="img_style w3-opacity w3-hover-opacity-off demo" src="'+result[0].prod_gallery[i]+'" height="100" onclick="currentDiv('+(i+1)+')"></span >'; 
 	                    }
 	                    jQuery("#gallery2").append(html_bind3); 
 
 
-	                    function currentDiv(n) {
-						  showDivs(slideIndex = n);
-						}
-
-						function showDivs(n) {
-						  var i;
-						  var x = document.getElementsByClassName("mySlides");
-						  var dots = document.getElementsByClassName("demo");
-						  if (n > x.length) {slideIndex = 1}
-						  if (n < 1) {slideIndex = x.length}
-						  for (i = 0; i < x.length; i++) {
-						    x[i].style.display = "none";
-						  }
-						  for (i = 0; i < dots.length; i++) {
-						    dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
-						  }
-						  x[slideIndex-1].style.display = "block";
-						  dots[slideIndex-1].className += " w3-opacity-off";
-						} 
+	                    
 
 
 	                    var html_bind4 ='';
