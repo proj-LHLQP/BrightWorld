@@ -608,8 +608,7 @@ MongoClient.connect(url, function (err, db) {
          var max_price = parseInt(req.body.max_price);
          var radio = req.body.radio;
          var radio1 = req.body.radio1;
-         console.log(radio);
-         console.log(radio1);
+         
          if (radio1 != undefined && radio1 != 'on') {
             query.prod_brand = radio1;
          }

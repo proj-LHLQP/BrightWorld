@@ -368,7 +368,7 @@ ul{
     border-radius: 50%;
     line-height: 58px!important;
 }
-.feature-products a:hover, a:hover:hover, a:active:hover, a:focus:hover {
+.feature-products  a:hover:hover, a:active:hover, a:focus:hover {
     text-decoration: none;
     color: #FFF;
 }
