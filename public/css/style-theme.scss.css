@@ -454,6 +454,7 @@ header nav ul.nav-dt .nav-item:hover>a {
 }
 #section-verticalmenu .float-vertical-button .verticalMenu-text {
  padding-left: 0;
+ font-size: 17px;
 }
 #verticalmenu .nav-verticalmenu {
  float:none

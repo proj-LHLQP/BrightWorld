@@ -356,3 +356,7 @@ ul{
 .icon-chevron-right:before {
     content: "\e876";
 }
+
+.business_item .m-top-20 {
+    margin: 20px 0px; 
+}
