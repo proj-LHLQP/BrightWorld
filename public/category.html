@@ -486,13 +486,13 @@
 	    container.pagination({
 	      // dataSource:'http://localhost:3333/list_products',
 	       dataSource: function(done) {
-			    // jQuery.ajax({
-			    //     type: 'GET',
-			    //     url: '/list_products',
-			    //     success: function(response) {
-			    //         done(response.data);
-			    //     }
-			    // });
+			    jQuery.ajax({
+			        type: 'GET',
+			        url: '/list_products',
+			        success: function(response) {
+			            done(response.data);
+			        }
+			    });
 			    $("#my_form").submit(function(event){
 					event.preventDefault(); //prevent default action 
 					var post_url = $(this).attr("action"); //get form action url
