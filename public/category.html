@@ -603,29 +603,34 @@
 				html+='<label for="checkbox'+(list_categories.length+1)+'">Tất Cả</label>';
 			html+='</li>'
             jQuery("#list_categories").append(html);
+
+
+            jQuery.ajax({
+		        url: '/list_brands',
+		        method: "GET",
+		        success: function(result){
+		            var html ='';
+		            var list_brands = result.data;
+		            for(var i = 0; i< list_brands.length;i++){
+		            	html+='<li "cat_item">';
+							html+='<input class="hidden"'+' type="radio"'+'  name="radio1"'+' id="checkbox'+(i+list_categories+1)+'"'+' value="'+list_brands[i].brand_name+'">'
+							html+='<label for="checkbox'+(i+list_categories+1)+'">'+list_brands[i].brand_name+'</label>';
+						html+='</li>';
+		            };
+		            html+='<li class="cat_item">';
+						html+='<input class="hidden"'+' type="radio"'+' name="radio1"' +' id="checkbox'+(i+list_categories+2)+'">';
+						html+='<label for="checkbox'+(i+list_categories+2)+'">Tất Cả</label>';
+					html+='</li>'
+		            jQuery("#list_brands").append(html);
+		            console.log(list_categories.length)
+		           }
+		        });
            }
+
         });
 
 
-	  jQuery.ajax({
-        url: '/list_brands',
-        method: "GET",
-        success: function(result){
-            var html ='';
-            var list_brands = result.data;
-            for(var i = 0; i< list_brands.length;i++){
-            	html+='<li "cat_item">';
-					html+='<input class="hidden"'+' type="radio"'+'  name="radio1"'+' id="checkbox'+(i+15)+'"'+' value="'+list_brands[i].brand_name+'">'
-					html+='<label for="checkbox'+(i+15)+'">'+list_brands[i].brand_name+'</label>';
-				html+='</li>';
-            };
-            html+='<li class="cat_item">';
-				html+='<input class="hidden"'+' type="radio"'+' name="radio1"' +' id="checkbox'+(i+16)+'">';
-				html+='<label for="checkbox'+(i+16)+'">Tất Cả</label>';
-			html+='</li>'
-            jQuery("#list_brands").append(html);
-           }
-        });
+	  
 	  
 	})
 	</script>
