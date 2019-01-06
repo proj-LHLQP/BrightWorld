@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<!-- PHONG CUSTOM REQUIRED -->
+    <script src="admin-lib/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="admin-lib/js/data-table/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <script src="admin-lib/js/dropzone/dropzone.js"></script>
+    <script type="text/javascript">
+    	jQuery(document).ready( function () {
+
+    		$("#my_form").submit(function(event){
+				event.preventDefault(); //prevent default action 
+				var post_url = $(this).attr("action"); //get form action url
+				var request_method = $(this).attr("method"); //get form GET/POST method
+				var form_data = $(this).serialize(); //Encode form elements for submission
+				
+				$.ajax({
+					url : post_url,
+					type: request_method,
+					data : form_data
+				}).done(function(response){ //
+					// console.log(response.data[0].prod_name);
+					console.log(response.data);
+					if (response.data.length == 0) {
+						$("#server-results").html("Không có kết quả được tìm thấy!");
+					} else {
+						var x='';
+						for(var i = 0; i<response.data.length; i++)
+							x+= '<p>'+response.data[i].prod_thumb+'</p>';
+						$("#server-results").html(x);
+					}
+						
+				});
+			});
+    	})
+    </script>
+</head>
+<body>
+	<form action="/action_filter_prod" method="POST" id="my_form">
+		<label>Brand</label>
+		<input type="text" name="brand">
+		<label>Category</label>
+		<input type="text" name="category">
+		<label>From</label>
+		<input type="text" name="from_price">
+		<label>To</label>
+		<input type="text" name="to_price">
+		<input type="submit" value="Filter">
+		<li>
+			<input class="hidden" type="radio"  name="radio" id="checkbox1" value="led am tran">
+			<label for="checkbox1">Led Âm Trần</label>
+		</li>
+		<li class="cat_item">
+			<input class="hidden" type="radio" checked="checked" name="radio" id="checkbox2" value="led bulb">
+			<label for="checkbox2">Led Bulb</label>
+		</li>
+	</form>
+	<div id="server-results"><!-- For server results --></div>
+</body>
+</html>

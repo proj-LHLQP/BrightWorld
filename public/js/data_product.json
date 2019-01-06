@@ -1,0 +1,66 @@
+var images = [
+	{
+		URL : "https://tlclighting.com.vn/wp-content/uploads/2018/05/chuwa-270x270.png",
+		Info: "Đèn LED Panel Tấm Plus 2018  TLC Lighting",
+	},
+	{
+		URL : "https://tlclighting.com.vn/wp-content/uploads/2018/05/den-led-bup-plus-2018-tlc-3-300x300.png",
+		Info: "ĐÈN LED BÚP PLUS 2018 TLC LIGHTING",
+	},
+	{
+		URL : "https://tlclighting.com.vn/wp-content/uploads/2017/10/tronf-300x300.jpg",
+		Info: "ĐÈN LED ỐP NỔI 6W TRÒN VỎ ĐEN",
+	},
+	{
+		URL : "https://tlclighting.com.vn/wp-content/uploads/2017/10/den-led-am-tran-mat-cong-vien-vang-2-400x400.png",
+		Info: "ĐÈN LED ÂM TRẦN MẶT CONG 5W VIỀN VÀNG",
+	},
+	{
+		URL : "https://tlclighting.com.vn/wp-content/uploads/2017/10/DSC006PHA-250x250.jpg",
+		Info: "ĐÈN PHA LED CÔNG NGHỆ KHÔNG VÍT",
+	},
+	{
+		URL : "https://tlclighting.com.vn/wp-content/uploads/2017/10/den-led-duong-pho-90x90.jpg",
+		Info: "ĐÈN LED ĐƯỜNG PHỐ HÌNH CÁ MẬP",
+	},
+	{
+		URL : "https://tlclighting.com.vn/wp-content/uploads/2017/10/den-led-nha-xuong-tlc-sieu-sang-250x250.jpg",
+		Info: "ĐÈN LED NHÀ XƯỞNG SIÊU SÁNG",
+	},
+	{
+		URL : "https://tlclighting.com.vn/wp-content/uploads/2017/10/DSC00551-300x300.jpg",
+		Info: "ĐÈN ÂM TRẦN ĐÔI (BỘ KÉP 2 ĐƠN 7W)",
+	},
+	{
+		URL : "https://tlclighting.com.vn/wp-content/uploads/2017/10/den-led-am-tran-don-7w-tron-tlc-lighting.jpg",
+		Info: "ĐÈN LED ÂM TRẦN ĐƠN COB 7W TLC LIGHTING",
+	},
+	{
+		URL : "https://tlclighting.com.vn/wp-content/uploads/2017/10/den-led-roi-2-lop-270x270.jpg",
+		Info: "ĐÈN LED RỌI RAY 2 LỚP 10W THÂN ĐEN",
+	},
+	{
+		URL : "https://tlclighting.com.vn/wp-content/uploads/2017/10/den-led-roi-2-lop-1-400x400.jpg",
+		Info: "ĐÈN LED RỌI RAY 2 LỚP 10W THÂN TRẮNG",
+	},
+	{
+		URL : "https://tlclighting.com.vn/wp-content/uploads/2017/10/2-1-250x250.jpg",
+		Info: "ĐÈN LED ÂM TRẦN MỎNG",
+	},
+	{
+		URL : "https://tlclighting.com.vn/wp-content/uploads/2017/10/tronf-250x250.jpg",
+		Info: "ĐÈN LED ỐP NỔI (NHIỀU CHỦNG LOẠI)",
+	},
+	{
+		URL : "https://tlclighting.com.vn/wp-content/uploads/2017/10/bong-den-led-ban-nguyet-tc-250x250.jpg",
+		Info: "ĐÈN LED TUÝP BÁN NGUYỆT SIÊU SÁNG",
+	},
+	{
+		URL : "https://tlclighting.com.vn/wp-content/uploads/2017/10/bong-den-led-tube-t8-90x90.jpg",
+		Info: "ĐÈN LED TUÝP TUBE T8 RỜI MÁNG TRẮNG",
+	},
+	// {
+	// 	URL : "https://tlclighting.com.vn/wp-content/uploads/2017/10/den-led-am-tran-mong-1-300x300.jpg",
+	// 	Info: "ĐÈN LED ÂM TRẦN CHỐNG CHÓI MỎNG",
+	// },
+]

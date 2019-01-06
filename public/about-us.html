@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../themes/default/default.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="../slider.css" type="text/css" media="screen" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript" src="slider.js"></script>
+	<link href="assets/css/bootstrap.css" rel="stylesheet">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<style type="text/css">
+		body{
+		 font-family: Arial, Helvetica, sans-serif;
+		 background-color: #f4f6f8;
+		 font-size: 13px;
+		 font-weight: 400;
+		}
+		ul{
+		 padding: 0;
+		}
+		ul,li{
+		 list-style: none;
+		}
+		@font-face {
+		  font-family: myFirstFont;
+		  src: url(sansation_light.woff);
+		}
+		@media screen and (min-width: 375px){
+
+		}
+		p{
+			font-size: 15px;
+		}
+
+		.background_image{
+
+		 background: #f4f6f8 url("img/au-contact3.jpg") no-repeat center;
+		 background-size: cover;
+		  height: 468px;
+		  position: relative;
+
+		}
+		.site-text {
+		  text-align: center;
+		  position: absolute;
+		  top: 50%;
+		  left: 50%;
+		  transform: translate(-50%, -50%);
+		  color: white;
+		  line-height: 2;
+		}
+		.our_store{
+		 width: 100%;
+		 padding: 140px 0;
+		 height: 300px;
+		}
+		.our_store .text{
+		 width: 1170px;
+		 height: 300px;
+		 margin: 0 auto;
+		}
+		.text .left {
+		 width: 30%; 
+		 float: left;
+		 margin-right: 100px; 
+		 line-height: 2
+		}
+		.text .right{
+		 width: 590px;
+		 float: right;
+		 line-height: 2;
+
+		}
+		.site_text2{
+		 position: absolute;
+		 width: 200px;
+
+		}
+		.mySlider-fade{
+		 height: 300px;
+		}
+
+
+		#contact {
+		 background-image: url("img/au-contact.jpg");
+		 background-position: center center;
+		 background-repeat: no-repeat;
+		 background-size: 100% 100%;
+		 display: inline;
+		 float: left;
+		 margin-bottom: 100px;
+		 padding: 70px 0;
+		 width: 100%;
+		 height: auto;
+		}
+
+		.contact-right{
+		 background-color: rgba(104, 102, 96, 0.5);
+		 color: #fff;
+		}
+		.contact-right h2 {
+		 color: #fafafa;
+		 font-size: 35px;
+		 margin: 30px 0;
+		}
+		.contact-form{
+		 float: right;
+		 margin-right: 299px;
+		 margin-top: -44px;
+		}
+		.contact-form .form-group input {
+		 background: transparent;
+		 color: #e1e1e1;
+		 font-size: 20px;
+		 border: 1px solid #fff;
+		 border-radius: 0;
+		 height: 60px;
+		 width: 450px;
+		 margin-bottom: 24px;
+		}
+		.contact-form .form-group textarea{
+		 color: #e1e1e1;
+		 background: transparent;
+		 border: 1px solid #fff;
+		 border-radius: 0;
+		 height: 184px;
+		 width: 450px;
+		}
+		.contact-form .form-control:focus {
+		    outline: 0;
+		    box-shadow: none;    
+		} 
+		.contact-form .form-control::-webkit-input-placeholder {
+		 color: #e2e2e2;
+		 font-size: 20px;
+		}
+
+		.contact-form .form-control:-moz-placeholder { / Firefox 18- /
+		 color: #e2e2e2;
+		 font-size: 20px; 
+		}
+
+		.contact-form .form-control::-moz-placeholder {  / Firefox 19+ /
+		 color: #e2e2e2;
+		 font-size: 20px;
+		}
+
+		.contact-form .form-control:-ms-input-placeholder {  
+		 color: #e2e2e2;
+		 font-size: 20px;
+		}
+		.contact-form button {
+		 float: right;
+		 margin-right: 0;
+		 border-radius: 0px;
+		 width: 145px;
+		 height: 54px;
+		 margin-top: 20px;
+
+		}
+		.contact-form.button-default::after,
+		.contact-form .button-default > span {
+		 padding: 12px 40px;  
+		}
+		section{
+		 padding: 80px 0;
+		}
+	</style>
+</head>
+<body>
+ <div id="topbar">
+      <div class="container justify-content-lg-center">
+        <div class="row">
+          <div  class="col-sm-6 col-md-6">
+
+          </div>
+          <div  class="col-sm-6 col-md-6">
+          </div>
+       </div>
+      </div>
+ </div>
+ <!--Header-->
+ <header id="header">
+  <!--Nav-->
+
+ </header>
+ <!--background_image-->
+ <section class="background_image">
+  <div class="topbarItems">
+    <div id="site-logo">
+      <a href="#" title=""></a>
+
+      <ul>
+         <li class="topbarItems-contactus">
+          <a href="#"></a>
+         </li>
+         <li class="topbarItems-contactus">
+          <a href="#"></a>
+         </li>
+         <li class="topbarItems-contactus">
+          <a href="#"></a>
+         </li>
+
+      </ul>
+    </div>
+
+    <div class="site-text">
+      <h1>Bright World</h1>
+
+      <p>At Bright World Store, we believe that you will choose the best LED lights that fit your space and needs. With extensive experience in the field of lights and professional staff and advanced creativity .. We are committed to providing our customers with quality products and aesthetics. High credibility and uniqueness of each product and follow your requirements with the most reasonable price.</p>
+    </div>
+  </div>
+</section>
+ <!--our_store-->
+<section id="our_store">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+       <h1> Our Store</h1>
+      </div>
+      <div class="col-md-6 col-sm-12">
+         <p><b>Our mission</b>
+          <br>
+            Our mission is to become a leading trading and service company for LED technology in Vietnam. Best customer service on the market that the company has.
+            <br><br><b>Staff</b> 
+
+             <br>With many years of experience in the field of management, engineers and staff in our company, we will help our customers' products reach the market in the fastest, most effective and professional way. Best.
+         </p>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="slider">
+  <div >
+      <img src="img/au-background.png" style="height: auto; width: 100%">
+    
+  </div>
+  
+</section>
+<section id="our_store">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+       <h1> Our Store</h1>
+      </div>
+      <div class="col-md-6 col-sm-12">
+         <p><b>Oriented development</b>
+          <br><br>
+          - Maintaining and increasing the speed of development on all targets: sales, market share, human resources, brand value, number of products (website design, online advertising, software and products in industry ...)
+
+          <br><br>
+             -Promote and enhance the company's existing strengths in management, production, sales, processing, website design and software development, Network solutions, ... to a new level to meet the needs Increasing demand of customers as well as being ready to join the WTO integration country.
+
+          <br><br>-With the desire to serve our customers more and more attentively, we are always ready to receive and appreciate all customer suggestions.
+         </p>
+      </div>
+    </div>
+  </div>
+</section>
+<!--contact-->
+<section id="contact">
+  <div class="container contact-right">
+    <h2 class="text-center">CONTACT</h2>
+  <div class="row">
+  <div class="col-sm-5">
+    <p>Contact us and we'll get back to you within 24 hours.</p>
+    <p><span class="glyphicon glyphicon-map-marker"></span> Ton That Thuyet, VN</p>
+    <p><span class="glyphicon glyphicon-phone"></span> 012345678</p>
+    <p><span class="glyphicon glyphicon-envelope"></span> brightworld@gmail.com</p>
+  </div>
+  <div class="col-sm-7">
+    <div class="row">
+     <div class="col-sm-6 form-group">
+      <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+     </div>
+     <div class="col-sm-6 form-group">
+      <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+     </div>
+    </div>
+    <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+    <div class="row">
+     <div class="col-sm-12 form-group">
+      <button class="btn btn-default pull-right" type="submit">Send</button>
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
+</section>
+<!-- Footer!-->
+</body>
+</html>
