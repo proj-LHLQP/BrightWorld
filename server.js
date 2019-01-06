@@ -553,7 +553,7 @@ MongoClient.connect(url, function (err, db) {
             res.send("error");
          } else {
             // res.send('Inserted');
-            res.redirect('login.html');
+            res.redirect('index.html');
           }
         });
 
@@ -590,7 +590,7 @@ MongoClient.connect(url, function (err, db) {
             } else if (docs.length === 1 && docs[0].type === undefined) {
                 res.redirect('/');
             } else {
-                res.redirect('login.html');
+                res.redirect('login-register.html');
             }
         });
 
@@ -610,11 +610,11 @@ MongoClient.connect(url, function (err, db) {
          var radio1 = req.body.radio1;
          console.log(radio);
          console.log(radio1);
-         if (radio1 != undefined) {
+         if (radio1 != undefined && radio1 != 'on') {
             query.prod_brand = radio1;
          }
          
-         if (radio != undefined) {
+         if (radio != undefined && radio != 'on') {
             query.prod_category=radio;
          }
 
@@ -678,10 +678,18 @@ MongoClient.connect(url, function (err, db) {
                 console.log(err)
             }else {
                 if(result.length){
+                    res.send({
+                        // status:1,
+                        // message: 'success',
+                        data: result    
+                    });
                 // console.log(result);
-                    res.send(false);
                 }else{
-                    res.send(true);
+                    res.send({
+                        // status:1,
+                        // message: 'success',
+                        data: []    
+                    });
                 }
             }           
         });
@@ -705,10 +713,18 @@ MongoClient.connect(url, function (err, db) {
                 console.log(err)
             }else {
                 if(result.length){
-                    res.send(false);
+                    res.send({
+                        // status:1,
+                        // message: 'success',
+                        data: result    
+                    });
                 // console.log(result);
                 }else{
-                    res.send(true);
+                    res.send({
+                        // status:1,
+                        // message: 'success',
+                        data: []    
+                    });
                 }
             }           
         });
