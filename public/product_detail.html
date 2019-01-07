@@ -427,7 +427,7 @@
 						<h3>PRODUCT RATINGS</h3>
 					</div>
 					<div class="content-product-ratings">
-						<div class="body-content">
+						<!-- <div class="body-content">
 							<div class="avatar-user">
 								 <img src="img/img_avatar.png" alt="Avatar"> 
 							</div>
@@ -507,7 +507,7 @@
 								guest.22165
 							</div>
 							<div class="content-ratings">Sản phẩm khá</div>
-						</div>
+						</div> -->
 					</div>
 				</div>
 				<div class="col-sm-12 form-rating" id="from-rating">
@@ -709,8 +709,8 @@
                     url: "/edit_prod",
                     data: { id:  id },
                     success: function(result){
-	                    console.log(result[0].prod_name);
-	                    console.log(result[0].prod_gallery);
+	                    // console.log(result[0].prod_name);
+	                    // console.log(result[0].prod_gallery);
 	                    var html_bind1 ='';
 	                    html_bind1 += '<div>'+result[0].prod_name+'</div>';
 	                    jQuery(".product_name").append(html_bind1);
@@ -782,10 +782,39 @@
 	                    jQuery("#prod_id").val(result[0]._id); 
 
 	                }
+                });
+
+				jQuery.ajax({
+                    method: "GET",
+                    url: "/get_ratings",
+                    // console.log(id),
+                    data: { id:  id },
+                    success: function(result){
+                    	console.log(result);
+                    	if (result.length) {
+	                    	var html_bind1 ='';
+	                    	var guestcode = id.substr(id.length - 5);
+	                    	for (var i = 0; i < result.length; i++) {
+	                    		result[i]
+	                    		guestcode = result[i].prod_id.substr(id.length - 5);
 
 
+	                    		html_bind1 +='<div class="body-content">';
+								html_bind1 +='<div class="avatar-user">';
+								html_bind1 +='	 <img src="img/img_avatar.png" alt="Avatar">';
+								html_bind1 +='</div>';
+								html_bind1 +='<div class="name-user">'+result[i].rate_name+'</div>';
+								html_bind1 +='<div class="content-ratings">'+result[i].rate_content+'</div>';
+								html_bind1 +='</div>';
+	                    	}
+		                    
+		                    jQuery(".content-product-ratings").append(html_bind1);
 
-                    })
+                    	} else {
+                    		jQuery(".content-product-ratings").append("Not rating for this product!");
+                    	}
+                    }
+                });
 
             });
 

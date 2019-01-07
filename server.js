@@ -733,10 +733,26 @@ MongoClient.connect(url, function (err, db) {
           if (err) {
             res.send("error");
          } else {
-            res.redirect('/product_detail.html?valid=' + prod_id);
+            res.redirect('/product_detail.html?id=' + prod_id);
          }
         });
     }); 
+
+
+    //API return one Category for edit
+    app.get('/get_ratings', function(req, res) {
+        var id = req.query.id;
+        MongoClient.connect(url, function(err, db) {
+            if(err) {  console.log(err); throw err;  }
+            data = '';
+            Ratings.find({prod_id: id}).toArray(function(err, docs){
+                if(err) throw err;
+                // res.render('edit-product.html', {data: docs});
+                res.send(docs);
+                // db.close();
+            });
+        });
+    });
 
 
 
