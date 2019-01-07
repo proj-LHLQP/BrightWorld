@@ -544,10 +544,12 @@ MongoClient.connect(url, function (err, db) {
         var username = req.body.username;
         var password = req.body.password;
         var email = req.body.email;
+        var type = 0;
         var user = {
             username : username,
             password : password,
-            email : email
+            email : email,
+            type : type
         };
         User.insert([user], function (err, result) {
           if (err) {
@@ -584,12 +586,10 @@ MongoClient.connect(url, function (err, db) {
             if(err) throw err;
             // res.render('edit-product.html', {data: docs});
             console.log(docs.length);
-            // console.log(docs[0].type);
+            console.log(docs[0]._id);
             // res.send(docs);
-            if (docs.length === 1 && docs[0].type === 1 ) {
-                res.redirect('dashboard.html');
-            } else if (docs.length === 1 && docs[0].type === undefined) {
-                res.redirect('index.html');
+            if (docs.length === 1 ) {
+                res.redirect('index.html?id='+docs[0]._id);
             } else {
                 res.redirect('login.html');
             }
@@ -713,6 +713,21 @@ MongoClient.connect(url, function (err, db) {
 
     });
 
+
+    //API return one user
+    app.get('/get_user', function(req, res) {
+        var id = req.query.id;
+        MongoClient.connect(url, function(err, db) {
+            if(err) {  console.log(err); throw err;  }
+            data = '';
+            User.find({_id: new mongodb.ObjectID(id)}).toArray(function(err, docs){
+                if(err) throw err;
+                // res.render('edit-product.html', {data: docs});
+                res.send(docs);
+                // db.close();
+            });
+        });
+    });
 
     //Insert one Ratings
      app.post('/save-rating',  function (req, res) {

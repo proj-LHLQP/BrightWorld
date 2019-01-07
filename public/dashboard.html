@@ -57,6 +57,32 @@
     <!-- modernizr JS
 		============================================ -->
     <script src="admin-lib/js/vendor/modernizr-2.8.3.min.js"></script>
+
+    <script type="text/javascript">
+        window.onload = function () { 
+                        
+            var url_string = window.location.href;
+            var url = new URL(url_string);
+            var id = url.searchParams.get("id");
+
+            // console.log(id == null);
+
+            var html_bind = '';
+            var html_bind1 = '';
+
+            if (id==null) {
+                window.location.replace('index.html');
+            } else {
+                html_bind += '    <li><a href="dashboard.html?id='+id+'">Dashboard</a></li>';
+                html_bind += '    <li><a href="index.html?id='+id+'">Home Page</a></li>';
+                jQuery('.collapse.dropdown-header-top').append(html_bind);
+                jQuery('.notika-main-menu-dropdown').append(html_bind);
+
+            }
+            
+        }
+    </script>
+
 </head>
 
 <body>
@@ -355,9 +381,9 @@
                             <ul class="mobile-menu-nav">
                                 <li><a data-toggle="collapse" data-target="#Charts" href="#">Home</a>
                                     <ul class="collapse dropdown-header-top">
-                                        <li><a href="dashboard.html">Dashboard</a></li>
+                                        <!-- <li><a href="dashboard.html">Dashboard</a></li>
                                         <li><a href="index.html">Home Page</a></li>
-                                        <li><a href="widgets.html">Widgets</a></li>
+                                        <li><a href="widgets.html">Widgets</a></li> -->
                                     </ul>
                                 </li>
                                 <li><a data-toggle="collapse" data-target="#demoevent" href="#">Email</a>
@@ -485,9 +511,9 @@
                     <div class="tab-content custom-menu-content">
                         <div id="Home" class="tab-pane active in notika-tab-menu-bg animated flipInX">
                             <ul class="notika-main-menu-dropdown">
-                                <li><a href="dashboard.html">Dashboard</a></li>
+                                <!-- <li><a href="dashboard.html">Dashboard</a></li>
                                 <li><a href="index.html">Home Page</a></li>
-                                <li><a href="widgets.html">Widgets</a></li>
+                                <li><a href="widgets.html">Widgets</a></li> -->
                             </ul>
                         </div>
                         <div id="mailbox" class="tab-pane notika-tab-menu-bg animated flipInX">
