@@ -80,6 +80,7 @@ MongoClient.connect(url, function (err, db) {
     var Categories = database.collection("Categories");
     var Brands = database.collection("Brands");
     var User = database.collection("User");
+    var Ratings = database.collection("Ratings");
 
     //API lấy tất cả sp
     app.get("/list_products",function(req,res){
@@ -716,20 +717,24 @@ MongoClient.connect(url, function (err, db) {
     //Insert one Ratings
      app.post('/save-rating',  function (req, res) {
        
-        var name = req.body.cate_name;
-        var name_short = req.body.cate_nameshort;
-        console.log(name);
-        var category = {
-            cate_name: name,
-            cate_nameshort:name_short
+        var prod_id = req.body.prod_id;
+        var rate_name = req.body.rate_name;
+        var rate_email = req.body.rate_email;
+        var rate_content = req.body.rate_content;
+        // console.log(name);
+        var rate = {
+            prod_id: prod_id,
+            rate_name:rate_name,
+            rate_email:rate_email,
+            rate_content:rate_content
+
         };
-        Categories.insert([category], function (err, result) {
+        Ratings.insert([rate], function (err, result) {
           if (err) {
             res.send("error");
          } else {
-            // res.send('Inserted');
-            res.redirect('categories-list.html');
-          }
+            res.redirect('/product_detail.html?valid=' + prod_id);
+         }
         });
     }); 
 

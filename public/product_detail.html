@@ -511,17 +511,17 @@
 					</div>
 				</div>
 				<div class="col-sm-12 form-rating" id="from-rating">
-					<form action="/save-comment" method="POST">
+					<form action="/save-rating" method="POST">
 						<div class="row">
 							<input class="form-control" id="prod_id" name="prod_id" type="hidden" required>
 							<div class="col-sm-6 form-group">
-								<input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+								<input class="form-control" id="name" name="rate_name" placeholder="Name" type="text" required>
 							</div>
 							<div class="col-sm-6 form-group">
-								<input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+								<input class="form-control" id="email" name="rate_email" placeholder="Email" type="email" required>
 							</div>
 						</div>
-						<textarea class="form-control" id="comments" name="comments" placeholder="Rating this product" rows="5"></textarea><br>
+						<textarea class="form-control" id="rate_content" name="rate_content" placeholder="Rating this product" rows="5"></textarea><br>
 						<div class="row">
 							<div class="col-sm-12 form-group">
 								<button class="btn btn-default pull-right" type="submit">Send</button>
@@ -778,6 +778,8 @@
 
 	                    html_bind7 = '<a href="'+result[0].prod_doc+'" style="color: #fff"><button class="button_download"><i class="fa fa-download" aria-hidden="true" style="color:#fff;padding-right: 8px;font-size: 18px"></i>Document<span style="font-style: italic;font-size: 10px">.docx</span></button></a>';
 	                    jQuery("#prod_doc").append(html_bind7); 
+
+	                    jQuery("#prod_id").val(result[0]._id); 
 
 	                }
 
