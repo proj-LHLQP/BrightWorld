@@ -303,26 +303,30 @@ header.header .social-icons a:hover {
 header nav {
  padding:0;
  background: #005186;
- box-shadow:none
+ box-shadow:none;
 }
 header nav .nav-menu-main {
- position:initial
+ position:initial;
 }
 header nav ul.nav-dt .nav-item {
- float:left
+ float:left;
+}
+header nav ul.nav-dt .nav-item:hover {
+  background-color: #999999;
+  color: #005186;
 }
 header nav ul.nav-dt .nav-item>a {
- padding:15.5px 8px;
+ padding:15.5px 38px;
  font-weight:600;
  line-height:normal;
  font-size:16px;
- color:rgba(255,255,255,0.8)
+ color:rgba(255,255,255,0.8);
 }
 header nav ul.nav-dt .nav-item>a:after {
- content:none
+ content:none;
 }
 header nav ul.nav-dt .nav-item:hover>a {
- color:#FFF
+ color:#fff;
 }
 header nav ul.nav-dt .nav-item:hover>.mega-content,header nav ul.nav-dt .nav-item:hover .dropdown-menu {
  box-shadow:0 0 15px -5px rgba(0,0,0,0.4)

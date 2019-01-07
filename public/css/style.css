@@ -421,6 +421,7 @@ header ul li{
 }
 .buttons .btn:hover {
   text-decoration: none;
+  color: #fff;
 }
  
 .buttons .btn-1 {
