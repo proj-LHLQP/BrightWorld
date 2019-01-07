@@ -769,7 +769,59 @@ MongoClient.connect(url, function (err, db) {
         });
     });
 
+    //API buy some product
+    app.get("/cart_product",function(req,res){
+         Products.aggregate([{ $sample:{size:5}}]).toArray(function (err, result) {
+            if (err) {
+                res.send({
+                    status: 0,
+                    message:"fail"
+                });
+            }else {
+                if(result.length){
+                    res.send({
+                        // status:1,
+                        // message: 'success',
+                        data: result    
+                    });
+          //console.log(result);
+                }else{
+                    res.send({
+                        // status:1,
+                        // message: 'success',
+                        data: []    
+                    });
+                }
+            }           
+        });
+    });
 
+    //API buy 1 product
+    app.get("/cart_1product",function(req,res){
+         Products.aggregate([{ $sample:{size:5}}]).toArray(function (err, result) {
+            if (err) {
+                res.send({
+                    status: 0,
+                    message:"fail"
+                });
+            }else {
+                if(result.length){
+                    res.send({
+                        // status:1,
+                        // message: 'success',
+                        data: result    
+                    });
+          //console.log(result);
+                }else{
+                    res.send({
+                        // status:1,
+                        // message: 'success',
+                        data: []    
+                    });
+                }
+            }           
+        });
+    });
 
   }
 });
