@@ -1,59 +1,119 @@
+
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
+	<meta charset="UTF-8">	
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="../themes/default/default.css" type="text/css" media="screen" />
-	<link rel="stylesheet" href="../slider.css" type="text/css" media="screen" />
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-	<script type="text/javascript" src="slider.js"></script>
-	<link href="assets/css/bootstrap.css" rel="stylesheet">
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/style.scss.css">
+	<link rel="stylesheet" type="text/css" href="css/style-theme.scss.css">
+	<link rel="stylesheet" type="text/css" href="css/responsive.scss.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/style970.css">
+	<link rel="stylesheet" type="text/css" href="css/style750.css">
+	<link rel="stylesheet" type="text/css" href="css/style700.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+	<link rel="stylesheet" href="fontawesome/css/all.css"/>
+    <link rel="stylesheet" href="css/slick/slick.css"> 
+    <link rel="stylesheet" href="css/slick/slick-theme.css">
+    <link rel="stylesheet" href="css/style_body.css">
+     <link rel="stylesheet" href="../slider.css" type="text/css" media="screen" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="slider.js"></script>
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <script type="text/javascript" src="js/wow.min.js"></script>
+    <script>
+     new WOW().init();
+    </script>
+	<script type="text/javascript" src="vendor/jquery/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript">
+		// jQuery(document).ready( function () {
+
+  //           jQuery.ajax({
+  //               url: '/top_12_products',
+  //               method: "GET",
+  //               success: function(result){
+  //               //    console.log(result);
+  //                   var html_bind ='';
+  //                   var total = result.data;
+  //                   // console.log(total);
+  //                   for (var i = 0; i < (total.length)/4; i++) {
+  //                       html_bind+= '<div class="item active">';
+	 //                    html_bind+= '    <div class="container">';
+	 //                    html_bind+= '        <div class="row" id="list4prod'+(i+1)+'">';
+	 //                    html_bind+= '        </div>';
+  //                       html_bind+= '    </div>';
+  //                       html_bind+= '</div>';
+  //                   }
+  //                   jQuery("#top12newprod").append(html_bind);  
+  //               }
+  //           });
+
+  //           jQuery.ajax({
+  //               url: '/top_12_products',
+  //               method: "GET",
+  //               success: function(result){
+  //                   var html_bind ='';
+  //                   var top12newprod = result.data;
+  //                   // console.log(top12newprod);
+  //                   for (var i = 0; i < top12newprod.length; i++) {
+  //                       // html_bind+= '<option value="'+top12newprod[i].cate_name+'">'+top12newprod[i].cate_name+'</option>
+  //                       html_bind+= '<div class="col-sm-3">;'
+  //                       html_bind+= '   <div class="port_item xs-m-top-30">';
+  //                       html_bind+= '        <div class="port_img">';
+  //                       html_bind+= '            <div class="new_product">';
+  //                       html_bind+= '            	<a href=""><img class="new_product_img" src="'+top12newprod[i].prod_thumb+'" alt=""/></a>';
+  //                       html_bind+= '            </div>';
+  //                       html_bind+= '        </div>';
+  //                       html_bind+= '        <div class="port_caption m-top-20 text-center">';
+  //                       html_bind+= '            <h5><a style="cursor: pointer;">'+top12newprod[i].prod_name+'</a></h5>';
+  //                       html_bind+= '            <h6 style="color: red">Giá: '+top12newprod[i].prod_price+'đ</h6>';
+  //                       html_bind+= '        </div>';
+  //                       html_bind+= '    </div>';
+  //                       html_bind+= '</div>';
+  //                   	jQuery(#list4prod1).append(html_bind);
+  //                   }
+  //               }
+  //           });
+
+  //       } );
+
+	</script>
 	<style type="text/css">
 		body{
-		 font-family: Arial, Helvetica, sans-serif;
-		 background-color: #f4f6f8;
+		 font-family: "UVNKieu";
+		 background-color: #fff;
 		 font-size: 13px;
 		 font-weight: 400;
+		 line-height: 2;
 		}
-		ul{
-		 padding: 0;
-		}
-		ul,li{
-		 list-style: none;
-		}
-		@font-face {
-		  font-family: myFirstFont;
-		  src: url(sansation_light.woff);
-		}
+	
 		@media screen and (min-width: 375px){
 
 		}
 		p{
-			font-size: 15px;
+			font-size: 18px;
 		}
 
 		.background_image{
 
-		 background: #f4f6f8 url("img/au-contact3.jpg") no-repeat center;
+		 /*background: #fff  no-repeat center;*/
 		 background-size: cover;
 		  height: 468px;
 		  position: relative;
+		  font-size: 18px;
+		}
 
+		.header_top {
+			margin-top: 35px;
 		}
-		.site-text {
-		  text-align: center;
-		  position: absolute;
-		  top: 50%;
-		  left: 50%;
-		  transform: translate(-50%, -50%);
-		  color: white;
-		  line-height: 2;
-		}
+
 		.our_store{
 		 width: 100%;
 		 padding: 140px 0;
@@ -64,30 +124,71 @@
 		 height: 300px;
 		 margin: 0 auto;
 		}
-		.text .left {
-		 width: 30%; 
-		 float: left;
-		 margin-right: 100px; 
-		 line-height: 2
-		}
-		.text .right{
-		 width: 590px;
-		 float: right;
-		 line-height: 2;
-
-		}
-		.site_text2{
-		 position: absolute;
-		 width: 200px;
-
-		}
-		.mySlider-fade{
-		 height: 300px;
+		.image img {
+			width: auto;
+			height: 290px;
 		}
 
+		.story_e1 img {
+			width: auto;
+			max-width: inherit;
+			margin-top: 35px;
+			height: 55px;
+		}
+		.st_icon_p {
+		    padding: 30px 00px;
+		    line-height: 30px;
+		    padding-left: 15px;
+		    font-weight: bold;
+		    text-transform: uppercase;
+		    font-size: 14px;
+		}
+	    
+		.story_e1{
+		background-color: #D6ECF7;
+	    padding: 10px 10px;
+	    height: 155px;
+
+		}
+		.video{
+				    background-size: cover;
+				    position: relative;
+				    background: url(img/au-background2.jpg) no-repeat center center;
+				    background-size:100%;
+				    width: 100%;
+				    background-attachment: fixed;
+				}
+				.main_video{
+				    display: block;
+				    z-index: 2;
+				    position: relative;
+				}
+				.main_video i, .main_video span.fa, .main_video span.icon{
+				    color:#fff;
+				    font-size:3rem;
+				    border:2px solid #fff;
+				    width:80px;
+				    height: 80px;
+				    line-height: 80px;
+				    border-radius: 50%;
+				    position: relative;
+				}
+				.roomy-100 {
+				    padding-top: 100px;
+				    padding-bottom: 100px;
+				}
+				.modal-body > #player{
+				    width:100%;
+				}
+				/*--------------------*/
+				.widget-content{
+				    font-size: 1.3em;
+				    line-height: 26px;
+				    color: #333;
+				}
 
 		#contact {
-		 background-image: url("img/au-contact.jpg");
+		 background-image: url("img/anhnen.jpg");
 		 background-position: center center;
 		 background-repeat: no-repeat;
 		 background-size: 100% 100%;
@@ -173,97 +274,457 @@
 	</style>
 </head>
 <body>
- <div id="topbar">
-      <div class="container justify-content-lg-center">
-        <div class="row">
-          <div  class="col-sm-6 col-md-6">
 
-          </div>
-          <div  class="col-sm-6 col-md-6">
-          </div>
-       </div>
-      </div>
- </div>
  <!--Header-->
- <header id="header">
-  <!--Nav-->
+ <header class="header other-page" style="background-color: #fff">
+		<div class="topbar-mobile hidden-lg hidden-md text-center text-md-left">
+			<div class="container">
+				<i class="fa fa-mobile" style=" font-size: 20px; display: inline-block; position: relative; transform: translateY(2px); "></i> Hotline: 
+				<span>
+					<a href="tel:0988886666">098888.6666</a>
+				</span>
+			</div>
+		</div>
+		<!-- <div class="topbar hidden-sm hidden-xs">
+			<div class="container">
+				<div>
+					<div class="row">
+						<div class="col-sm-6 col-md-9 a-left">
+							<ul class="list-inline f-left">
+								<li>
+									<p>Light with me!</p>
+								</li>
+							</ul>
+						</div>
+						<div class="col-sm-6 col-md-3">
+							<div class="social-icons">
+								<a title="Facebook" href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+								<a title="Twitter" href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+								<a title="Google" href="https://plus.google.com" ><i class="fab fa-google"></i></a>
+								<a title="Pinterest" href="https://www.pinterest.com"><i class="fab fa-pinterest"></i></a>
+								<a title="Instagram" href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div> -->
+		<div class="container">
+			<div class="header-content clearfix a-center">
+				<div class="d-lg-flex align-items-center">
+					<div class="logo inline-block">
+						<!-- <a href="" >					 -->
+						<a href="filter.html">
+							<img src="img/logo2.jpg" alt="logo">
+						</a>
+					</div>
+					<div class="header-content-search hidden-xs hidden-sm">
+						<div class="hidden-xs hidden-sm">
+							<div class="header_search">
+								<form class="input-group search-bar d-flex" action="/search" method="get" role="search">
+									<div class="collection-selector">
+										<div class="search_text">Search</div>
+									</div>
+									<input type="search" name="query" value="" placeholder="Search Product. " class="input-group-field st-default-search-input search-text" autocomplete="off">
+									<span class="input-group-btn">
+										<button class="btn icon-fallback-text">
+											<i class="fa fa-search"></i>
+										</button>
+									</span>
+								</form>
+							</div>
+						</div> 
+					</div>
+					<div class="header-content-medium hidden-sm hidden-xs">
+						<div class="top-cart-contain f-right ">
+							<div class="mini-cart text-xs-center">
+								<div class="heading-cart">
+									<a class="icons" href="cart">
+										<div class="icon">
+											<i class="fa fa-shopping-bag"></i>
+											<span class="cartCount count_item_pr" id="cart-total">0</span>
+										</div>
+									</a>
+								</div>
+								<div class="top-cart-content">
+									<ul id="cart-sidebar" class="mini-products-list count_li"><div class="no-item"><p style="text-align: center;">No products in cart.</p></div></ul>
+								</div>
+							</div>
+						</div>
+						<div class="header-acount">
+							<a class="icons" href="account">
+								<i class="fa fa-user" aria-hidden="true"></i>
+							</a>
+							<div class="drop-down text-xs-left">
+								<ul>
+									<li><a href="login-register.html">Log In</a></li>
+									<li><a href="login-register.html">Registration</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="menu-bar hidden-md hidden-lg">
+				<img src="img/menu-bar.png" alt="menu bar">
+			</div>
+			<div class="icon-cart-mobile hidden-md hidden-lg f-left absolute" onclick="window.location.href='/cart'">
+				<div class="icon">
+					<i class="fa fa-shopping-bag"></i>
+					<span class="cartCount count_item_pr">0</span>
+				</div>
+			</div>
+		</div>
 
- </header>
+		<nav class="">
+			<div class="container">
+				<div>
+					<div class="row">
+						<div class="col-lg-3 col-md-4 col-sm-12 col-xs-12 vertical-menu-home padding-small aside-vetical-menu">
+							<div id="section-verticalmenu" class="block block-verticalmenu float-vertical float-vertical-left">
+								<div class="bg-vertical"></div>
+								<h4 class="block-title float-vertical-button">
+									<!-- <span class="verticalMenu-toggle"></span> -->
+									<span class="verticalMenu-text">Categories</span>	
+								</h4>
+							</div>
+						</div>
+
+						<div class="col-lg-6 col-md-8 col-sm-12 col-xs-12 p-0 nav-menu-main hidden-sm hidden-xs">
+							<ul class="nav nav-dt nav-left">
+								<li class="nav-item "><a class="nav-link" href="index.html" title="Trang chủ">Home Page</a></li>
+								<li class="nav-item active has-mega">
+									<a href="category.html" class="nav-link" title="Sản phẩm">Product <i  data-toggle="dropdown"></i></a>		
+									<div class="mega-content">
+									    <div class="level0-wrapper2">
+									   
+										 </div>
+									</div>
+								</li>
+								<li class="nav-item "><a class="nav-link" href="about-us.html" title="Giới thiệu">About Us</a></li>
+								<li class="nav-item ">
+									<a href="news.html" class="nav-link" title="Tin tức">News <i data-toggle="dropdown"></i></a>			
+					
+								</li>
+								<!-- <li class="nav-item "><a class="nav-link" href="lien-he" title="Liên hệ">Contact Us</a></li> -->
+								<!-- <li class="nav-item "><a class="nav-link" href="dai-ly" title="Đại lý">Đại lý</a></li> -->
+								<!-- <li class="nav-item "><a class="nav-link" href="dashboard.html" title="Đại lý">Admin</a></li> -->
+							</ul>	
+						</div>
+						<div class="col-md-3 header-contact hidden-md hidden-sm hidden-xs">
+							<ul class="d-flex" style=" justify-content: flex-end; ">	
+								<li>
+									<i class="fa fa-clock" aria-hidden="true"></i>
+									<span>08:00 - 17:00</span>
+								</li>	 						
+								<li>
+									<i class="fa fa-phone"></i>
+									<a href="tel:19001009">19001009</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="hidden-lg hidden-md menu-offcanvas">
+					<div class="head-menu clearfix">
+						<ul class="list-inline">
+							<li>
+								<a href="account/login"><i class="fa fa-user"></i> Log In</a>
+							</li>
+							<li><span>hoặc</span> Registration</li>
+							<li><a href="account/register"></a>						
+							</li>
+							<li class="li-search">
+								<div class="hidden-lg hidden-md">
+									<div class="header_search search_form">
+										<form class="input-group search-bar search_form" action="/search" method="get" role="search">		
+											<input type="search" name="query" value="" placeholder="Tìm sản phẩm" class="input-group-field st-default-search-input search-text" autocomplete="off">
+											<span class="input-group-btn">
+												<button class="btn icon-fallback-text">
+													<i class="fa fa-search"></i>
+												</button>
+											</span>
+										</form>
+									</div>
+								</div>					
+							</li>
+						</ul>
+						<div class="menuclose"><i class="fa fa-window-close"></i></div>
+					</div>
+					<ul id="nav-mobile" class="nav hidden-md hidden-lg">
+						<li class="h3">
+							MENU
+						</li>
+						<li class="nav-item "><a class="nav-link" href="index.html">Home Page</a></li>		
+						<li class="nav-item active">
+							<a href="collections/all" class="nav-link">Products <i class="fa faa fa-angle-right"></i></a>
+							<ul class="dropdown-menu">
+								<li class="dropdown-submenu nav-item-lv2">
+									<a class="nav-link" href="san-pham-moi">Sản phẩm mới <i class="fa faa fa-angle-right"></i></a>
+									<ul class="dropdown-menu">
+										<li class="nav-item-lv3">
+											<a class="nav-link" href="collections/all">Vòng tay mới</a>
+										</li>						
+										<li class="nav-item-lv3">
+											<a class="nav-link" href="collections/all">Dây chuyền mới</a>
+										</li>						
+										<li class="nav-item-lv3">
+											<a class="nav-link" href="collections/all">Nhẫn phong thủy mới</a>
+										</li>						
+										<li class="nav-item-lv3">
+											<a class="nav-link" href="collections/all">Khuyến mãi mới</a>
+										</li>						
+										<li class="nav-item-lv3">
+											<a class="nav-link" href="collections/all">Sản phẩm mới</a>
+										</li>						
+									</ul>                      
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item "><a class="nav-link" href="about.html">About Us</a></li>		
+						<li class="nav-item ">
+							<a href="news.html" class="nav-link">News <i class="fa faa fa-angle-right"></i></a>
+							<ul class="dropdown-menu">
+								<li class="nav-item-lv2">
+									<a class="nav-link" href="">Tin phong thủy</a>
+								</li>
+								<li class="dropdown-submenu nav-item-lv2">
+									<a class="nav-link" href="">Tin thế giới <i class="fa faa fa-angle-right"></i></a>
+									<ul class="dropdown-menu">
+										<li class="nav-item-lv3">
+											<a class="nav-link" href="">Tin nước ngoài</a>
+										</li>						
+										<li class="nav-item-lv3">
+											<a class="nav-link" href="">Tin nước trong</a>
+										</li>						
+									</ul>                      
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item "><a class="nav-link" href="lien-he">Contact Us</a></li>		
+						<li class="nav-item "><a class="nav-link" href="dai-ly">Admin</a></li>		
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
  <!--background_image-->
- <section class="background_image">
+ <section class="background_image bg-img footer-area bg-gradient-overlay" style="background-image:  url(img/cuong-do-anh-sang-la-gi.jpg);">
   <div class="topbarItems">
-    <div id="site-logo">
-      <a href="#" title=""></a>
+      
+      <div class="col-md-12 col-xs-12 header_top">
+      	<h1 style="text-align: center; color: #fff"> Bright World</h1>
+      	<div class="col-md-2 col-xs-12"></div>
+      	<div class="col-md-8 col-xs-12">
 
-      <ul>
-         <li class="topbarItems-contactus">
-          <a href="#"></a>
-         </li>
-         <li class="topbarItems-contactus">
-          <a href="#"></a>
-         </li>
-         <li class="topbarItems-contactus">
-          <a href="#"></a>
-         </li>
-
-      </ul>
+           <p style="color: #fff; text-align: center;">At Bright World Store, we believe that you will choose the best LED lights that fit your space and needs. With extensive experience in the field of lights and professional staff and advanced creativity .. We are committed to providing our customers with quality products and aesthetics. High credibility and uniqueness of each product and follow your requirements with the most reasonable price.</p>
+        </div>
+        <div class="col-md-2 col-xs-12"></div>
+      </div>  
     </div>
-
-    <div class="site-text">
-      <h1>Bright World</h1>
-
-      <p>At Bright World Store, we believe that you will choose the best LED lights that fit your space and needs. With extensive experience in the field of lights and professional staff and advanced creativity .. We are committed to providing our customers with quality products and aesthetics. High credibility and uniqueness of each product and follow your requirements with the most reasonable price.</p>
+  </div>
+</section>
+<h1 style="text-align: center; margin-bottom: 40px; margin-top: 60px; color:#005186">Story About Us</h1>
+      <div class="col-md-12 col-xs-12" style="margin-top: 20px; margin-bottom: 80px;">
+      	<div class="container">
+      		<div class="row">
+		      	<div class="col-md-3 col-xs-12  wow bounceInUp" data-wow-delay="1000ms" data-wow-duration="2000ms"">
+		      		<div class="story_e1">
+		      			<div class="row">
+				      		<div class="col-md-3 col-xs-3">
+				      			<img src="img/story_icon1.png ">
+				      		</div>
+				      		<div class="col-md-9 col-xs-9">
+				      			<p class="st_icon_p">PRESTIGIOUS AND LEADING BARAND IN VIETNAM</p>
+				      		</div>
+			      		</div>
+		      		</div>
+		      	</div>
+		      	<div class="col-md-3 col-xs-12  wow bounceInUp" data-wow-delay="1000ms" data-wow-duration="2500ms"">
+		      		<div class="story_e1">
+		      			<div class="row">
+				      		<div class="col-md-3 col-xs-3">
+				      			<img src="img/story_icon2.png">
+				      		</div>
+				      		<div class="col-md-9 col-xs-9">
+				      			<p class="st_icon_p"> 10-YEARS SUSTAINABLE DEVELOPMENT</p>
+				      		</div>
+				      	</div>
+			      	</div>
+		      	</div>
+		      	<div class="col-md-3 col-xs-12  wow bounceInUp" data-wow-delay="1000ms" data-wow-duration="3000ms"">
+		      		<div class="story_e1">
+		      			<div class="row">
+				      		<div class="col-md-3 col-xs-3">
+				      			<img src="img/story_icon3.png">
+				      		</div>
+				      		<div class="col-md-9 col-xs-9">
+				      			<p class="st_icon_p"> ADVANCED DEVELOPMENT OPPORTUNITY</p>
+				      		</div>
+				      	</div>
+			      	</div>
+		      	</div>
+		      	<div class="col-md-3 col-xs-12  wow bounceInUp" data-wow-delay="1000ms" data-wow-duration="3500ms"" >
+		      		<div class="story_e1">
+		      			<div class="row">
+				      		<div class="col-md-3 col-xs-3">
+				      			<img src="img/if_book_322421.png">
+				      		</div>
+				      		<div class="col-md-9 col-xs-9">
+				      			<p class="st_icon_p"> HIGH QUALITY PRODUCT STANDARDS</p>
+				      		</div>
+				      	</div>
+			      	</div>
+		      	</div>
+	      	</div>
+      	</div>
+      </div>
+<section id="our_store">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-sm-12 wow fadeInLeft" data-wow-delay="1000ms" data-wow-duration="2500ms">
+       <img src="img/nv1.png">
+      </div>
+      <div class="col-md-6 col-sm-12 wow fadeInRight" data-wow-delay="1000ms" data-wow-duration="2500ms">
+         <p><b style="font-size: 20px">01 REGISTER WITH THE BRANCH / AGENT / DISTRIBUTOR IN THE REGION</b>
+          <br><br>
+          When you join the system, please register with the branches, agents, distributors in the geographic area you live to get the best help.
+         </p>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 100px">
+      <div class="col-md-6 col-sm-12 wow fadeInRight" data-wow-delay="1000ms" data-wow-duration="2500ms">
+         <p><b>02 REGISTER WITH THE BRANCH / AGENT / DISTRIBUTOR IN THE REGION</b>
+          <br><br>
+           With multiple discounts for agents and collaborators of our system. Along with many quality products you can easily choose business.
+         </p>
+      </div>
+      <div class="col-md-6 col-sm-12 wow fadeInLeft" data-wow-delay="1000ms" data-wow-duration="2500ms" style="text-align: center;">
+       <img src="img/nv2.png">
+      </div>
     </div>
   </div>
 </section>
  <!--our_store-->
+<!-- <section id="our_store">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-sm-12 wow fadeInLeft" data-wow-delay="1000ms" >
+
+      </div>
+    </div>
+  </div>
+</section> -->
+<section id="video" class="video">
+    <div class="main_video roomy-100 m-top-100">
+        <div class="text-center">
+            <a href="#" data-toggle="modal" data-target="#playerModal"><span class="fa fa-play"></span></a>
+        </div>
+        <!---id video-->
+    </div>
+    <div class="modal fade" id="playerModal" tabindex="-3" role="dialog" aria-labelledby="player" aria-hidden="true">
+        <div class="modal-dialog  modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <div class="header header-primary text-center">
+                        <h4 class="card-title">Bright World Corporation</h4>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-body">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/voKJpe9_F00" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
 <section id="our_store">
   <div class="container">
     <div class="row">
-      <div class="col-md-6 col-sm-12">
-       <h1> Our Store</h1>
+      <div class="col-md-6 col-sm-12 image wow fadeInLeft" data-wow-delay="1000ms" data-wow-duration="2500ms" style="margin-top: 40px;">
+       <img src="img/nv3.png">
       </div>
-      <div class="col-md-6 col-sm-12">
-         <p><b>Our mission</b>
-          <br>
-            Our mission is to become a leading trading and service company for LED technology in Vietnam. Best customer service on the market that the company has.
-            <br><br><b>Staff</b> 
-
-             <br>With many years of experience in the field of management, engineers and staff in our company, we will help our customers' products reach the market in the fastest, most effective and professional way. Best.
-         </p>
+      <div class="col-md-6 col-sm-12 wow fadeInRight" data-wow-delay="1000ms" data-wow-duration="2500ms">
+          <p style="text-align: justify; line-height: 1.5;"><h3><b>03 UP TO MINIMUM ORDER BY REGULATION</b></h3>
+          <p>- Maintaining and increasing the speed of development on all targets: sales, market share, human resources, brand value, number of products (website design, online advertising, software and products in industry ...)
+          </p>
+          <p> - Promote and enhance the company's existing strengths in management, production, sales, processing, website design and software development, Network solutions, ... to a new level to meet the needs Increasing demand of customers as well as being ready to join the WTO integration country.
+          </p>
+          <p>- With the desire to serve our customers more and more attentively, we are always ready to receive and appreciate all customer suggestions.</p>
+          </p>
       </div>
     </div>
   </div>
 </section>
-<section id="slider">
-  <div >
-      <img src="img/au-background.png" style="height: auto; width: 100%">
-    
-  </div>
-  
-</section>
-<section id="our_store">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 col-sm-12">
-       <h1> Our Store</h1>
-      </div>
-      <div class="col-md-6 col-sm-12">
-         <p><b>Oriented development</b>
-          <br><br>
-          - Maintaining and increasing the speed of development on all targets: sales, market share, human resources, brand value, number of products (website design, online advertising, software and products in industry ...)
-
-          <br><br>
-             -Promote and enhance the company's existing strengths in management, production, sales, processing, website design and software development, Network solutions, ... to a new level to meet the needs Increasing demand of customers as well as being ready to join the WTO integration country.
-
-          <br><br>-With the desire to serve our customers more and more attentively, we are always ready to receive and appreciate all customer suggestions.
-         </p>
-      </div>
+<!-- <section id="video" class="video">
+    <div class="main_video roomy-100 m-top-100">
+        <div class="text-center">
+            <a href="#" data-toggle="modal" data-target="#playerModal"></a>
+        </div> -->
+        <!---id video-->
+    <!-- </div>
+    <div class="modal fade" id="playerModal" tabindex="-3" role="dialog" aria-labelledby="player" aria-hidden="true">
+        <div class="modal-dialog  modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <div class="header header-primary text-center">
+                        <h4 class="card-title">Bright World Corporation</h4>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-body">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+</section> -->
+<!-- <section id="benefit">
+	<div class="topbarItems">
+      <h1 style="text-align: center; margin-bottom: 50px; margin-bottom: 50px; color: black">BENEFITS OF CUSTOMERS</h1>
+      <div class="row col-md-12 col-xs-12" style="margin-bottom: 80px">
+      	<div class="col-md-3 col-xs-12 story_e1 wow bounceInUp" data-wow-delay="1000ms" data-wow-duration="2000ms"">
+      		<div class="col-md-2 col-xs-2">
+      			<img src="img/story_icon1.png ">
+      		</div>
+      		<div class="col-md-10 col-xs-10">
+      			<p> BENEFIT 1</p>
+      		</div>
+      	</div>
+      	<div class="col-md-3 col-xs-12 story_e1 wow bounceInUp" data-wow-delay="1000ms" data-wow-duration="2500ms"">
+      		<div class="col-md-2 col-xs-2">
+      			<img src="img/story_icon2.png">
+      		</div>
+      		<div class="col-md-10 col-xs-10">
+      			<p> BENEFIT 2</p>
+      		</div>
+      	</div>
+      	<div class="col-md-3 col-xs-12 story_e1 wow bounceInUp" data-wow-delay="1000ms" data-wow-duration="3000ms"">
+      		<div class="col-md-2 col-xs-2">
+      			<img src="img/story_icon3.png">
+      		</div>
+      		<div class="col-md-10 col-xs-10">
+      			<p>BENEFIT 3</p>
+      		</div>
+      	</div>
+      	<div class="col-md-3 col-xs-12 story_e1 wow bounceInUp" data-wow-delay="1000ms" data-wow-duration="3500ms"" >
+      		<div class="col-md-2 col-xs-2">
+      			<img src="img/if_book_322421.png">
+      		</div>
+      		<div class="col-md-10 col-xs-10">
+      			<p> BENEFIT 4</p>
+      		</div>
+      	</div>
+      </div>
   </div>
-</section>
+</section> -->
 <!--contact-->
-<section id="contact">
+<!-- <section id="contact">
   <div class="container contact-right">
     <h2 class="text-center">CONTACT</h2>
   <div class="row">
@@ -291,7 +752,70 @@
    </div>
   </div>
  </div>
-</section>
-<!-- Footer!-->
+</section> -->
+<!-- BẮT ĐẦU FOOTER -->
+	<footer class="col-xs-12 footer-area bg-img bg-gradient-overlay" style="background-image: url(img/lighting_connected_systems_hero.jpg);">
+			<div class="container">
+				<div class="row">
+					<div class="footer-bottom col-xs-12">
+						<div class="row">
+							<div class="col-md-4 bottom-left">
+								<img class="logo" src="img/logo2.jpg"/><br><br>
+								<span class="about-us" style="font-size: 20px;font-weight: 600;color: #ffff;">CÔNG TY CỔ PHẦN BRIGHTWORLD</span>
+								<div class="about-us">
+									<i class="fas fa-home" style="color: #00aeef;"></i>
+									<span>Địa chỉ: 21C Trần Duy Hưng, P. Trung Hoà, Q. Cầu Giấy, Hà Nội, Việt Nam</span>
+								</div>
+								<div class="about-us">
+									<i class="fas fa-phone-square" style="color: #00aeef;"></i>
+									<span>Điện thoại: (84-24) 8888 6666 / 9999 5555</span>
+								</div>
+								<div class="about-us">
+									<i class="fas fa-envelope" style="color: #00aeef;"></i>
+									<span>Email: thietbichieusang@gmail.com</span>
+								</div>
+							</div>
+							<div class="col-md-4 col-sm-6 bottom-center" style="margin-top: 30px;">
+								<span class="enterMail"><h5 style="color: #ffff;font-weight: 600">ĐĂNG KÝ NHẬN EMAIL</h5></span><br>
+								<span class="enterMail">Nhập email để theo dõi tin tức từ BrightWorld</span><br>
+								<form class="form-inline" role="form">
+									<div class="form-group">
+										<input type="email" class="form-control ip" placeholder="Enter email">
+										<button class="btn btn-primary" type="button">Gửi đi</button>
+									</div>
+								</form>
+								<div class="social-inline">
+									<a class="facebook">
+										<i class="fab fa-facebook-f"></i>
+									</a>
+									<a class="google">
+										<i class="fab fa-google-plus-g"></i>
+									</a>
+									<a class="youtube">
+										<i class="fab fa-youtube"></i>
+									</a>
+									<a class="twitter">
+										<i class="fab fa-twitter"></i>
+									</a>
+								</div>
+							</div>
+							<div class="col-md-4 col-sm-6 bottom-right">
+								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2214.5770853029826!2d105.80347741982574!3d21.01427798557149!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x953e8c1a369cf62a!2zVGjhur8gR2nhu5tpIMSQw6huIExFRCBIw6AgTuG7mWk!5e0!3m2!1svi!2s!4v1544722522666" frameborder="0" style="border:0" allowfullscreen></iframe>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container ">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="copyright">
+							<p style="font-weight: 400;font-size: 15px;color: #999999;">CopyRight © 2018 by Công Ty cổ phần BrightWorld.All right reserved.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<a href="#" class="cd-top fa fa-chevron-up">Back To Top</a>
+	</footer>
 </body>
 </html>
