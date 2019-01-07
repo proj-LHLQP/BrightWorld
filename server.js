@@ -585,7 +585,7 @@ MongoClient.connect(url, function (err, db) {
             // res.render('edit-product.html', {data: docs});
             console.log(docs.length);
             // console.log(docs[0].type);
-            res.send(docs);
+            // res.send(docs);
             if (docs.length === 1 && docs[0].type === 1 ) {
                 res.redirect('dashboard.html');
             } else if (docs.length === 1 && docs[0].type === undefined) {
