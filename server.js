@@ -713,6 +713,27 @@ MongoClient.connect(url, function (err, db) {
     });
 
 
+    //Insert one Ratings
+     app.post('/save-rating',  function (req, res) {
+       
+        var name = req.body.cate_name;
+        var name_short = req.body.cate_nameshort;
+        console.log(name);
+        var category = {
+            cate_name: name,
+            cate_nameshort:name_short
+        };
+        Categories.insert([category], function (err, result) {
+          if (err) {
+            res.send("error");
+         } else {
+            // res.send('Inserted');
+            res.redirect('categories-list.html');
+          }
+        });
+    }); 
+
+
 
   }
 });

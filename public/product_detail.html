@@ -19,6 +19,43 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>   
 	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.css">
 
+	<style type="text/css">
+		.product-ratings {
+		    box-shadow: 0 1px 1px 0 rgba(0,0,0,.05);
+		    border-radius: .125rem;
+		    overflow: hidden;
+		    background: #fff;
+		    margin-top: .9375rem;
+		    padding: 1.5625rem;
+		}
+		.product-ratings .content-product-ratings .body-content{
+			width: 100%;
+			min-height: 92px;
+			border-bottom: #badbc6 solid 1px;
+			padding-top: 10px;
+			padding-left: 10px;
+		}
+		.product-ratings .content-product-ratings{
+			max-height: 500px;
+			overflow: auto;
+		}
+		.product-ratings .content-product-ratings .body-content .avatar-user img{
+			width: 40px;
+			height: auto;
+			float: left;
+		  	border-radius: 50%;
+		}
+		.product-ratings .content-product-ratings .body-content .name-user{
+			padding-top: 10px;
+			padding-left: 55px
+		}
+		.product-ratings .content-product-ratings .body-content .content-ratings{
+			padding-top: 20px;
+			padding-left: 55px;
+			padding-bottom: 10px;
+		}
+	</style>
+
 </head>
 <body>
 	<header class="header other-page">
@@ -385,15 +422,119 @@
 					
 				</div>
 				
-				<h2><em><strong>Quý khách mua hàng xin liên hệ:</strong></em></h2>
-				<p><em><strong>Cửa hàng Thế Giới đèn LED –&nbsp;Bright World&nbsp;– 21C Trần Duy Hưng, Cầu Giấy, Hà Nội.&nbsp;(Mở cửa đến 21h các ngày trong tuần)</strong></em></p>
-				<p><em><strong>HOTLINE:&nbsp; 04 8888 6666</strong></em></p>
-				<p><strong>Email: </strong></p>
-				&nbsp; &nbsp; &nbsp; &nbsp;
-			 &nbsp; &nbsp; &nbsp; &nbsp;
+				<div class="product-ratings">
+					<div class="header">
+						<h3>PRODUCT RATINGS</h3>
+					</div>
+					<div class="content-product-ratings">
+						<div class="body-content">
+							<div class="avatar-user">
+								 <img src="img/img_avatar.png" alt="Avatar"> 
+							</div>
+							<div class="name-user">
+								guest.22165
+							</div>
+							<div class="content-ratings">Sản phẩm rất tốt Sản phẩm rất tốt Sản phẩm rất tốt Sản phẩm rất tốt Sản phẩm rất tốt Sản phẩm rất tốt Sản phẩm rất tốt Sản phẩm rất tốt Sản phẩm rất tốt Sản phẩm rất tốt Sản phẩm rất tốt Sản phẩm rất tốt Sản phẩm rất tốt Sản phẩm rất tốt Sản phẩm rất tốt Sản phẩm rất tốt Sản phẩm rất tốt Sản phẩm rất tốt Sản phẩm rất tốt Sản phẩm rất tốt </div>
+						</div>
+						<div class="body-content">
+							<div class="avatar-user">
+								 <img src="img/img_avatar.png" alt="Avatar"> 
+							</div>
+							<div class="name-user">
+								guest.22165
+							</div>
+							<div class="content-ratings">Sản phẩm được</div>
+						</div>
+						<div class="body-content">
+							<div class="avatar-user">
+								 <img src="img/img_avatar.png" alt="Avatar"> 
+							</div>
+							<div class="name-user">
+								guest.22165
+							</div>
+							<div class="content-ratings">Sản phẩm tạm</div>
+						</div>
+						<div class="body-content">
+							<div class="avatar-user">
+								 <img src="img/img_avatar.png" alt="Avatar"> 
+							</div>
+							<div class="name-user">
+								guest.22165
+							</div>
+							<div class="content-ratings">Sản phẩm ok</div>
+						</div>
+						<div class="body-content">
+							<div class="avatar-user">
+								 <img src="img/img_avatar.png" alt="Avatar"> 
+							</div>
+							<div class="name-user">
+								guest.22165
+							</div>
+							<div class="content-ratings">Sản phẩm khá</div>
+						</div>
+						<div class="body-content">
+							<div class="avatar-user">
+								 <img src="img/img_avatar.png" alt="Avatar"> 
+							</div>
+							<div class="name-user">
+								guest.22165
+							</div>
+							<div class="content-ratings">Sản phẩm khá</div>
+						</div>
+						<div class="body-content">
+							<div class="avatar-user">
+								 <img src="img/img_avatar.png" alt="Avatar"> 
+							</div>
+							<div class="name-user">
+								guest.22165
+							</div>
+							<div class="content-ratings">Sản phẩm khá</div>
+						</div>
+						<div class="body-content">
+							<div class="avatar-user">
+								 <img src="img/img_avatar.png" alt="Avatar"> 
+							</div>
+							<div class="name-user">
+								guest.22165
+							</div>
+							<div class="content-ratings">Sản phẩm khá</div>
+						</div>
+						<div class="body-content">
+							<div class="avatar-user">
+								 <img src="img/img_avatar.png" alt="Avatar"> 
+							</div>
+							<div class="name-user">
+								guest.22165
+							</div>
+							<div class="content-ratings">Sản phẩm khá</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-12 form-rating" id="from-rating">
+					<form action="/save-comment" method="POST">
+						<div class="row">
+							<input class="form-control" id="prod_id" name="prod_id" type="hidden" required>
+							<div class="col-sm-6 form-group">
+								<input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+							</div>
+							<div class="col-sm-6 form-group">
+								<input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+							</div>
+						</div>
+						<textarea class="form-control" id="comments" name="comments" placeholder="Rating this product" rows="5"></textarea><br>
+						<div class="row">
+							<div class="col-sm-12 form-group">
+								<button class="btn btn-default pull-right" type="submit">Send</button>
+							</div>
+						</div>
+					</form>
+				</div>
+
 			</div>
 		</div>
 		
+		
+
 
 		<div class=" col-md-3 col-sm-3 col-xs-12">
 			<aside class="homenews homenews1">
