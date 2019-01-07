@@ -34,7 +34,6 @@
 	<script type="text/javascript" src="vendor/jquery/jquery-3.3.1.min.js"></script>
 	<style type="text/css">
 		body{
-		 font-family: "UVNKieu";
 		 background-color: #fff;
 		 font-size: 13px;
 		 font-weight: 400;
@@ -223,7 +222,7 @@
 <body>
 
  <!--Header-->
- <header class="header other-page" style="background-color: #fff">
+<header class="header other-page">
 		<div class="topbar-mobile hidden-lg hidden-md text-center text-md-left">
 			<div class="container">
 				<i class="fa fa-mobile" style=" font-size: 20px; display: inline-block; position: relative; transform: translateY(2px); "></i> Hotline: 
@@ -232,36 +231,12 @@
 				</span>
 			</div>
 		</div>
-		<!-- <div class="topbar hidden-sm hidden-xs">
-			<div class="container">
-				<div>
-					<div class="row">
-						<div class="col-sm-6 col-md-9 a-left">
-							<ul class="list-inline f-left">
-								<li>
-									<p>Light with me!</p>
-								</li>
-							</ul>
-						</div>
-						<div class="col-sm-6 col-md-3">
-							<div class="social-icons">
-								<a title="Facebook" href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
-								<a title="Twitter" href="https://twitter.com"><i class="fab fa-twitter"></i></a>
-								<a title="Google" href="https://plus.google.com" ><i class="fab fa-google"></i></a>
-								<a title="Pinterest" href="https://www.pinterest.com"><i class="fab fa-pinterest"></i></a>
-								<a title="Instagram" href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div> -->
 		<div class="container">
 			<div class="header-content clearfix a-center">
 				<div class="d-lg-flex align-items-center">
 					<div class="logo inline-block">
 						<!-- <a href="" >					 -->
-						<a href="filter.html">
+						<a href="/">
 							<img src="img/logo2.jpg" alt="logo">
 						</a>
 					</div>
@@ -294,7 +269,7 @@
 									</a>
 								</div>
 								<div class="top-cart-content">
-									<ul id="cart-sidebar" class="mini-products-list count_li"><div class="no-item"><p style="text-align: center;">No products in cart.</p></div></ul>
+									<ul id="cart-sidebar" class="mini-products-list count_li"><div class="no-item"><p>No products in cart.</p></div></ul>
 								</div>
 							</div>
 						</div>
@@ -304,8 +279,8 @@
 							</a>
 							<div class="drop-down text-xs-left">
 								<ul>
-									<li><a href="login-register.html">Log In</a></li>
-									<li><a href="login-register.html">Registration</a></li>
+									<li><a href="login.html">Log In</a></li>
+									<li><a href="register.html">Registration</a></li>
 								</ul>
 							</div>
 						</div>
@@ -330,28 +305,52 @@
 						<div class="col-lg-3 col-md-4 col-sm-12 col-xs-12 vertical-menu-home padding-small aside-vetical-menu">
 							<div id="section-verticalmenu" class="block block-verticalmenu float-vertical float-vertical-left">
 								<div class="bg-vertical"></div>
-								<h4 class="block-title float-vertical-button">
-									<!-- <span class="verticalMenu-toggle"></span> -->
-									<span class="verticalMenu-text">Categories</span>	
-								</h4>
+								<a href="category.html">
+									<h4 class="block-title float-vertical-button">
+										<!-- <span class="verticalMenu-toggle"></span> -->
+										<span class="verticalMenu-text">Menu</span>	
+									</h4>
+								</a>
 							</div>
 						</div>
 
 						<div class="col-lg-6 col-md-8 col-sm-12 col-xs-12 p-0 nav-menu-main hidden-sm hidden-xs">
 							<ul class="nav nav-dt nav-left">
-								<li class="nav-item "><a class="nav-link" href="index.html" title="Trang chủ">Home Page</a></li>
+								<li class="nav-item "><a class="nav-link" href="index.html" title="Trang chủ">Home page</a></li>
 								<li class="nav-item active has-mega">
-									<a href="category.html" class="nav-link" title="Sản phẩm">Product <i  data-toggle="dropdown"></i></a>		
-									<div class="mega-content">
+									<a href="category.html" class="nav-link" title="Sản phẩm">Product<i  data-toggle="dropdown"></i></a>		
+									<!-- <div class="mega-content">
 									    <div class="level0-wrapper2">
-									   
+									       <div class="nav-block nav-block-center">
+											   <ul class="level0">
+												   <li class="level1 parent item"> <h2 class="h4"><a href="san-pham-moi" title="Sản phẩm mới"><span>Sản phẩm mới</span></a></h2> </li>
+												   <li class="level1 parent item"> <h2 class="h4"><a href="san-pham-hot" title="Sản phẩm hot"><span>Sản phẩm hot</span></a></h2> </li>
+												   <li class="level1 parent item"> <h2 class="h4"><a href="san-pham-noi-bat" title="Sản phẩm nổi bật"><span>Sản phẩm nổi bật</span></a></h2>  </li>
+												   <li class="level1 parent item"> <h2 class="h4"><a href="san-pham-khuyen-mai" title="Sản phẩm khuyến mại"><span>Sản phẩm khuyến mại</span></a></h2>  </li>
+											   </ul>
+										   </div>
 										 </div>
-									</div>
+									</div> -->
 								</li>
-								<li class="nav-item "><a class="nav-link" href="about-us.html" title="Giới thiệu">About Us</a></li>
+								<li class="nav-item "><a href="about-us.html" class="nav-link" title="Giới thiệu">About Us</a></li>
 								<li class="nav-item ">
-									<a href="news.html" class="nav-link" title="Tin tức">News <i data-toggle="dropdown"></i></a>			
-					
+									<a href="tin-tuc" class="nav-link" title="Tin tức">News <i data-toggle="dropdown"></i></a>			
+									<!-- <ul class="dropdown-menu">
+										<li class="nav-item-lv2">
+											<a class="nav-link" href="lien-he" title="Liên hệ">Contact Us</a>
+										</li>
+										<li class="dropdown-submenu nav-item-lv2">
+											<a class="nav-link" href="" title="Tin thế giới">Tin thế giới <i class="fa fa-angle-right"></i></a>
+											<ul class="dropdown-menu">
+												<li class="nav-item-lv3">
+													<a class="nav-link" href="" title="Tin nước ngoài">Tin nước ngoài</a>
+												</li>						
+												<li class="nav-item-lv3">
+													<a class="nav-link" href="" title="Tin nước trong">Tin nước trong</a>
+												</li>						
+											</ul>                      
+										</li>
+									</ul> -->
 								</li>
 								<!-- <li class="nav-item "><a class="nav-link" href="lien-he" title="Liên hệ">Contact Us</a></li> -->
 								<!-- <li class="nav-item "><a class="nav-link" href="dai-ly" title="Đại lý">Đại lý</a></li> -->
@@ -376,10 +375,10 @@
 					<div class="head-menu clearfix">
 						<ul class="list-inline">
 							<li>
-								<a href="account/login"><i class="fa fa-user"></i> Log In</a>
+								<a href="login.html" style="color: #31ABED"><i class="fa fa-user" style="padding-right:4px;"></i><span style="font-weight: 600">Log In</span></a>
 							</li>
-							<li><span>hoặc</span> Registration</li>
-							<li><a href="account/register"></a>						
+							<li><span>hoặc</span></li>
+							<li><a href="register.html" style="color: #D3A00A"><i class="fa fa-user-plus" style="padding-right:4px;"></i><span style="font-weight: 600">Registration</span></a>						
 							</li>
 							<li class="li-search">
 								<div class="hidden-lg hidden-md">
@@ -396,66 +395,65 @@
 								</div>					
 							</li>
 						</ul>
-						<div class="menuclose"><i class="fa fa-window-close"></i></div>
+						<div class="menuclose"><i class="fa fa-window-close" style="color: red"></i></div>
 					</div>
 					<ul id="nav-mobile" class="nav hidden-md hidden-lg">
-						<li class="h3">
-							MENU
-						</li>
+						<li class="h3" style="color: #CC6600">MENU</li>
+
 						<li class="nav-item "><a class="nav-link" href="index.html">Home Page</a></li>		
 						<li class="nav-item active">
-							<a href="collections/all" class="nav-link">Products <i class="fa faa fa-angle-right"></i></a>
+							<a href="category.html" class="nav-link">Products <i class="fa faa fa-angle-right"></i></a>
 							<ul class="dropdown-menu">
 								<li class="dropdown-submenu nav-item-lv2">
-									<a class="nav-link" href="san-pham-moi">Sản phẩm mới <i class="fa faa fa-angle-right"></i></a>
+									<a class="nav-link" href="/san-pham-moi">Sản phẩm mới <i class="fa faa fa-angle-right"></i></a>
 									<ul class="dropdown-menu">
 										<li class="nav-item-lv3">
-											<a class="nav-link" href="collections/all">Vòng tay mới</a>
+											<a class="nav-link" href="category.html">Vòng tay mới</a>
 										</li>						
 										<li class="nav-item-lv3">
-											<a class="nav-link" href="collections/all">Dây chuyền mới</a>
+											<a class="nav-link" href="category.html">Dây chuyền mới</a>
 										</li>						
 										<li class="nav-item-lv3">
-											<a class="nav-link" href="collections/all">Nhẫn phong thủy mới</a>
+											<a class="nav-link" href="category.html">Nhẫn phong thủy mới</a>
 										</li>						
 										<li class="nav-item-lv3">
-											<a class="nav-link" href="collections/all">Khuyến mãi mới</a>
+											<a class="nav-link" href="category.html">Khuyến mãi mới</a>
 										</li>						
 										<li class="nav-item-lv3">
-											<a class="nav-link" href="collections/all">Sản phẩm mới</a>
+											<a class="nav-link" href="category.html">Sản phẩm mới</a>
 										</li>						
 									</ul>                      
 								</li>
 							</ul>
 						</li>
-						<li class="nav-item "><a class="nav-link" href="about.html">About Us</a></li>		
+						<li class="nav-item "><a class="nav-link" href="about-us.html">About Us</a></li>		
 						<li class="nav-item ">
-							<a href="news.html" class="nav-link">News <i class="fa faa fa-angle-right"></i></a>
+							<a href="/tin-tuc" class="nav-link">News <i class="fa faa fa-angle-right"></i></a>
 							<ul class="dropdown-menu">
 								<li class="nav-item-lv2">
-									<a class="nav-link" href="">Tin phong thủy</a>
+									<a class="nav-link" href="/">Tin phong thủy</a>
 								</li>
 								<li class="dropdown-submenu nav-item-lv2">
-									<a class="nav-link" href="">Tin thế giới <i class="fa faa fa-angle-right"></i></a>
+									<a class="nav-link" href="/">Tin thế giới <i class="fa faa fa-angle-right"></i></a>
 									<ul class="dropdown-menu">
 										<li class="nav-item-lv3">
-											<a class="nav-link" href="">Tin nước ngoài</a>
+											<a class="nav-link" href="/">Tin nước ngoài</a>
 										</li>						
 										<li class="nav-item-lv3">
-											<a class="nav-link" href="">Tin nước trong</a>
+											<a class="nav-link" href="/">Tin nước trong</a>
 										</li>						
 									</ul>                      
 								</li>
 							</ul>
 						</li>
-						<li class="nav-item "><a class="nav-link" href="lien-he">Contact Us</a></li>		
-						<li class="nav-item "><a class="nav-link" href="dai-ly">Admin</a></li>		
+						<li class="nav-item "><a class="nav-link" href="/lien-he">Contact Us</a></li>		
+						<li class="nav-item "><a class="nav-link" href="/dai-ly">Admin</a></li>		
 					</ul>
 				</div>
+		
 			</div>
 		</nav>
 	</header>
- <!--background_image-->
  <section class="background_image bg-img footer-area bg-gradient-overlay" style="background-image:  url(img/cuong-do-anh-sang-la-gi.jpg);">
   <div class="topbarItems">
       
