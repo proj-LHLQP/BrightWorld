@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Home</title>
+	<title>Trang chủ</title>
 	<meta charset="UTF-8">	
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.css">
@@ -17,11 +17,54 @@
     <link rel="stylesheet" href="css/slick/slick.css"> 
     <link rel="stylesheet" href="css/slick/slick-theme.css">
     <link rel="stylesheet" href="css/style_body.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <script type="text/javascript" src="js/wow.min.js"></script>
+    <script>
+     new WOW().init();
+    </script>
 
 	<script type="text/javascript" src="vendor/jquery/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript">
 	
 	</script>
+	<style type="text/css">
+		.video{
+			    background-size: cover;
+			    position: relative;
+			    background: url(img/cuong-do-anh-sang-la-gi.jpg) no-repeat center center;
+			    background-size:100%;
+			    width: 100%;
+			    background-attachment: fixed;
+			}
+			.main_video{
+			    display: block;
+			    z-index: 2;
+			    position: relative;
+			}
+			.main_video i, .main_video span.fa, .main_video span.icon{
+			    color:#fff;
+			    font-size:3rem;
+			    border:2px solid #fff;
+			    width:80px;
+			    height: 80px;
+			    line-height: 80px;
+			    border-radius: 50%;
+			    position: relative;
+			}
+			.roomy-100 {
+			    padding-top: 100px;
+			    padding-bottom: 100px;
+			}
+			.modal-body > #player{
+			    width:100%;
+			}
+			/*--------------------*/
+			.widget-content{
+			    font-size: 1.3em;
+			    line-height: 26px;
+			    color: #333;
+			}
+	</style>
 </head>
 <body>
 
@@ -50,7 +93,7 @@
 									<div class="collection-selector">
 										<div class="search_text">Search</div>
 									</div>
-									<input type="search" name="query" value="" placeholder="Tìm kiếm sản phẩm. " class="input-group-field st-default-search-input search-text" autocomplete="off">
+									<input type="search" name="query" value="" placeholder="Search Product. " class="input-group-field st-default-search-input search-text" autocomplete="off">
 									<span class="input-group-btn">
 										<button class="btn icon-fallback-text">
 											<i class="fa fa-search"></i>
@@ -122,13 +165,42 @@
 								<li class="nav-item "><a class="nav-link" href="index.html" title="Trang chủ">Home page</a></li>
 								<li class="nav-item active has-mega">
 									<a href="category.html" class="nav-link" title="Sản phẩm">Product<i  data-toggle="dropdown"></i></a>		
+									<!-- <div class="mega-content">
+									    <div class="level0-wrapper2">
+									       <div class="nav-block nav-block-center">
+											   <ul class="level0">
+												   <li class="level1 parent item"> <h2 class="h4"><a href="san-pham-moi" title="Sản phẩm mới"><span>Sản phẩm mới</span></a></h2> </li>
+												   <li class="level1 parent item"> <h2 class="h4"><a href="san-pham-hot" title="Sản phẩm hot"><span>Sản phẩm hot</span></a></h2> </li>
+												   <li class="level1 parent item"> <h2 class="h4"><a href="san-pham-noi-bat" title="Sản phẩm nổi bật"><span>Sản phẩm nổi bật</span></a></h2>  </li>
+												   <li class="level1 parent item"> <h2 class="h4"><a href="san-pham-khuyen-mai" title="Sản phẩm khuyến mại"><span>Sản phẩm khuyến mại</span></a></h2>  </li>
+											   </ul>
+										   </div>
+										 </div>
+									</div> -->
 								</li>
 								<li class="nav-item "><a href="about-us.html" class="nav-link" title="Giới thiệu">About Us</a></li>
 								<li class="nav-item ">
 									<a href="tin-tuc" class="nav-link" title="Tin tức">News <i data-toggle="dropdown"></i></a>			
-							
+									<!-- <ul class="dropdown-menu">
+										<li class="nav-item-lv2">
+											<a class="nav-link" href="lien-he" title="Liên hệ">Contact Us</a>
+										</li>
+										<li class="dropdown-submenu nav-item-lv2">
+											<a class="nav-link" href="" title="Tin thế giới">Tin thế giới <i class="fa fa-angle-right"></i></a>
+											<ul class="dropdown-menu">
+												<li class="nav-item-lv3">
+													<a class="nav-link" href="" title="Tin nước ngoài">Tin nước ngoài</a>
+												</li>						
+												<li class="nav-item-lv3">
+													<a class="nav-link" href="" title="Tin nước trong">Tin nước trong</a>
+												</li>						
+											</ul>                      
+										</li>
+									</ul> -->
 								</li>
-								
+								<!-- <li class="nav-item "><a class="nav-link" href="lien-he" title="Liên hệ">Contact Us</a></li> -->
+								<!-- <li class="nav-item "><a class="nav-link" href="dai-ly" title="Đại lý">Đại lý</a></li> -->
+								<!-- <li class="nav-item "><a class="nav-link" href="dashboard.html" title="Đại lý">Admin</a></li> -->
 							</ul>	
 						</div>
 						<div class="col-md-3 header-contact hidden-md hidden-sm hidden-xs">
@@ -177,7 +249,7 @@
 						<li class="nav-item "><a class="nav-link" href="index.html">Home Page</a></li>		
 						<li class="nav-item active">
 							<a href="category.html" class="nav-link">Products <i class="fa faa fa-angle-right"></i></a>
-							<!-- <ul class="dropdown-menu">
+							<ul class="dropdown-menu">
 								<li class="dropdown-submenu nav-item-lv2">
 									<a class="nav-link" href="/san-pham-moi">Sản phẩm mới <i class="fa faa fa-angle-right"></i></a>
 									<ul class="dropdown-menu">
@@ -198,12 +270,12 @@
 										</li>						
 									</ul>                      
 								</li>
-							</ul> -->
+							</ul>
 						</li>
 						<li class="nav-item "><a class="nav-link" href="about-us.html">About Us</a></li>		
 						<li class="nav-item ">
 							<a href="/tin-tuc" class="nav-link">News <i class="fa faa fa-angle-right"></i></a>
-							<!-- <ul class="dropdown-menu">
+							<ul class="dropdown-menu">
 								<li class="nav-item-lv2">
 									<a class="nav-link" href="/">Tin phong thủy</a>
 								</li>
@@ -218,7 +290,7 @@
 										</li>						
 									</ul>                      
 								</li>
-							</ul> -->
+							</ul>
 						</li>
 						<li class="nav-item "><a class="nav-link" href="/lien-he">Contact Us</a></li>		
 						<li class="nav-item "><a class="nav-link" href="/dai-ly">Admin</a></li>		
@@ -286,10 +358,10 @@
 		            	<div class="head_title text-center fix">
 		                <h2 class="title_main" style="color: #005186;font-weight: 600;">WHY CHOOSE US</h2>
 		            </div>
-		                <div class="col-md-4">
+		                <div class="col-md-4 wow bounceInUp" data-wow-delay="1000ms" data-wow-duration="2000ms">
 		                    <div class="features_item sm-m-top-30">
 		                        <div class="f_item_icon">
-		                            <i class="fa fa-thumbs-up"></i>
+		                            <img src="img/icon-1.png">
 		                        </div>
 		                        <div class="f_item_text">
 		                            <h3>Perfect Service</h3>
@@ -297,25 +369,26 @@
 		                        </div>
 		                    </div>
 		                </div>
-		                <div class="col-md-4">
+		              
+		                <div class="col-md-4 wow bounceInUp" data-wow-delay="1000ms" data-wow-duration="2500ms">
 		                    <div class="features_item sm-m-top-30">
 		                        <div class="f_item_icon">
-		                            <i class="fa fa-credit-card"></i>
-		                        </div>
-		                        <div class="f_item_text">
-		                            <h3>Good Price</h3>
-		                            <p>Reasonable price suitable for all customers.</p>
-		                        </div>
-		                    </div>
-		                </div>
-		                <div class="col-md-4">
-		                    <div class="features_item sm-m-top-30">
-		                        <div class="f_item_icon">
-		                            <i class="fa fa-wrench"></i>
+		                          <img src="img/icon-2.png">
 		                        </div>
 		                        <div class="f_item_text">
 		                            <h3>Best Quality</h3>
 		                            <p style="line-height: 1.5;">High quality products according to the manufacturer's standards, providing diverse products of different types and styles, always updating the market.</p>
+		                        </div>
+		                    </div>
+		                </div>
+		                <div class="col-md-4 wow bounceInUp" data-wow-delay="1000ms" data-wow-duration="3000ms">
+		                    <div class="features_item sm-m-top-30">
+		                        <div class="f_item_icon">
+		                           <img src="img/icon-3.png">
+		                        </div>
+		                        <div class="f_item_text">
+		                            <h3>Good Price</h3>
+		                            <p>Reasonable price suitable for all customers.</p>
 		                        </div>
 		                    </div>
 		                </div>
@@ -324,9 +397,35 @@
 		    </div><!-- End off container -->
 		</section><!-- End off Featured Section-->
 
-
+    <section id="video" class="video">
+		    <div class="main_video roomy-100 m-top-100">
+		        <div class="text-center">
+		           
+		        </div>
+		        <!---id video-->
+		    </div>
+		    <div class="modal fade" id="playerModal" tabindex="-3" role="dialog" aria-labelledby="player" aria-hidden="true">
+		        <div class="modal-dialog  modal-lg">
+		            <div class="modal-content">
+		                <div class="modal-header">
+		                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+		                    <div class="header header-primary text-center">
+		                        
+		                    </div>
+		                </div>
+		                <div class="modal-body">
+		                    <div class="modal-body">
+		                       
+		                    </div>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+  
+  
+   </section>
 		<!--Business Section-->
-		<section id="business" class="business bg-grey roomy-70">
+		<section id="business" class="business bg-grey roomy-70 wow bounceInUp" data-wow-delay="1000ms" data-wow-duration="2500ms">
 		    <div class="container">
 		        <div class="row">
 		            <div class="main_business">
@@ -355,7 +454,7 @@
 		                    </div>
 		                </div>
 		                
-		                <div class="col-md-6">
+		                <div class="col-md-6 wow bounceInUp" data-wow-delay="2000ms" data-wow-duration="3500ms">
 		                    <div class="business_item">
 		                        <div class="about_me">About Us</div>
 		                        <ul>
@@ -390,7 +489,7 @@
 		    <div class="container">
 		        <div class="main_product roomy-80">
 		            <div class="head_title text-center fix">
-		                <h2 class="title_main" style="margin-bottom: 10px;color: #005186;font-weight: 600;">News Product</h2>
+		                <h2 class="title_main" style="margin-bottom: 10px;color: #005186;font-weight: 600;">New Product</h2>
 		                <h5 style="margin-bottom: 50px;"><i>Products are always updated according to market demand</i></h5>
 		            </div>
 
@@ -436,10 +535,10 @@
 		                    </div>
 		                </div>
 
-		                <div class="col-md-6">
+		                <div class="col-md-6 wow fadeInLeft" data-wow-delay="1000ms" data-wow-duration="2000ms">
 		                    <div class="test_item fix">
 		                        <div class="item_img">
-		                            <img class="img-circle" src="img/64_9.jpg" alt="" />
+		                            <img class="img-circle" src="img/avatar2.png" alt="" />
 		                            <i class="fa fa-quote-left"></i>
 		                        </div>
 
@@ -452,7 +551,7 @@
 		                    </div>
 		                </div>
 
-		                <div class="col-md-6">
+		                <div class="col-md-6 wow fadeInRight" data-wow-delay="1000ms" data-wow-duration="2000ms">
 		                    <div class="test_item fix sm-m-top-30">
 		                        <div class="item_img">
 		                            <img class="img-circle" src="img/avatar1.jpg" alt=""  />
