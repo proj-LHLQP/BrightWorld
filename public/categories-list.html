@@ -83,7 +83,7 @@
                         { "data": "_id",
                           "render": function(data, type, row, meta){
                             if(type === 'display'){
-                                data = '<a id="editlink" href="/edit-category.html?id='+data+'"><i class="far fa-edit"></i></a>&nbsp;&nbsp;<a href="/delete_cate?id='+data+'"><i class="far fa-trash-alt"></i></a>';
+                                data = '<a id="editlink" href="/edit-category.html?id='+data+'"><i class="far fa-edit"></i></a>&nbsp;&nbsp;<a onclick="return confirm()"  href="/delete_cate?id='+data+'"><i class="far fa-trash-alt"></i></a>';
                             }
                                 return data;
                             },
