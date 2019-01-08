@@ -676,8 +676,8 @@ MongoClient.connect(url, function (err, db) {
         User.find({username : username,password : password}).toArray(function(err, docs){
             if(err) throw err;
             // res.render('edit-product.html', {data: docs});
-            console.log(docs.length);
-            console.log(docs[0]._id);
+            // console.log(docs.length);
+            // console.log(docs[0]._id);
             // res.send(docs);
             if (docs.length === 1 ) {
                 res.redirect('index.html?id='+docs[0]._id);
