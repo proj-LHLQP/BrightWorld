@@ -5,8 +5,8 @@
 }
 
 body {
-	font-family: 'Lato', sans-serif;
-	font-size: 14px;
+	font-family: 'Comfortaa', sans-serif;
+	font-size: 16px;
 	line-height: 1.15;
 	color: #34404b;
 	background:#fff; 
@@ -485,7 +485,7 @@ header ul li{
 footer{
 	float: left;
 	width: 100%;
-	height: 430px;
+	height: 461px;
 	color: #b7b7b7;
 	background: linear-gradient(to right, #2c455d, #00012c);
     opacity: 0.85;
@@ -577,7 +577,7 @@ footer{
 }
 
 .sidebar .sidebar_title {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 500;
     border-left: 4px solid;
     background: #D6ECF7;
