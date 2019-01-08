@@ -30,7 +30,9 @@
 		 font-weight: 400;
 		 line-height: 2;
 		}
-			
+		a, a:hover, a:active, a:visited, a:focus {
+		    text-decoration:none;
+		}
 		.name_cart{
 			text-align: center;
 		}
@@ -151,7 +153,28 @@
 
                 }
         	});
+
+			jQuery("#atm").prop("checked", true);
+
+        	jQuery('input:radio[name="payment-method"]').change(
+			    function(){
+			        if (this.checked && this.value == 'cod') {
+			        	jQuery('.numbercard').val('12345678912345');
+			        	jQuery('.month').val('03');
+			        	jQuery('.year').val('2022');
+			            jQuery('#atm-infor').hide();
+
+			        } else {
+			        	jQuery('.numbercard').val('');
+			        	jQuery('.month').val('');
+			        	jQuery('.year').val('');
+			            jQuery('#atm-infor').show();
+			        }
+			    }
+		    );
             
+
+
         }
     </script>
 </head>
@@ -369,6 +392,8 @@
  		<h1>Basket</h1>
  	</section>
  	<section class="table_cart col-xs-12">
+ 		<form >
+ 			
  		<div class="container">
  			<div class="row">
  				<table class="col-xs-12">
@@ -436,29 +461,32 @@
                     	<div class="col-sm-4 col-xs-12">
 	                        <div class="form-group">
 	                            <div >
-	                                <input type="text" class="form-control numbercard"  placeholder="Number Card" name="numbercard" required>
+	                                <input type="number" class="form-control numbercard"  placeholder="Number Card" name="numbercard" required>
 	                            </div>
 	                        </div>
 	                    </div>
                     	<div class="col-sm-4 col-xs-12">
 	                        <div class="form-group">
 	                            <div >
-	                                <input type="number" class="form-control month"  placeholder="Month" name="month" required>
+	                                <input type="number" class="form-control month" defaultValue="01" min="01" max="12" placeholder="Month expired" name="month" required>
 	                            </div>
 	                        </div>
 	                    </div>
                     	<div class="col-sm-4 col-xs-12">
 	                        <div class="form-group">
-	                            <div >
-	                                <input type="number" class="form-control year"  placeholder="Year" name="year" required>
+	                            <div>
+	                                <input type="number" class="form-control year" defaultValue="2019" min="2019" max="2049" placeholder="Year expired" name="year" required>
 	                            </div>
 	                        </div>
 	                    </div>
                     </div>
+                    <!-- <input class="btn btn-primary" type="submit" style="margin-top: 70px" value="CHECKOUT"> -->
+                    <button class="btn btn-primary" style="margin-top: 70px;" type="submit"><a style="color: white" href="/index.html?id=5c3368513fcd931814bbda2b">CHECKOUT</a></button>
 		 		</div>
  			</div>
  		</div>
  		
+ 		</form>
  	</section>
 
 <!-- BẮT ĐẦU FOOTER -->
