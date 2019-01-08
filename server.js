@@ -193,7 +193,61 @@ MongoClient.connect(url, function (err, db) {
             }           
         });
     });
-    
+     //API lấy tất Users
+    app.get("/list_users",function(req,res){
+         // Brands.find({},{ projection:{brand_name:1,brand_id:0,_id:0}}).toArray(function (err, result) {
+         User.find({}).toArray(function (err, result) {
+            if (err) {
+                res.send({
+                    status: 0,
+                    message:"fail",
+                });
+                console.log(err)
+            }else {
+                if(result.length){
+                    res.send({
+                        // status:1,
+                        // message: 'success',
+                        data: result    
+                    });
+                // console.log(result);
+                }else{
+                    res.send({
+                        // status:1,
+                        // message: 'success',
+                        data: []    
+                    });
+                }
+            }           
+        });
+    }); //API lấy tất Ratings
+    app.get("/list_ratings",function(req,res){
+         // Brands.find({},{ projection:{brand_name:1,brand_id:0,_id:0}}).toArray(function (err, result) {
+         Ratings.find({}).toArray(function (err, result) {
+            if (err) {
+                res.send({
+                    status: 0,
+                    message:"fail",
+                });
+                console.log(err)
+            }else {
+                if(result.length){
+                    res.send({
+                        // status:1,
+                        // message: 'success',
+                        data: result    
+                    });
+                // console.log(result);
+                }else{
+                    res.send({
+                        // status:1,
+                        // message: 'success',
+                        data: []    
+                    });
+                }
+            }           
+        });
+    });
 
     //Insert one Product
     var cpUpload = upload.fields([{ name: 'prod_thumb', maxCount: 1 }, { name: 'prod_gallery', maxCount: 8 }, { name: 'prod_doc', maxCount: 1 }])
@@ -412,6 +466,43 @@ MongoClient.connect(url, function (err, db) {
         });
     });
 
+    //Action delete one User
+    app.get('/delete_user', function(req, res) {
+        var id = req.query.id;
+        MongoClient.connect(url, function(err, db) {
+            if(err) {  console.log(err); throw err;  }
+            data = '';
+            User.deleteOne({_id: new mongodb.ObjectID(id)});
+                res.redirect('users-list.html');
+                db.close();
+        });
+    });
+    app.get('/edit_user', function(req, res) {
+        var id = req.query.id;
+        MongoClient.connect(url, function(err, db) {
+            if(err) {  console.log(err); throw err;  }
+            data = '';
+            User.find({_id: new mongodb.ObjectID(id)}).toArray(function(err, docs){
+                if(err) throw err;
+                // res.render('edit-product.html', {data: docs});
+                res.send(docs);
+                db.close();
+            });
+        });
+    });
+    //Action Save one User
+    app.post('/update_user', function (req, res) {
+
+        var id = req.body._id;
+        //Khai báo biến nhận về từ body (value input)
+        console.log(id);
+        var type_ = req.body.type_;
+        console.log(type_)
+        User.updateOne({_id: new mongodb.ObjectID(id)}, {$set: {type: type_}},{w:1}, function (err,result) {
+            if (err) throw err;
+        });
+        res.redirect('users-list.html');
+    });
 
 
     //Insert one Brand
@@ -798,8 +889,7 @@ MongoClient.connect(url, function (err, db) {
 
     //API buy 1 product
     app.get("/cart_1product",function(req,res){
-        
-         Products.find({_id: new mongodb.ObjectID(id)}).toArray(function (err, result) {
+         Products.aggregate([{ $sample:{size:5}}]).toArray(function (err, result) {
             if (err) {
                 res.send({
                     status: 0,
