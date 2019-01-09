@@ -931,6 +931,13 @@ form.cart{
     margin-top: 50px;
     margin-bottom: 30px;
 }
+.button_download{
+        padding: 6px 18px;
+        border-radius: 15px;
+        border: 1px solid #00a885;
+        color: #fff;
+        background-color: #00a885;
+    }
 /*********/
 @media only screen and  (min-width:1170px){
     .product_name{
@@ -953,15 +960,11 @@ form.cart{
     .img_small{
         margin: 0 10px;
     }
-    .button_download{
-        padding: 6px 18px;
-        border-radius: 15px;
-        border: 1px solid #00a885;
-        color: #fff;
-        background-color: #00a885;
-    }
+    
 }
-
+.list-unstyled{
+    text-align: center;
+}
 
 
 
