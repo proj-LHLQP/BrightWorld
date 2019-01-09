@@ -580,7 +580,7 @@
                                            <i class="fa fa-list-alt" aria-hidden="true"></i>
                                         </div>
                                         <div class="nk-int-st" style="margin-bottom: 50px;">
-                                            <input type="text" class="form-control username"  placeholder="Username" name="username" required readonly="False">
+                                            <input type="text" class="form-control username" style="cursor: not-allowed" placeholder="Username" name="username" required readonly="true">
                                             <input class="form-control _id hidden" name="_id">
                                         </div>
                                     </div>
@@ -593,7 +593,7 @@
                                             <i class="fa fa-envelope" aria-hidden="true"></i>
                                         </div>
                                         <div class="nk-int-st" style="margin-bottom: 50px;">
-                                            <input type="text" class="form-control mail" placeholder="Type" name="mail" required readonly="False">
+                                            <input type="text" class="form-control mail" style="cursor: not-allowed" placeholder="Type" name="mail" required readonly="False">
                                         </div>
                                     </div>
                                 </div>
@@ -605,7 +605,7 @@
                                             <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                                         </div>
                                         <div class="nk-int-st">
-                                            <input type="text" class="form-control type_" placeholder="Type" name="type_" required>
+                                            <input type="number" min=0 max=1 class="form-control type_" placeholder="Type" name="type_" required>
                                             <!-- <select>
                                               <option name="type_" class="type_" value="0">0</option>
                                               <option name="type_" class="type_" value="1">1</option>

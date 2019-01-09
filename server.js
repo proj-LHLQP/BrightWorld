@@ -269,7 +269,7 @@ MongoClient.connect(url, function (err, db) {
         //Biến chuỗi đường dẫn thành mảng
         var strArray = stringPathStandardAf.split(",");
         //In thử mảng
-        console.log(strArray);
+        // console.log(strArray);
         //Khai báo biến nhận về từ body (value input)
         var name = req.body.prod_name;
         var brand = req.body.prod_brand;
@@ -325,19 +325,15 @@ MongoClient.connect(url, function (err, db) {
 
             // Nếu thumb mới ko đc up sẻ lấy thumb cũ, nếu up sẽ lấy thumb mới
             var originalFileNameOld = docs[0].prod_thumb.replace("/upload/","");
-            console.log("====================== ID anh can sửa là" + id);
+            // console.log("====================== ID anh can sửa là" + id);
             var originalFileName ='';
             //Lấy đường đẫn phần tử thứ nhất của file ảnh và file document
             if (req.files['prod_thumb'] === undefined) {    //Nếu ko up
                 originalFileName = originalFileNameOld;
             } else {
-                // console.log("====================== vào 4");
                 originalFileName = req.files['prod_thumb'][0].originalname;
             }
-            // console.log("====================== vào 5");
             // console.log(originalFileName);
-
-            // console.log("=======================================");
 
             // Nếu doc mới ko đc up sẻ lấy doc cũ, nếu up sẽ lấy doc mới
             var originalFileDocNameOld = docs[0].prod_doc.replace("/upload/","");
@@ -347,27 +343,24 @@ MongoClient.connect(url, function (err, db) {
             if (req.files['prod_doc'] === undefined) {    //Nếu ko up
                 originalFileDocName = originalFileDocNameOld;
             } else {
-                // console.log("====================== vào 4");
                 originalFileDocName = req.files['prod_doc'][0].originalname;
             }
-            // console.log("====================== vào 5");
             // console.log(originalFileDocName);
 
             // console.log(docs[0].prod_gallery[0]);
-            
 
             // Nếu gallery mới ko đc up sẻ lấy gallery cũ, nếu up sẽ lấy gallery mới
             var strArray ='';
             if (req.files['prod_gallery'] === undefined && req.files['prod_thumb'] === undefined) {
                 strArray = docs[0].prod_gallery;
-                console.log("=============== mảng gallery cũ   "+strArray);
-                console.log(strArray);
+                // console.log("=============== mảng gallery cũ   "+strArray);
+                // console.log(strArray);
             } else if (req.files['prod_gallery'] === undefined && req.files['prod_thumb'] !== undefined) {
                 var elem0 = "/upload/"+originalFileName;
                 docs[0].prod_gallery[0] = elem0;
                 strArray = docs[0].prod_gallery;
-                console.log("=============== mảng gallery mới thay elem1    "+docs[0].prod_gallery);
-                console.log(docs[0].prod_gallery);
+                // console.log("=============== mảng gallery mới thay elem1    "+docs[0].prod_gallery);
+                // console.log(docs[0].prod_gallery);
             } else if (req.files['prod_gallery'] !== undefined && req.files['prod_thumb'] === undefined) {
                 //Duyệt mảng lấy đường dẫn thô của gallery ảnh (có thừa dấu ,)
                 var stringPath ='';
@@ -381,8 +374,8 @@ MongoClient.connect(url, function (err, db) {
                 //Biến chuỗi đường dẫn thành mảng
                 strArray = stringPathStandardAf.split(",");
                 //In thử mảng
-                console.log("=============== mảng gallery mới giữ nguyên thumb cũ "+strArray);
-                console.log(strArray);
+                // console.log("=============== mảng gallery mới giữ nguyên thumb cũ "+strArray);
+                // console.log(strArray);
             } else {
                 //Duyệt mảng lấy đường dẫn thô của gallery ảnh (có thừa dấu ,)
                 var stringPath = ""; 
@@ -396,7 +389,7 @@ MongoClient.connect(url, function (err, db) {
                 //Biến chuỗi đường dẫn thành mảng
                 strArray = stringPathStandardAf.split(",");
                 //In thử mảng
-                console.log(strArray);                
+                // console.log(strArray);                
             }
 
 
@@ -441,7 +434,7 @@ MongoClient.connect(url, function (err, db) {
     //API return one Product for edit
     app.get('/edit_prod', function(req, res) {
         var id = req.query.id;
-        console.log(id);
+        // console.log(id);
         MongoClient.connect(url, function(err, db) {
             if(err) {  console.log(err); throw err;  }
             data = '';
@@ -495,9 +488,9 @@ MongoClient.connect(url, function (err, db) {
 
         var id = req.body._id;
         //Khai báo biến nhận về từ body (value input)
-        console.log(id);
+        // console.log(id);
         var type_ = req.body.type_;
-        console.log(type_)
+        // console.log(type_)
         User.updateOne({_id: new mongodb.ObjectID(id)}, {$set: {type: type_}},{w:1}, function (err,result) {
             if (err) throw err;
         });
@@ -510,7 +503,7 @@ MongoClient.connect(url, function (err, db) {
 
        
         var name = req.body.brand_name;
-        console.log(name);
+        // console.log(name);
         var brand = {
             brand_name: name
         };
@@ -553,9 +546,9 @@ MongoClient.connect(url, function (err, db) {
 
         var id = req.body._id;
         //Khai báo biến nhận về từ body (value input)
-        console.log(id);
+        // console.log(id);
         var name = req.body.brand_name;
-        console.log(name);
+        // console.log(name);
         Brands.updateOne({_id: new mongodb.ObjectID(id)}, {$set: {brand_name: name}},{w:1}, function (err,result) {
             if (err) throw err;
         });
@@ -582,7 +575,7 @@ MongoClient.connect(url, function (err, db) {
        
         var name = req.body.cate_name;
         var name_short = req.body.cate_nameshort;
-        console.log(name);
+        // console.log(name);
         var category = {
             cate_name: name,
             cate_nameshort:name_short
@@ -599,7 +592,7 @@ MongoClient.connect(url, function (err, db) {
      //Action delete one Categories
     app.get('/delete_cate', function(req, res) {
         var id = req.query.id;
-        console.log(id);
+        // console.log(id);
         MongoClient.connect(url, function(err, db) {
             if(err) {  console.log(err); throw err;  }
             data = '';
@@ -616,9 +609,9 @@ MongoClient.connect(url, function (err, db) {
         //Khai báo biến nhận về từ body (value input)
         var name = req.body.cate_name;
         var name_short = req.body.cate_nameshort;
-        console.log(id);
-        console.log(name);
-        console.log(name_short);
+        // console.log(id);
+        // console.log(name);
+        // console.log(name_short);
         
         Categories.updateOne({_id: new mongodb.ObjectID(id)}, {$set: {cate_name: name,
                                                                       cate_nameshort: name_short
