@@ -608,7 +608,7 @@ footer{
 }
 
 /*Trang contact*/
-.address {
+.address1 {
   padding: 0 14px;
   height: auto; 
   background-color: #D6ECF7; 
@@ -616,7 +616,7 @@ footer{
   margin-bottom: 50px; 
   box-shadow: 2px 2px 4px rgba(10, 117, 134, 0.52);
 }
-.address p {
+.address1 p {
   font-size: 18px;
 }
 /*footer .footer-top{
