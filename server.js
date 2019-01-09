@@ -220,7 +220,8 @@ MongoClient.connect(url, function (err, db) {
                 }
             }           
         });
-    }); //API lấy tất Ratings
+    }); 
+    //API lấy tất Ratings
     app.get("/list_ratings",function(req,res){
          // Brands.find({},{ projection:{brand_name:1,brand_id:0,_id:0}}).toArray(function (err, result) {
          Ratings.find({}).toArray(function (err, result) {
@@ -246,6 +247,17 @@ MongoClient.connect(url, function (err, db) {
                     });
                 }
             }           
+        });
+    });
+     //Action delete one Rating
+    app.get('/delete_rating', function(req, res) {
+        var id = req.query.id;
+        MongoClient.connect(url, function(err, db) {
+            if(err) {  console.log(err); throw err;  }
+            data = '';
+            Ratings.deleteOne({_id: new mongodb.ObjectID(id)});
+                res.redirect('ratings-list.html');
+                db.close();
         });
     });
 
@@ -836,7 +848,26 @@ MongoClient.connect(url, function (err, db) {
          }
         });
     }); 
+     //Insert one feedbacks
+     app.post('/save-feedback',  function (req, res) {
+        var f_name = req.body.name;
+        var f_email = req.body.email;
+        var f_comment = req.body.comment;
+        // console.log(name);
+        var feed = {
+            name:f_name,
+            email:f_email,
+            feedback:f_comment
 
+        };
+        Feedbacks.insert([feed], function (err, result) {
+          if (err) {
+            res.send("error");
+         } else {
+            res.redirect('about-us.html');
+         }
+        });
+    }); 
 
     //API return one Category for edit
     app.get('/get_ratings', function(req, res) {
