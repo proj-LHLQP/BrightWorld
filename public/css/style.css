@@ -272,6 +272,7 @@ header ul li{
     width: 15px;
     height: 15px;
     border: 1px solid #C1C1C1;
+    border-radius: 100%;
     background: #edf0f2;
     display: inline-block;
     margin-right: 15px;
@@ -286,7 +287,7 @@ header ul li{
     font-weight: 600;
 }
 .product_categories input[type="radio"]:checked + label:before {
-    border: 5px solid #e02c26;
+    border: 5px solid #005186;
 }
 
 /*.category .small {
