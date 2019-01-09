@@ -852,7 +852,7 @@ MongoClient.connect(url, function (err, db) {
      app.post('/save-feedback',  function (req, res) {
         var f_name = req.body.name;
         var f_email = req.body.email;
-        var f_comment = req.body.comment;
+        var f_comment = req.body.comments;
         // console.log(name);
         var feed = {
             name:f_name,
