@@ -81,7 +81,7 @@ MongoClient.connect(url, function (err, db) {
     var Brands = database.collection("Brands");
     var User = database.collection("User");
     var Ratings = database.collection("Ratings");
-
+    var Feedbacks = database.collection("Feedbacks");
     //API lấy tất cả sp
     app.get("/list_products",function(req,res){
          Products.find({}).sort({_id:-1}).toArray(function (err, result) {
