@@ -50,12 +50,25 @@
 	    margin: 10px 0px; 
 	}
 
+/*Trang contact*/
+.address {
+  padding: 0 14px;
+  height: auto; 
+  background-color: #D6ECF7; 
+  margin-top: 30px; 
+  margin-bottom: 50px; 
+  box-shadow: 2px 2px 4px rgba(10, 117, 134, 0.52);
+}
+.address p {
+  font-size: 17px;
+}
+
 
 /* footer's HAI*/
 	footer{
 		float: left;
 		width: 100%;
-		height: 428px;
+		height: 496px;
 		color: #BEBEBF;
 		background-color: #f2fafb;
 	}
