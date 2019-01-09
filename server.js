@@ -249,6 +249,34 @@ MongoClient.connect(url, function (err, db) {
             }           
         });
     });
+    //API lấy tất cả feedback
+    app.get("/list_feedbacks",function(req,res){
+         // Brands.find({},{ projection:{brand_name:1,brand_id:0,_id:0}}).toArray(function (err, result) {
+         Feedbacks.find({}).toArray(function (err, result) {
+            if (err) {
+                res.send({
+                    status: 0,
+                    message:"fail",
+                });
+                console.log(err)
+            }else {
+                if(result.length){
+                    res.send({
+                        // status:1,
+                        // message: 'success',
+                        data: result    
+                    });
+                // console.log(result);
+                }else{
+                    res.send({
+                        // status:1,
+                        // message: 'success',
+                        data: []    
+                    });
+                }
+            }           
+        });
+    });
      //Action delete one Rating
     app.get('/delete_rating', function(req, res) {
         var id = req.query.id;
@@ -257,6 +285,17 @@ MongoClient.connect(url, function (err, db) {
             data = '';
             Ratings.deleteOne({_id: new mongodb.ObjectID(id)});
                 res.redirect('ratings-list.html');
+                db.close();
+        });
+    });
+    //Action delete one Feedbacks
+     app.get('/delete_feedback', function(req, res) {
+        var id = req.query.id;
+        MongoClient.connect(url, function(err, db) {
+            if(err) {  console.log(err); throw err;  }
+            data = '';
+            Feedbacks.deleteOne({_id: new mongodb.ObjectID(id)});
+                res.redirect('feedbacks-list.html');
                 db.close();
         });
     });
