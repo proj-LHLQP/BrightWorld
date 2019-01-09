@@ -82,7 +82,15 @@
                         { "data": "rate_name" },
                         { "data": "rate_email" },
                         { "data": "rate_content" },
-                        
+                         { "data": "_id",
+                          "render": function(data, type, row, meta){
+                            if(type === 'display'){
+                                data = '<a onclick="return confirm()"  href="/delete_rating?id='+data+'"><i class="far fa-trash-alt"></i></a>';
+                            }
+                                return data;
+                            },
+                            "orderable": false
+                        },
                     ]
                 } 
             );
@@ -542,12 +550,14 @@
                                         <th>Name</th>
                                         <th>Email</th>
                                         <th>Content</th>
+                                        <th>Action</th>
                                     
                                     </tr>
                                 </thead>
                                 
                                 <tfoot>
                                     <tr>
+                                        <th></th>
                                         <th></th>
                                         <th></th>
                                         <th></th>
