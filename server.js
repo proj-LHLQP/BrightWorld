@@ -82,7 +82,7 @@ MongoClient.connect(url, function (err, db) {
     var User = database.collection("User");
     var Ratings = database.collection("Ratings");
     var Feedbacks = database.collection("Feedbacks");
-    //API lấy tất cả sp
+    //API get all product
     app.get("/list_products",function(req,res){
          Products.find({}).sort({_id:-1}).toArray(function (err, result) {
             if (err) {
@@ -109,7 +109,7 @@ MongoClient.connect(url, function (err, db) {
         });
     });
 
-    //API lấy top 12 sp mới
+    //API get 12 product Latest
     app.get("/top_12_products",function(req,res){
          Products.find({}).sort({_id: -1 }).limit(12).toArray(function (err, result) {
             if (err) {
@@ -136,7 +136,7 @@ MongoClient.connect(url, function (err, db) {
         });
     });
 
-    //API lấy tất cả nhãn hiệu
+    //API get all brand
     app.get("/list_brands",function(req,res){
          // Brands.find({},{ projection:{brand_name:1,brand_id:0,_id:0}}).toArray(function (err, result) {
          Brands.find({}).toArray(function (err, result) {
@@ -165,7 +165,7 @@ MongoClient.connect(url, function (err, db) {
         });
     });
 
-    //API lấy tất cả category
+    //API get all category
     app.get("/list_categories",function(req,res){
          // Brands.find({},{ projection:{brand_name:1,brand_id:0,_id:0}}).toArray(function (err, result) {
          Categories.find({}).toArray(function (err, result) {
@@ -193,7 +193,7 @@ MongoClient.connect(url, function (err, db) {
             }           
         });
     });
-     //API lấy tất Users
+     //API get all Users
     app.get("/list_users",function(req,res){
          // Brands.find({},{ projection:{brand_name:1,brand_id:0,_id:0}}).toArray(function (err, result) {
          User.find({}).toArray(function (err, result) {
@@ -221,7 +221,7 @@ MongoClient.connect(url, function (err, db) {
             }           
         });
     }); 
-    //API lấy tất Ratings
+    //API get all Ratings
     app.get("/list_ratings",function(req,res){
          // Brands.find({},{ projection:{brand_name:1,brand_id:0,_id:0}}).toArray(function (err, result) {
          Ratings.find({}).toArray(function (err, result) {
@@ -249,7 +249,7 @@ MongoClient.connect(url, function (err, db) {
             }           
         });
     });
-    //API lấy tất cả feedback
+    //API get all feedback
     app.get("/list_feedbacks",function(req,res){
          // Brands.find({},{ projection:{brand_name:1,brand_id:0,_id:0}}).toArray(function (err, result) {
          Feedbacks.find({}).toArray(function (err, result) {
@@ -622,8 +622,6 @@ MongoClient.connect(url, function (err, db) {
 
     //Insert one Categories
      app.post('/insert_cate',  function (req, res) {
-
-       
         var name = req.body.cate_name;
         var name_short = req.body.cate_nameshort;
         // console.log(name);
@@ -792,7 +790,7 @@ MongoClient.connect(url, function (err, db) {
 
 
 
-    //API and Action check tồn tại user
+    //API and Action check exists user
     app.post("/check_user_exists",function(req,res){
          var query = {};
          var username = req.body.username;
@@ -823,7 +821,7 @@ MongoClient.connect(url, function (err, db) {
     });
 
 
-    //API and Action check tồn tại email
+    //API and Action check exists email
     app.post("/check_email_exists",function(req,res){
          var query = {};
          var email = req.body.email;
@@ -848,7 +846,6 @@ MongoClient.connect(url, function (err, db) {
 
     });
 
-
     //API return one user
     app.get('/get_user', function(req, res) {
         var id = req.query.id;
@@ -865,8 +862,7 @@ MongoClient.connect(url, function (err, db) {
     });
 
     //Insert one Ratings
-     app.post('/save-rating',  function (req, res) {
-       
+    app.post('/save-rating',  function (req, res) {
         var prod_id = req.body.prod_id;
         var rate_name = req.body.rate_name;
         var rate_email = req.body.rate_email;
@@ -877,7 +873,6 @@ MongoClient.connect(url, function (err, db) {
             rate_name:rate_name,
             rate_email:rate_email,
             rate_content:rate_content
-
         };
         Ratings.insert([rate], function (err, result) {
           if (err) {
@@ -897,7 +892,6 @@ MongoClient.connect(url, function (err, db) {
             name:f_name,
             email:f_email,
             feedback:f_comment
-
         };
         Feedbacks.insert([feed], function (err, result) {
           if (err) {
@@ -923,35 +917,8 @@ MongoClient.connect(url, function (err, db) {
         });
     });
 
-    //API buy some product
+    //API get random 5 product (for cart)
     app.get("/cart_product",function(req,res){
-         Products.aggregate([{ $sample:{size:5}}]).toArray(function (err, result) {
-            if (err) {
-                res.send({
-                    status: 0,
-                    message:"fail"
-                });
-            }else {
-                if(result.length){
-                    res.send({
-                        // status:1,
-                        // message: 'success',
-                        data: result    
-                    });
-          //console.log(result);
-                }else{
-                    res.send({
-                        // status:1,
-                        // message: 'success',
-                        data: []    
-                    });
-                }
-            }           
-        });
-    });
-
-    //API buy 1 product
-    app.get("/cart_1product",function(req,res){
          Products.aggregate([{ $sample:{size:5}}]).toArray(function (err, result) {
             if (err) {
                 res.send({
